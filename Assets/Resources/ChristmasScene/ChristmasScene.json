@@ -9,9 +9,9 @@
           "uid": "BallBlue",
           "path": "ChristmasScene/BallBlue",
           "position": {
-            "x": -2.613,
-            "y": 0.665,
-            "z": 1.512
+            "x": 1.135,
+            "y": -0.563,
+            "z": 0.358
           },
           "rotation": {
             "x": 0,
@@ -19,37 +19,37 @@
             "z": 0
           },
           "scale": {
-            "x": 1,
-            "y": 1,
-            "z": 1
+            "x": 1.2,
+            "y": 1.2,
+            "z": 1.2
           }
         },
         {
           "uid": "BallRed",
           "path": "ChristmasScene/BallRed",
           "position": {
+            "x": 1.109,
+            "y": -0.564,
+            "z": 0.65
+          },
+          "rotation": {
             "x": 0,
             "y": 0,
             "z": 0
           },
-          "rotation": {
-            "x": -2.639,
-            "y": 107.642,
-            "z": 0
-          },
           "scale": {
-            "x": 1,
-            "y": 1,
-            "z": 1
+            "x": 1.2,
+            "y": 1.2,
+            "z": 1.2
           }
         },
         {
           "uid": "CandyCane",
           "path": "ChristmasScene/CandyCane",
           "position": {
-            "x": -2.625,
-            "y": 0.667,
-            "z": 1.949
+            "x": 1.123,
+            "y": -0.591,
+            "z": 0.906
           },
           "rotation": {
             "x": 90,
@@ -57,9 +57,9 @@
             "z": 0
           },
           "scale": {
-            "x": 0.2,
-            "y": 0.2,
-            "z": 0.2
+            "x": 0.3,
+            "y": 0.3,
+            "z": 0.3
           }
         }
       ],
@@ -69,19 +69,19 @@
           "uid": "TreeCollider",
           "path": "ChristmasScene/TreeCollider",
           "position": {
-            "x": -2.625,
-            "y": 0.667,
-            "z": 1.949
+            "x": -0.092,
+            "y": -0.272,
+            "z": 1.786752
           },
           "rotation": {
-            "x": 90,
+            "x": 0,
             "y": 0,
             "z": 0
           },
           "scale": {
-            "x": 0.2,
-            "y": 0.2,
-            "z": 0.2
+            "x": 1,
+            "y": 1,
+            "z": 1
           }
         }
       ],
@@ -89,9 +89,9 @@
         "correct": [ "BallRed" ],
         "wrong": [ "BallBlue", "CandyCane" ],
         "finalPosition": {
-          "x": -3.466,
-          "y": 0.624,
-          "z": 2.126
+          "x": 0.133,
+          "y": -0.756,
+          "z": 1.288
         },
         "finalRotation": {
           "x": 37.296,
@@ -115,14 +115,14 @@
         "correct": [ "BallBlue" ],
         "wrong": [ "CandyCane" ],
         "finalPosition": {
-          "x": -3.247,
-          "y": 0.471,
-          "z": 2.099
+          "x": -0.161,
+          "y": -0.532,
+          "z": 1.229
         },
         "finalRotation": {
-          "x": 29.912,
-          "y": 6.98,
-          "z": 26.258
+          "x": 32.676,
+          "y":0,
+          "z": 0
         },
         "audio": [ "Audio/bedroom1", "Audio/bedroom2" ],
         "audioFeedback": {
@@ -141,14 +141,14 @@
         "correct": [ "CandyCane" ],
         "wrong": [],
         "finalPosition": {
-          "x": -3.444,
-          "y": 0.954,
-          "z": 2.258
+          "x": -0.167,
+          "y": -0.127,
+          "z": 1.382
         },
         "finalRotation": {
-          "x": -13.128,
-          "y": 192.69,
-          "z": -2.723
+          "x": 30.905,
+          "y": 0,
+          "z": 0
         },
         "audio": [ "Audio/bedroom1", "Audio/bedroom2" ],
         "audioFeedback": {

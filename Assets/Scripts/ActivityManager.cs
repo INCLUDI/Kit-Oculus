@@ -7,25 +7,24 @@ using static DataModel;
 public class ActivityManager : MonoBehaviour
 {
     private List<EventConfiguration> _eventList;
-    private SceneConfiguration _sceneConfiguration;
 
     private int _eventStep;
     private int _audioStep;
 
     public bool readyForNextEvent = false;
 
-    public bool canGaze = true;
+    public bool isFree = true;
     // Start is called before the first frame update
     void Start()
     {
         string sceneName = SceneManager.GetActiveScene().name;
 
         //Parso il json giusto
-        TextAsset file = Resources.Load<TextAsset>(sceneName + "/" + sceneName); //reader.ReadToEnd();
-        Debug.Log(sceneName);
-        
-        _sceneConfiguration = JsonUtility.FromJson<SceneConfiguration>(file.text);
-        _eventList = _sceneConfiguration.events;
+        TextAsset file = Resources.Load<TextAsset>(sceneName + "/" + sceneName);
+        Debug.Log(file);
+
+        _eventList = JsonUtility.FromJson<SceneConfiguration>(file.text).events;
+        foreach (EventConfiguration e in _eventList)
 
         _audioStep = 0;
         _eventStep = 0;
@@ -87,7 +86,7 @@ public class ActivityManager : MonoBehaviour
             }
             else
             {
-                canGaze = true;
+                isFree = true;
                 EventManager.TriggerEvent("stopTalking");
             }
         });
@@ -108,8 +107,10 @@ public class ActivityManager : MonoBehaviour
         if (_eventList[_eventStep].type == "dragrelease")
         {
             List<string> correctList = _eventList[_eventStep].parameters.correct;
-            if (correctList.Contains(collidingObject.name) && canGaze)
+            if (correctList.Contains(collidingObject.name) && isFree)
             {
+                Debug.Log("riposizionato l'oggetto giusto");
+
                 collidingObject.GetComponent<Rigidbody>().useGravity = false;
                 collidingObject.GetComponent<OVRGrabbable>().enabled = false;
                 Collider[] colliders = collidingObject.GetComponentsInChildren<Collider>();
@@ -121,16 +122,17 @@ public class ActivityManager : MonoBehaviour
                 SetFinalPosition(collidingObject);
                 SetFinalRotation(collidingObject);
 
+                // Per liberare la mano
                 EventManager.TriggerEvent("GrabEnd");
 
                 AudioManager.instance.playAudioFromString(_eventList[_eventStep].audioFeedback.audioOk, () => {
                     nextEvent();
                 });
             }
-            else if (canGaze)
+            else if (isFree)
             {
                 AudioManager.instance.playAudioFromString(_eventList[_eventStep].audioFeedback.audioWrong, () => {
-                    UpdateGaze(true);
+                    UpdateIsBusy(true);
                 });
             }
 
@@ -150,8 +152,8 @@ public class ActivityManager : MonoBehaviour
         collidingObject.transform.rotation = Quaternion.Euler(finalRotation.x, finalRotation.y, finalRotation.z);
     }
 
-    private void UpdateGaze(bool isBusy)
+    private void UpdateIsBusy(bool isFree)
     {
-        canGaze = isBusy;
+        this.isFree = isFree;
     }
 }
