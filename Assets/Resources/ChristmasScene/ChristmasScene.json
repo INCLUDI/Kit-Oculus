@@ -1,0 +1,161 @@
+{
+  "sceneName": "ChristmasScene",
+  "events": [
+    {
+      "type": "dragrelease",
+      "objsToDeactivate": [],
+      "objsToActivate": [
+        {
+          "uid": "BallBlue",
+          "path": "ChristmasScene/BallBlue",
+          "position": {
+            "x": -2.613,
+            "y": 0.665,
+            "z": 1.512
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        },
+        {
+          "uid": "BallRed",
+          "path": "ChristmasScene/BallRed",
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "rotation": {
+            "x": -2.639,
+            "y": 107.642,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        },
+        {
+          "uid": "CandyCane",
+          "path": "ChristmasScene/CandyCane",
+          "position": {
+            "x": -2.625,
+            "y": 0.667,
+            "z": 1.949
+          },
+          "rotation": {
+            "x": 90,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 0.2,
+            "y": 0.2,
+            "z": 0.2
+          }
+        }
+      ],
+      "targetsToDeactivate": [],
+      "targetsToActivate": [
+        {
+          "uid": "TreeCollider",
+          "path": "ChristmasScene/TreeCollider",
+          "position": {
+            "x": -2.625,
+            "y": 0.667,
+            "z": 1.949
+          },
+          "rotation": {
+            "x": 90,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 0.2,
+            "y": 0.2,
+            "z": 0.2
+          }
+        }
+      ],
+      "parameters": {
+        "correct": [ "BallRed" ],
+        "wrong": [ "BallBlue", "CandyCane" ],
+        "finalPosition": {
+          "x": -3.466,
+          "y": 0.624,
+          "z": 2.126
+        },
+        "finalRotation": {
+          "x": 37.296,
+          "y": 0,
+          "z": 0
+        },
+        "audio": [ "Audio/bedroom1", "Audio/bedroom2" ],
+        "audioFeedback": {
+          "audioOk": "Audio/correct1",
+          "audioWrong": "Audio/wrong1"
+        }
+      }
+    },
+    {
+      "type": "dragrelease",
+      "objsToDeactivate": [],
+      "objsToActivate": [],
+      "targetsToDeactivate": [],
+      "targetsToActivate": [],
+      "parameters": {
+        "correct": [ "BallBlue" ],
+        "wrong": [ "CandyCane" ],
+        "finalPosition": {
+          "x": -3.247,
+          "y": 0.471,
+          "z": 2.099
+        },
+        "finalRotation": {
+          "x": 29.912,
+          "y": 6.98,
+          "z": 26.258
+        },
+        "audio": [ "Audio/bedroom1", "Audio/bedroom2" ],
+        "audioFeedback": {
+          "audioOk": "Audio/correct1",
+          "audioWrong": "Audio/wrong1"
+        }
+      }
+    },
+    {
+      "type": "dragrelease",
+      "objsToDeactivate": [],
+      "objsToActivate": [],
+      "targetsToDeactivate": [ "TreeCollider" ],
+      "targetsToActivate": [],
+      "parameters": {
+        "correct": [ "CandyCane" ],
+        "wrong": [],
+        "finalPosition": {
+          "x": -3.444,
+          "y": 0.954,
+          "z": 2.258
+        },
+        "finalRotation": {
+          "x": -13.128,
+          "y": 192.69,
+          "z": -2.723
+        },
+        "audio": [ "Audio/bedroom1", "Audio/bedroom2" ],
+        "audioFeedback": {
+          "audioOk": "Audio/correct1",
+          "audioWrong": "Audio/wrong1"
+        }
+      }
+    }
+  ]
+}
