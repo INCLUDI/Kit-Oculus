@@ -11,6 +11,8 @@ public class ActivityManager : MonoBehaviour
     private int _eventStep;
     private int _audioStep;
 
+    public Transform dynamicObjects;
+
     public bool readyForNextEvent = false;
 
     public bool isFree = true;
@@ -38,11 +40,18 @@ public class ActivityManager : MonoBehaviour
         foreach (SceneObj obj in _eventList[eventStep].objsToActivate)
         {
             GameObject temp = (GameObject)Instantiate(Resources.Load(obj.path), new Vector3(obj.position.x, obj.position.y, obj.position.z),
-                Quaternion.identity);
+                Quaternion.identity, dynamicObjects);
             temp.transform.localScale = new Vector3(obj.scale.x, obj.scale.y, obj.scale.z);
             temp.transform.rotation = Quaternion.Euler(obj.rotation.x, obj.rotation.y, obj.rotation.z);
             temp.name = obj.uid;
-
+        }
+        foreach (SceneObj obj in _eventList[eventStep].targetsToActivate)
+        {
+            GameObject temp = (GameObject)Instantiate(Resources.Load(obj.path), new Vector3(obj.position.x, obj.position.y, obj.position.z),
+                Quaternion.identity, dynamicObjects);
+            temp.transform.localScale = new Vector3(obj.scale.x, obj.scale.y, obj.scale.z);
+            temp.transform.rotation = Quaternion.Euler(obj.rotation.x, obj.rotation.y, obj.rotation.z);
+            temp.name = obj.uid;
         }
     }
 
@@ -86,7 +95,6 @@ public class ActivityManager : MonoBehaviour
             }
             else
             {
-                isFree = true;
                 EventManager.TriggerEvent("stopTalking");
             }
         });
@@ -107,10 +115,8 @@ public class ActivityManager : MonoBehaviour
         if (_eventList[_eventStep].type == "dragrelease")
         {
             List<string> correctList = _eventList[_eventStep].parameters.correct;
-            if (correctList.Contains(collidingObject.name) && isFree)
+            if (correctList.Contains(collidingObject.name))
             {
-                Debug.Log("riposizionato l'oggetto giusto");
-
                 collidingObject.GetComponent<Rigidbody>().useGravity = false;
                 collidingObject.GetComponent<OVRGrabbable>().enabled = false;
                 Collider[] colliders = collidingObject.GetComponentsInChildren<Collider>();
@@ -129,7 +135,7 @@ public class ActivityManager : MonoBehaviour
                     nextEvent();
                 });
             }
-            else if (isFree)
+            else
             {
                 AudioManager.instance.playAudioFromString(_eventList[_eventStep].audioFeedback.audioWrong, () => {
                     UpdateIsBusy(true);
