@@ -35,7 +35,6 @@ public class AudioManager : MonoBehaviour
     {
         EventManager.TriggerEvent("startTalking");
         AudioClip audioClip = (AudioClip)Resources.Load(audioName);
-        Debug.Log(audioClip);
         audioSource.PlayOneShot(audioClip);
         StartCoroutine(waitForAudioCompleted(audioClip.length, call));
     }

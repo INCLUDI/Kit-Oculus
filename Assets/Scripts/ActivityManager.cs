@@ -86,9 +86,6 @@ public class ActivityManager : MonoBehaviour
 
     private void playAudioSequence()
     {
-        Debug.Log(_eventStep);
-        Debug.Log(_audioStep);
-        Debug.Log(_eventList[_eventStep].audio[_audioStep]);
         AudioManager.instance.playAudioFromString(_eventList[_eventStep].audio[_audioStep], () => {
             if (_audioStep + 1 < _eventList[_eventStep].audio.Count)
             {
@@ -124,12 +121,13 @@ public class ActivityManager : MonoBehaviour
                 collidingObject.GetComponent<Rigidbody>().useGravity = false;
                 collidingObject.GetComponent<OVRGrabbable>().enabled = false;
                 collidingObject.GetComponent<Collider>().enabled = false;
+                collidingObject.GetComponent<Rigidbody>().isKinematic = true;
 
                 SetFinalPosition(collidingObject);
                 SetFinalRotation(collidingObject);
 
-                // Per liberare la mano 
-                // EventManager.TriggerEvent("GrabEnd");
+                // Per rilasciare la mano o il controller
+                EventManager.TriggerEvent("ReleaseObject");
 
                 AudioManager.instance.playAudioFromString(_eventList[_eventStep].audioFeedback.audioOk, () => {
                     nextEvent();
