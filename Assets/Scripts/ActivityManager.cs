@@ -102,26 +102,15 @@ public class ActivityManager : MonoBehaviour
 
     public void checkCorrectObject(GameObject collidingObject)
     {
-        /*if (name == "Assistant" && canGaze)
-        {
-            AudioManager.instance.playAudioFromString(_eventList[_eventStep].audio[_audioStep], () => {
-                UpdateGaze(true);
-            });
-            return;
-        }*/
-
-        // Serve?
-        Debug.Log(collidingObject.name);
-
         if (_eventList[_eventStep].type == "dragrelease")
         {
             List<string> correctList = _eventList[_eventStep].parameters.correct;
             if (correctList.Contains(collidingObject.name))
-            {
-                collidingObject.GetComponent<Rigidbody>().useGravity = false;
-                collidingObject.GetComponent<OVRGrabbable>().enabled = false;
+            {   
                 collidingObject.GetComponent<Collider>().enabled = false;
                 collidingObject.GetComponent<Rigidbody>().isKinematic = true;
+                collidingObject.GetComponent<Rigidbody>().useGravity = false;
+                collidingObject.GetComponent<OVRGrabbable>().enabled = false;
 
                 SetFinalPosition(collidingObject);
                 SetFinalRotation(collidingObject);
