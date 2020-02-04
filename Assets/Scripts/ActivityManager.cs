@@ -83,7 +83,6 @@ public class ActivityManager : MonoBehaviour
         }
     }
 
-
     private void playAudioSequence()
     {
         AudioManager.instance.playAudioFromString(_eventList[_eventStep].audio[_audioStep], () => {

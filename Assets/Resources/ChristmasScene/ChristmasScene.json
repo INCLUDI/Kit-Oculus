@@ -99,10 +99,10 @@
           "z": 0
         }
       },
-      "audio": [ "ChristmasScene/Christmas1" ],
+      "audio": [ "ChristmasScene/Christmas-intro", "ChristmasScene/Christmas-redball" ],
       "audioFeedback": {
-        "audioOk": "ChristmasScene/Christmas1",
-        "audioWrong": "ChristmasScene/Christmas1"
+        "audioOk": "ChristmasScene/Correct",
+        "audioWrong": "ChristmasScene/Wrong"
       }
     },
     {
@@ -125,10 +125,10 @@
           "z": 0
         }
       },
-      "audio": [ "ChristmasScene/Christmas1" ],
+      "audio": [ "ChristmasScene/Christmas-blueball" ],
       "audioFeedback": {
-        "audioOk": "ChristmasScene/Christmas1",
-        "audioWrong": "ChristmasScene/Christmas1"
+        "audioOk": "ChristmasScene/Correct",
+        "audioWrong": "ChristmasScene/Wrong"
       }
     },
     {
@@ -151,10 +151,10 @@
           "z": 0
         }
       },
-      "audio": [ "ChristmasScene/Christmas1" ],
+      "audio": [ "ChristmasScene/Christmas-candycane" ],
       "audioFeedback": {
-        "audioOk": "ChristmasScene/Christmas1",
-        "audioWrong": "ChristmasScene/Christmas1"
+        "audioOk": "ChristmasScene/Correct",
+        "audioWrong": "ChristmasScene/Wrong"
       }
     }
   ]
