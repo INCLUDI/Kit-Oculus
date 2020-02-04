@@ -11,22 +11,22 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Boy01_FacialAnimMap
-    second: {fileID: 2800000, guid: fca88be6eca5bd840a4ce209acd09981, type: 3}
+    second: {fileID: 2800000, guid: aefee9eb82eb8e649997dd0c5d48eb9f, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Boy01_diffuse
-    second: {fileID: 2800000, guid: 9ea24cb3cd4ee3049b4403db6ee5cdb2, type: 3}
+    second: {fileID: 2800000, guid: 4933918e0580abf4397f64c014a557d2, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Boy01_normal
-    second: {fileID: 2800000, guid: 33194fb3d0364a1408709fa23114d3a8, type: 3}
+    second: {fileID: 2800000, guid: ecd8e00dec34a2a4f9f3c397dc8127da, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Boy01_spec
-    second: {fileID: 2800000, guid: 47acbe64871a6004bb6f2c4948f0fe82, type: 3}
+    second: {fileID: 2800000, guid: c4e77ec1830510141ba5d3923a717618, type: 3}
   materials:
     importMaterials: 1
     materialName: 0

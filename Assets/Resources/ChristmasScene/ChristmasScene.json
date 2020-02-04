@@ -97,12 +97,12 @@
           "x": 37.296,
           "y": 0,
           "z": 0
-        },
-        "audio": [ "Audio/bedroom1", "Audio/bedroom2" ],
-        "audioFeedback": {
-          "audioOk": "Audio/correct1",
-          "audioWrong": "Audio/wrong1"
         }
+      },
+      "audio": [ "ChristmasScene/Christmas1" ],
+      "audioFeedback": {
+        "audioOk": "ChristmasScene/Christmas1",
+        "audioWrong": "ChristmasScene/Christmas1"
       }
     },
     {
@@ -121,14 +121,14 @@
         },
         "finalRotation": {
           "x": 32.676,
-          "y":0,
+          "y": 0,
           "z": 0
-        },
-        "audio": [ "Audio/bedroom1", "Audio/bedroom2" ],
-        "audioFeedback": {
-          "audioOk": "Audio/correct1",
-          "audioWrong": "Audio/wrong1"
         }
+      },
+      "audio": [ "ChristmasScene/Christmas1" ],
+      "audioFeedback": {
+        "audioOk": "ChristmasScene/Christmas1",
+        "audioWrong": "ChristmasScene/Christmas1"
       }
     },
     {
@@ -149,12 +149,12 @@
           "x": 30.905,
           "y": 0,
           "z": 0
-        },
-        "audio": [ "Audio/bedroom1", "Audio/bedroom2" ],
-        "audioFeedback": {
-          "audioOk": "Audio/correct1",
-          "audioWrong": "Audio/wrong1"
         }
+      },
+      "audio": [ "ChristmasScene/Christmas1" ],
+      "audioFeedback": {
+        "audioOk": "ChristmasScene/Christmas1",
+        "audioWrong": "ChristmasScene/Christmas1"
       }
     }
   ]

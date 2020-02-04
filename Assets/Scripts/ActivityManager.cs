@@ -26,13 +26,14 @@ public class ActivityManager : MonoBehaviour
         Debug.Log(file);
 
         _eventList = JsonUtility.FromJson<SceneConfiguration>(file.text).events;
-        foreach (EventConfiguration e in _eventList)
+        Debug.Log(_eventList.Count);
 
         _audioStep = 0;
         _eventStep = 0;
         // Instanzio gli oggetti nella scena 
         generateSceneObjectsFromEvent(_eventStep);
 
+        playAudioSequence();
     }
 
     private void generateSceneObjectsFromEvent(int eventStep)
@@ -87,6 +88,9 @@ public class ActivityManager : MonoBehaviour
 
     private void playAudioSequence()
     {
+        Debug.Log(_eventStep);
+        Debug.Log(_audioStep);
+        Debug.Log(_eventList[_eventStep].audio[_audioStep]);
         AudioManager.instance.playAudioFromString(_eventList[_eventStep].audio[_audioStep], () => {
             if (_audioStep + 1 < _eventList[_eventStep].audio.Count)
             {
@@ -128,8 +132,8 @@ public class ActivityManager : MonoBehaviour
                 SetFinalPosition(collidingObject);
                 SetFinalRotation(collidingObject);
 
-                // Per liberare la mano
-                EventManager.TriggerEvent("GrabEnd");
+                // Per liberare la mano 
+                // EventManager.TriggerEvent("GrabEnd");
 
                 AudioManager.instance.playAudioFromString(_eventList[_eventStep].audioFeedback.audioOk, () => {
                     nextEvent();
