@@ -23,10 +23,8 @@ public class ActivityManager : MonoBehaviour
 
         //Parso il json giusto
         TextAsset file = Resources.Load<TextAsset>(sceneName + "/" + sceneName);
-        Debug.Log(file);
 
         _eventList = JsonUtility.FromJson<SceneConfiguration>(file.text).events;
-        Debug.Log(_eventList.Count);
 
         _audioStep = 0;
         _eventStep = 0;
@@ -116,6 +114,8 @@ public class ActivityManager : MonoBehaviour
         }*/
 
         // Serve?
+        Debug.Log(collidingObject.name);
+
         if (_eventList[_eventStep].type == "dragrelease")
         {
             List<string> correctList = _eventList[_eventStep].parameters.correct;
@@ -123,11 +123,7 @@ public class ActivityManager : MonoBehaviour
             {
                 collidingObject.GetComponent<Rigidbody>().useGravity = false;
                 collidingObject.GetComponent<OVRGrabbable>().enabled = false;
-                Collider[] colliders = collidingObject.GetComponentsInChildren<Collider>();
-                foreach (Collider collider in colliders)
-                {
-                    collider.enabled = false;
-                }
+                collidingObject.GetComponent<Collider>().enabled = false;
 
                 SetFinalPosition(collidingObject);
                 SetFinalRotation(collidingObject);

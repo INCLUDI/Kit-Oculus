@@ -13,7 +13,6 @@ public class CollisionManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("ciao");
         activityManager.checkCorrectObject(other.gameObject);
     }
 }

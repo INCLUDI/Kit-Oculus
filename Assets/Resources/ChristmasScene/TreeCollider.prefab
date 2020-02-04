@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 5956670074212483108}
   - component: {fileID: 5956670074212483109}
   - component: {fileID: 5191086656302029602}
-  m_Layer: 0
-  m_Name: TreeCollider 1
+  m_Layer: 9
+  m_Name: TreeCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
