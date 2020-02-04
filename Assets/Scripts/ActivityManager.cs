@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using static DataModel;
+using DG.Tweening;
 
 public class ActivityManager : MonoBehaviour
 {
@@ -123,13 +124,13 @@ public class ActivityManager : MonoBehaviour
     private void SetFinalPosition(GameObject collidingObject)
     {
         CustomVector3 finalPosition = _eventList[_eventStep].parameters.finalPosition;
-        collidingObject.transform.position = new Vector3(finalPosition.x, finalPosition.y, finalPosition.z);
+        collidingObject.transform.DOMove(new Vector3(finalPosition.x, finalPosition.y, finalPosition.z), 1);
     }
 
     private void SetFinalRotation(GameObject collidingObject)
     {
         CustomVector3 finalRotation = _eventList[_eventStep].parameters.finalRotation;
-        collidingObject.transform.rotation = Quaternion.Euler(finalRotation.x, finalRotation.y, finalRotation.z);
+        collidingObject.transform.DORotate(new Vector3(finalRotation.x, finalRotation.y, finalRotation.z), 1);
     }
 
     private void UpdateIsBusy(bool isFree)
