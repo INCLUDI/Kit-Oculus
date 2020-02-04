@@ -44,23 +44,11 @@ public class ActivityManager : MonoBehaviour
             temp.transform.rotation = Quaternion.Euler(obj.rotation.x, obj.rotation.y, obj.rotation.z);
             temp.name = obj.uid;
         }
-        foreach (SceneObj obj in _eventList[eventStep].targetsToActivate)
-        {
-            GameObject temp = (GameObject)Instantiate(Resources.Load(obj.path), new Vector3(obj.position.x, obj.position.y, obj.position.z),
-                Quaternion.identity, dynamicObjects);
-            temp.transform.localScale = new Vector3(obj.scale.x, obj.scale.y, obj.scale.z);
-            temp.transform.rotation = Quaternion.Euler(obj.rotation.x, obj.rotation.y, obj.rotation.z);
-            temp.name = obj.uid;
-        }
     }
 
     private void removeSceneObjectsFromEvent(int eventStep)
     {
         foreach (string toRemove in _eventList[eventStep].objsToDeactivate)
-        {
-            Destroy(GameObject.Find(toRemove));
-        }
-        foreach (string toRemove in _eventList[eventStep].targetsToDeactivate)
         {
             Destroy(GameObject.Find(toRemove));
         }

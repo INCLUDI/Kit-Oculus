@@ -3,7 +3,7 @@
   "events": [
     {
       "type": "dragrelease",
-      "objsToDeactivate": [],
+      "objsToDeactivate": [ "Arrow" ],
       "objsToActivate": [
         {
           "uid": "BallBlue",
@@ -61,10 +61,26 @@
             "y": 0.3,
             "z": 0.3
           }
-        }
-      ],
-      "targetsToDeactivate": [],
-      "targetsToActivate": [
+        },
+        {
+          "uid": "Arrow",
+          "path": "ChristmasScene/Arrow",
+          "position": {
+            "x": 0.125,
+            "y": -0.599,
+            "z": 1.297
+          },
+          "rotation": {
+            "x": 180,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 0.5,
+            "z": 1
+          }
+        },
         {
           "uid": "TreeCollider",
           "path": "ChristmasScene/TreeCollider",
@@ -107,10 +123,28 @@
     },
     {
       "type": "dragrelease",
-      "objsToDeactivate": [],
-      "objsToActivate": [],
-      "targetsToDeactivate": [],
-      "targetsToActivate": [],
+      "objsToDeactivate": [ "Arrow" ],
+      "objsToActivate": [
+        {
+          "uid": "Arrow",
+          "path": "ChristmasScene/Arrow",
+          "position": {
+            "x": -0.1592,
+            "y": -0.396,
+            "z": 1.309
+          },
+          "rotation": {
+            "x": 180,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 0.5,
+            "z": 1
+          }
+        }
+      ],
       "parameters": {
         "correct": [ "BallBlue" ],
         "wrong": [ "CandyCane" ],
@@ -133,10 +167,28 @@
     },
     {
       "type": "dragrelease",
-      "objsToDeactivate": [],
-      "objsToActivate": [],
-      "targetsToDeactivate": [ "TreeCollider" ],
-      "targetsToActivate": [],
+      "objsToDeactivate": [ "TreeCollider", "Arrow" ],
+      "objsToActivate": [
+        {
+          "uid": "Arrow",
+          "path": "ChristmasScene/Arrow",
+          "position": {
+            "x": -0.176,
+            "y": 0.056,
+            "z": 1.4634
+          },
+          "rotation": {
+            "x": 180,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 0.5,
+            "z": 1
+          }
+        }
+      ],
       "parameters": {
         "correct": [ "CandyCane" ],
         "wrong": [],
