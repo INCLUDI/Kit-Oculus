@@ -44,6 +44,18 @@ public class ActivityManager : MonoBehaviour
             temp.transform.localScale = new Vector3(obj.scale.x, obj.scale.y, obj.scale.z);
             temp.transform.rotation = Quaternion.Euler(obj.rotation.x, obj.rotation.y, obj.rotation.z);
             temp.name = obj.uid;
+
+            switch (temp.tag)
+            {
+                case "Grabbable":
+                    // temp.AddComponent<GrabbableManager>();
+                    break;
+                case "Target":
+                    temp.AddComponent<TargetManager>();
+                    break;
+                default:
+                    break;
+            }
         }
     }
 
@@ -74,6 +86,7 @@ public class ActivityManager : MonoBehaviour
 
     private void playAudioSequence()
     {
+        EventManager.TriggerEvent("DisableInteraction");
         AudioManager.instance.playAudioFromString(_eventList[_eventStep].audio[_audioStep], () => {
             if (_audioStep + 1 < _eventList[_eventStep].audio.Count)
             {
@@ -83,6 +96,7 @@ public class ActivityManager : MonoBehaviour
             else
             {
                 EventManager.TriggerEvent("stopTalking");
+                EventManager.TriggerEvent("EnableInteraction");
             }
         });
     }
@@ -94,17 +108,17 @@ public class ActivityManager : MonoBehaviour
         {
             List<string> correctList = _eventList[_eventStep].parameters.correct;
             if (correctList.Contains(collidingObject.name))
-            {   
+            {
                 collidingObject.GetComponent<Collider>().enabled = false;
                 collidingObject.GetComponent<Rigidbody>().isKinematic = true;
-                collidingObject.GetComponent<Rigidbody>().useGravity = false;
                 collidingObject.GetComponent<OVRGrabbable>().enabled = false;
+                EventManager.TriggerEvent("ReleaseObject");
 
                 SetFinalPosition(collidingObject);
                 SetFinalRotation(collidingObject);
 
-                // Per rilasciare la mano o il controller
-                EventManager.TriggerEvent("ReleaseObject");
+                // Per rilasciare la mano o il controller (messo per ora nell'evento DisableInteraction)
+                // EventManager.TriggerEvent("ReleaseObject");
 
                 AudioManager.instance.playAudioFromString(_eventList[_eventStep].audioFeedback.audioOk, () => {
                     nextEvent();
@@ -112,9 +126,7 @@ public class ActivityManager : MonoBehaviour
             }
             else
             {
-                AudioManager.instance.playAudioFromString(_eventList[_eventStep].audioFeedback.audioWrong, () => {
-                    UpdateIsBusy(true);
-                });
+                AudioManager.instance.playAudioFromString(_eventList[_eventStep].audioFeedback.audioWrong);
             }
 
         }
@@ -133,8 +145,5 @@ public class ActivityManager : MonoBehaviour
         collidingObject.transform.DORotate(new Vector3(finalRotation.x, finalRotation.y, finalRotation.z), 1);
     }
 
-    private void UpdateIsBusy(bool isFree)
-    {
-        this.isFree = isFree;
-    }
+
 }

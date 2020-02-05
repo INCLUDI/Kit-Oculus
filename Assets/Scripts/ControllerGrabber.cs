@@ -13,8 +13,11 @@ public class ControllerGrabber : OVRGrabber
 
     private void ReleaseObject()
     {
-        m_grabbedObj = null;
-        GrabEnd();
+        if (m_grabbedObj)
+        {
+            m_grabbedObj = null;
+            GrabEnd();
+        }
     }
 
 }
