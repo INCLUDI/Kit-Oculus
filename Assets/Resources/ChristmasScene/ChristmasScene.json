@@ -10,7 +10,7 @@
           "path": "ChristmasScene/BallBlue",
           "position": {
             "x": 1.135,
-            "y": -0.563,
+            "y": 2.159,
             "z": 0.358
           },
           "rotation": {
@@ -29,7 +29,7 @@
           "path": "ChristmasScene/BallRed",
           "position": {
             "x": 1.109,
-            "y": -0.564,
+            "y": 2.165,
             "z": 0.65
           },
           "rotation": {
@@ -48,7 +48,7 @@
           "path": "ChristmasScene/CandyCane",
           "position": {
             "x": 1.123,
-            "y": -0.591,
+            "y": 2.167,
             "z": 0.906
           },
           "rotation": {
@@ -67,7 +67,7 @@
           "path": "ChristmasScene/Arrow",
           "position": {
             "x": 0.125,
-            "y": -0.599,
+            "y": 0.901,
             "z": 1.297
           },
           "rotation": {
@@ -86,7 +86,7 @@
           "path": "ChristmasScene/TreeCollider",
           "position": {
             "x": -0.092,
-            "y": -0.272,
+            "y": 1.228,
             "z": 1.786752
           },
           "rotation": {
@@ -106,7 +106,7 @@
         "wrong": [ "BallBlue", "CandyCane" ],
         "finalPosition": {
           "x": 0.133,
-          "y": -0.756,
+          "y": 0.744,
           "z": 1.288
         },
         "finalRotation": {
@@ -130,7 +130,7 @@
           "path": "ChristmasScene/Arrow",
           "position": {
             "x": -0.1592,
-            "y": -0.396,
+            "y": 1.104,
             "z": 1.309
           },
           "rotation": {
@@ -150,7 +150,7 @@
         "wrong": [ "CandyCane" ],
         "finalPosition": {
           "x": -0.161,
-          "y": -0.532,
+          "y": 0.968,
           "z": 1.229
         },
         "finalRotation": {
@@ -174,7 +174,7 @@
           "path": "ChristmasScene/Arrow",
           "position": {
             "x": -0.176,
-            "y": 0.056,
+            "y": 1.373,
             "z": 1.4634
           },
           "rotation": {
@@ -194,7 +194,7 @@
         "wrong": [],
         "finalPosition": {
           "x": -0.167,
-          "y": -0.127,
+          "y": 1.373,
           "z": 1.382
         },
         "finalRotation": {

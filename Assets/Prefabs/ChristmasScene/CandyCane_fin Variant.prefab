@@ -15,7 +15,7 @@ PrefabInstance:
     - target: {fileID: 7473197525557253145, guid: 6f1cbdaf111cc574b8a5a799bdbcad73,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.127
+      value: 1.373
       objectReference: {fileID: 0}
     - target: {fileID: 7473197525557253145, guid: 6f1cbdaf111cc574b8a5a799bdbcad73,
         type: 3}
@@ -65,7 +65,7 @@ PrefabInstance:
     - target: {fileID: 7473197525557522793, guid: 6f1cbdaf111cc574b8a5a799bdbcad73,
         type: 3}
       propertyPath: m_Name
-      value: CandyCane_fin
+      value: CandyCane_fin Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f1cbdaf111cc574b8a5a799bdbcad73, type: 3}

@@ -15,7 +15,7 @@ PrefabInstance:
     - target: {fileID: 6049805787077299992, guid: c8a5ed697a4dc4745886c75e17284a88,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.756
+      value: 0.744
       objectReference: {fileID: 0}
     - target: {fileID: 6049805787077299992, guid: c8a5ed697a4dc4745886c75e17284a88,
         type: 3}
@@ -65,7 +65,7 @@ PrefabInstance:
     - target: {fileID: 7326903146340334859, guid: c8a5ed697a4dc4745886c75e17284a88,
         type: 3}
       propertyPath: m_Name
-      value: BallRed_fin
+      value: BallRed_fin Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8a5ed697a4dc4745886c75e17284a88, type: 3}

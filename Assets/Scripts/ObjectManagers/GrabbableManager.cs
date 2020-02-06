@@ -5,17 +5,16 @@ using DG.Tweening;
 
 public class GrabbableManager : MonoBehaviour
 {
-    private OVRGrabbable grabbable;
+    // private OVRGrabbable grabbable;
 
-    private Vector3 initialPosition;
+    Vector3 initialPosition;
 
     private void Awake()
     {
-        grabbable = GetComponent<OVRGrabbable>();
         initialPosition = transform.position;
     }
 
-    void Start()
+    /*void Start()
     {
         EventManager.StartListening("EnableInteraction", EnableGrabbable);
         EventManager.StartListening("DisableInteraction", DisableGrabbable);
@@ -48,5 +47,13 @@ public class GrabbableManager : MonoBehaviour
         EventManager.StopListening("EnableInteraction", EnableGrabbable);
         EventManager.StopListening("DisableInteraction", DisableGrabbable);
         EventManager.StopListening("DisableObject", DisableObject);
+    }*/
+
+
+    public void ResetPosition()
+    {
+        Debug.Log(transform.position);
+        transform.position = initialPosition;
+        Debug.Log(transform.position);
     }
 }

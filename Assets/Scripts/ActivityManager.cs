@@ -48,7 +48,7 @@ public class ActivityManager : MonoBehaviour
             switch (temp.tag)
             {
                 case "Grabbable":
-                    // temp.AddComponent<GrabbableManager>();
+                    temp.AddComponent<GrabbableManager>();
                     break;
                 case "Target":
                     temp.AddComponent<TargetManager>();
