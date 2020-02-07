@@ -10,7 +10,7 @@
             "path": "ChristmasScene/BallBlue",
             "position": {
               "x": 1.135,
-              "y": 2.159,
+              "y": 0.9438049,
               "z": 0.358
             },
             "rotation": {
@@ -29,7 +29,7 @@
             "path": "ChristmasScene/BallRed",
             "position": {
               "x": 1.109,
-              "y": 2.165,
+              "y": 0.9438049,
               "z": 0.65
             },
             "rotation": {
@@ -48,7 +48,7 @@
             "path": "ChristmasScene/CandyCane",
             "position": {
               "x": 1.123,
-              "y": 2.167,
+              "y": 0.91215,
               "z": 0.906
             },
             "rotation": {
