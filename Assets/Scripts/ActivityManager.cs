@@ -37,31 +37,43 @@ public class ActivityManager : MonoBehaviour
 
     private void generateSceneObjectsFromEvent(int eventStep)
     {
-        foreach (SceneObj obj in _eventList[eventStep].objsToActivate)
+        foreach (SceneObj obj in _eventList[eventStep].sceneObjs.grabbablesToActivate)
         {
-            GameObject temp = (GameObject)Instantiate(Resources.Load(obj.path), new Vector3(obj.position.x, obj.position.y, obj.position.z),
-                Quaternion.identity, dynamicObjects);
-            temp.transform.localScale = new Vector3(obj.scale.x, obj.scale.y, obj.scale.z);
-            temp.transform.rotation = Quaternion.Euler(obj.rotation.x, obj.rotation.y, obj.rotation.z);
-            temp.name = obj.uid;
-
-            switch (temp.tag)
-            {
-                case "Grabbable":
-                    temp.AddComponent<GrabbableManager>();
-                    break;
-                case "Target":
-                    temp.AddComponent<TargetManager>();
-                    break;
-                default:
-                    break;
-            }
+            GameObject temp = ActivateObj(obj);
+            temp.AddComponent<GrabbableManager>();
         }
+        foreach (SceneObj obj in _eventList[eventStep].sceneObjs.targetsToActivate)
+        {
+            GameObject temp = ActivateObj(obj);
+            temp.AddComponent<TargetManager>();
+        }
+        foreach (SceneObj obj in _eventList[eventStep].sceneObjs.othersToActivate)
+        {
+            ActivateObj(obj);
+        }
+    }
+
+    private GameObject ActivateObj(SceneObj obj)
+    {
+        GameObject temp = (GameObject)Instantiate(Resources.Load(obj.path), new Vector3(obj.position.x, obj.position.y, obj.position.z),
+                Quaternion.identity, dynamicObjects);
+        temp.transform.localScale = new Vector3(obj.scale.x, obj.scale.y, obj.scale.z);
+        temp.transform.rotation = Quaternion.Euler(obj.rotation.x, obj.rotation.y, obj.rotation.z);
+        temp.name = obj.uid;
+        return temp;
     }
 
     private void removeSceneObjectsFromEvent(int eventStep)
     {
-        foreach (string toRemove in _eventList[eventStep].objsToDeactivate)
+        foreach (string toRemove in _eventList[eventStep].sceneObjs.grabbablesToDeactivate)
+        {
+            Destroy(GameObject.Find(toRemove));
+        };
+        foreach (string toRemove in _eventList[eventStep].sceneObjs.targetsToDeactivate)
+        {
+            Destroy(GameObject.Find(toRemove));
+        };
+        foreach (string toRemove in _eventList[eventStep].sceneObjs.othersToDeactivate)
         {
             Destroy(GameObject.Find(toRemove));
         }
@@ -87,8 +99,8 @@ public class ActivityManager : MonoBehaviour
     private void playAudioSequence()
     {
         EventManager.TriggerEvent("DisableInteraction");
-        AudioManager.instance.playAudioFromString(_eventList[_eventStep].audio[_audioStep], () => {
-            if (_audioStep + 1 < _eventList[_eventStep].audio.Count)
+        AudioManager.instance.playAudioFromString(_eventList[_eventStep].audioFeedback.audio[_audioStep], () => {
+            if (_audioStep + 1 < _eventList[_eventStep].audioFeedback.audio.Count)
             {
                 _audioStep++;
                 playAudioSequence();
@@ -102,12 +114,15 @@ public class ActivityManager : MonoBehaviour
     }
 
 
-    public void checkCorrectObject(GameObject collidingObject)
+    public void checkCorrectObject(GameObject collidingObject, GameObject target)
     {
+        Debug.Log(collidingObject, target);
+
         if (_eventList[_eventStep].type == "dragrelease")
         {
-            List<string> correctList = _eventList[_eventStep].parameters.correct;
-            if (correctList.Contains(collidingObject.name))
+            List<string> correctGrabbables = _eventList[_eventStep].parameters.correctGrabbable;
+            List<string> correctTargets = _eventList[_eventStep].parameters.correctTarget;
+            if (correctGrabbables.Contains(collidingObject.name) && correctTargets.Contains(target.name))
             {
                 collidingObject.GetComponent<Collider>().enabled = false;
                 collidingObject.GetComponent<Rigidbody>().isKinematic = true;

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TargetManager : MonoBehaviour
 {
+    private ActivityManager activityManager;
     private Collider target;
 
     private void Awake()
@@ -13,8 +14,15 @@ public class TargetManager : MonoBehaviour
 
     void Start()
     {
+        activityManager = GameObject.Find("ActivityManager").GetComponent<ActivityManager>();
+
         EventManager.StartListening("EnableInteraction", EnableTarget);
         EventManager.StartListening("DisableInteraction", DisableTarget);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        activityManager.checkCorrectObject(other.gameObject, this.gameObject);
     }
 
     private void EnableTarget()
@@ -26,4 +34,5 @@ public class TargetManager : MonoBehaviour
     {
         target.enabled = false;
     }
+
 }

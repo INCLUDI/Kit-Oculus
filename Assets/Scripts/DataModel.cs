@@ -14,22 +14,6 @@ public class DataModel : MonoBehaviour
     }
 
     [Serializable]
-    public class AudioFeedback
-    {
-        public string audioOk;
-        public string audioWrong;
-    }
-
-    [Serializable]
-    public class EventParameters
-    {
-        public List<string> correct;
-        public List<string> wrong;
-        public CustomVector3 finalPosition;
-        public CustomVector3 finalRotation;
-    }
-
-    [Serializable]
     public class SceneObj
     {
         public string uid;
@@ -40,15 +24,41 @@ public class DataModel : MonoBehaviour
     }
 
     [Serializable]
+    public class AudioFeedback
+    {
+        public List<string> audio;
+        public string audioOk;
+        public string audioWrong;
+    }
+
+    [Serializable]
+    public class EventParameters
+    {
+        public List<string> correctGrabbable;
+        public List<string> wrongGrabbable;
+        public List<string> correctTarget;
+        public List<string> wrongTarget;
+        public CustomVector3 finalPosition;
+        public CustomVector3 finalRotation;
+    }
+
+    [Serializable]
+    public class EventObjs
+    {
+        public List<SceneObj> grabbablesToActivate;
+        public List<string> grabbablesToDeactivate;
+        public List<SceneObj> targetsToActivate;
+        public List<string> targetsToDeactivate;
+        public List<SceneObj> othersToActivate;
+        public List<string> othersToDeactivate;
+    }
+
+    [Serializable]
     public class EventConfiguration
     {
         public string type;
-        public List<string> objsToDeactivate;
-        public List<SceneObj> objsToActivate;
-        public List<string> targetsToDeactivate;
-        public List<SceneObj> targetsToActivate;
+        public EventObjs sceneObjs;
         public EventParameters parameters;
-        public List<string> audio;
         public AudioFeedback audioFeedback;
     }
 
