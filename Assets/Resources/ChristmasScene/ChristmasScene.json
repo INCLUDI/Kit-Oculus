@@ -446,6 +446,118 @@
         "audioOk": "ChristmasScene/Correct",
         "audioWrong": "ChristmasScene/Wrong"
       }
+    },
+    {
+      "type": "dragrelease",
+      "sceneObjs": {
+        "grabbablesToActivate": [
+          {
+            "uid": "GiftTop",
+            "path": "ChristmasScene/GiftTop",
+            "position": {
+              "x": 1.198,
+              "y": 0.019,
+              "z": 0.526
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 0.7,
+              "y": 0.7,
+              "z": 0.7
+            }
+          }
+        ],
+        "grabbablesToDeactivate": [ "GiftTop" ],
+        "targetsToActivate": 
+        [
+          {
+            "uid": "GiftTopCollider",
+            "path": "ChristmasScene/GiftTopCollider",
+            "position": {
+              "x": 1.037438,
+              "y": 1.475,
+              "z": 0.726
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          }
+        ],
+        "targetsToDeactivate": [ "GiftTopCollider" ],
+        "othersToActivate": [
+          {
+            "uid": "GiftBottom",
+            "path": "ChristmasScene/GiftBottom",
+            "position": {
+              "x": 1.198,
+              "y": 0.019,
+              "z": 0.526
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 0.7,
+              "y": 0.7,
+              "z": 0.7
+            }
+          },
+          {
+            "uid": "Arrow",
+            "path": "ChristmasScene/Arrow",
+            "position": {
+              "x": 1.125,
+              "y": 1.386,
+              "z": 0.731
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 0.5,
+              "z": 1
+            }
+          }
+        ],
+        "othersToDeactivate": [ "Arrow", "GiftBottom" ]
+      },
+      "parameters": {
+        "correctGrabbable": [ "GiftTop" ],
+        "wrongGrabbable": [],
+        "correctTarget": [ "GiftTopCollider" ],
+        "wrongTarget": [],
+        "finalPosition": {
+          "x": 1.198,
+          "y": -0.19,
+          "z": 0.12
+        },
+        "finalRotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      "audioFeedback": {
+        "audio": [ "ChristmasScene/Correct" ],
+        "audioOk": "ChristmasScene/Correct",
+        "audioWrong": "ChristmasScene/Wrong"
+      }
     }
   ]
 }
