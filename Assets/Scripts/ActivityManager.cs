@@ -14,9 +14,9 @@ public class ActivityManager : MonoBehaviour
 
     public Transform dynamicObjects;
 
-    public bool readyForNextEvent = false;
-
     public bool isFree = true;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +46,8 @@ public class ActivityManager : MonoBehaviour
         {
             GameObject temp = ActivateObj(obj);
             temp.AddComponent<TargetManager>();
+            temp.GetComponent<TargetManager>().hitCounter = 
+                _eventList[_eventStep].parameters.numericParameter == 0 ? 1 : _eventList[_eventStep].parameters.numericParameter;
         }
         foreach (SceneObj obj in _eventList[eventStep].sceneObjs.othersToActivate)
         {
@@ -62,7 +64,7 @@ public class ActivityManager : MonoBehaviour
         temp.name = obj.uid;
         return temp;
     }
-
+    
     private void removeSceneObjectsFromEvent(int eventStep)
     {
         foreach (string toRemove in _eventList[eventStep].sceneObjs.grabbablesToDeactivate)
@@ -91,6 +93,7 @@ public class ActivityManager : MonoBehaviour
         {
             _audioStep = 0;
             _eventStep++;
+
             generateSceneObjectsFromEvent(_eventStep);
             playAudioSequence();
         }
@@ -122,6 +125,7 @@ public class ActivityManager : MonoBehaviour
         {
             List<string> correctGrabbables = _eventList[_eventStep].parameters.correctGrabbable;
             List<string> correctTargets = _eventList[_eventStep].parameters.correctTarget;
+
             if (correctGrabbables.Contains(collidingObject.name) && correctTargets.Contains(target.name))
             {
                 collidingObject.GetComponent<Collider>().enabled = false;
@@ -132,9 +136,6 @@ public class ActivityManager : MonoBehaviour
                 SetFinalPosition(collidingObject);
                 SetFinalRotation(collidingObject);
 
-                // Per rilasciare la mano o il controller (messo per ora nell'evento DisableInteraction)
-                // EventManager.TriggerEvent("ReleaseObject");
-
                 AudioManager.instance.playAudioFromString(_eventList[_eventStep].audioFeedback.audioOk, () => {
                     nextEvent();
                 });
@@ -143,20 +144,54 @@ public class ActivityManager : MonoBehaviour
             {
                 AudioManager.instance.playAudioFromString(_eventList[_eventStep].audioFeedback.audioWrong);
             }
-
         }
+        if (_eventList[_eventStep].type == "dragmove") 
+        {
+            if (target.GetComponent<TargetManager>().hitCounter > 0)
+            {
+                target.GetComponent<TargetManager>().hitCounter--;
+            }
+            else
+            {
+                target.GetComponent<Collider>().enabled = false;
+            }
 
+            TargetManager[] targets = dynamicObjects.GetComponentsInChildren<TargetManager>();
+            int totalCount = 0;
+            foreach (TargetManager t in targets)
+            {
+                totalCount += t.hitCounter;
+            }
+
+            Debug.Log(totalCount);
+
+            if (totalCount == 0)
+            {
+                foreach (string toRemove in _eventList[_eventStep].parameters.objsToDeactivate)
+                {
+                    Destroy(GameObject.Find(toRemove));
+                };
+                foreach (SceneObj obj in _eventList[_eventStep].parameters.objsToActivate)
+                {
+                    ActivateObj(obj);
+                }
+
+                AudioManager.instance.playAudioFromString(_eventList[_eventStep].audioFeedback.audioOk, () => {
+                    nextEvent();
+                });
+            }
+        }
     }
 
     private void SetFinalPosition(GameObject collidingObject)
     {
-        CustomVector3 finalPosition = _eventList[_eventStep].parameters.finalPosition;
+        CustomVector3 finalPosition = _eventList[_eventStep].parameters.objsToActivate[0].position;
         collidingObject.transform.DOMove(new Vector3(finalPosition.x, finalPosition.y, finalPosition.z), 1);
     }
 
     private void SetFinalRotation(GameObject collidingObject)
     {
-        CustomVector3 finalRotation = _eventList[_eventStep].parameters.finalRotation;
+        CustomVector3 finalRotation = _eventList[_eventStep].parameters.objsToActivate[0].rotation;
         collidingObject.transform.DORotate(new Vector3(finalRotation.x, finalRotation.y, finalRotation.z), 1);
     }
 

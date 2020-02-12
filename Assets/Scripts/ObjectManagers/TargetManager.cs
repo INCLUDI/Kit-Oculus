@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class TargetManager : MonoBehaviour
 {
+    public int hitCounter;
+
     private ActivityManager activityManager;
     private Collider target;
+
+    public TargetManager(int hitCounter)
+    {
+        this.hitCounter = hitCounter;
+    }
 
     private void Awake()
     {

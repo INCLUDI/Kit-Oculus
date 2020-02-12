@@ -38,8 +38,9 @@ public class DataModel : MonoBehaviour
         public List<string> wrongGrabbable;
         public List<string> correctTarget;
         public List<string> wrongTarget;
-        public CustomVector3 finalPosition;
-        public CustomVector3 finalRotation;
+        public int numericParameter;
+        public List<SceneObj> objsToActivate;
+        public List<string> objsToDeactivate;
     }
 
     [Serializable]

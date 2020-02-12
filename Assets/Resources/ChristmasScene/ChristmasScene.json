@@ -2,76 +2,95 @@
   "sceneName": "ChristmasScene",
   "events": [
     {
-      "type": "dragrelease",
+      "type": "dragmove",
       "sceneObjs": {
         "grabbablesToActivate": [
           {
-            "uid": "BallBlue",
-            "path": "ChristmasScene/BallBlue",
+            "uid": "Knife",
+            "path": "ChristmasScene/Knife",
             "position": {
-              "x": 1.135,
-              "y": 0.9438049,
-              "z": 0.358
+              "x": 1.015,
+              "y": 0.927,
+              "z": 0.356
             },
             "rotation": {
               "x": 0,
-              "y": 0,
+              "y": 180,
               "z": 0
             },
             "scale": {
-              "x": 1.2,
-              "y": 1.2,
-              "z": 1.2
-            }
-          },
-          {
-            "uid": "BallRed",
-            "path": "ChristmasScene/BallRed",
-            "position": {
-              "x": 1.109,
-              "y": 0.9438049,
-              "z": 0.65
-            },
-            "rotation": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            },
-            "scale": {
-              "x": 1.2,
-              "y": 1.2,
-              "z": 1.2
-            }
-          },
-          {
-            "uid": "CandyCane",
-            "path": "ChristmasScene/CandyCane",
-            "position": {
-              "x": 1.123,
-              "y": 0.91215,
-              "z": 0.906
-            },
-            "rotation": {
-              "x": 90,
-              "y": 0,
-              "z": 0
-            },
-            "scale": {
-              "x": 0.3,
-              "y": 0.3,
-              "z": 0.3
+              "x": 0.1581997,
+              "y": 0.01063446,
+              "z": 0.1581997
             }
           }
         ],
-        "grabbablesToDeactivate": [],
+        "grabbablesToDeactivate": [ "Knife" ],
         "targetsToActivate": [
           {
-            "uid": "TreeCollider",
-            "path": "ChristmasScene/TreeCollider",
+            "uid": "PumpkinCollider1",
+            "path": "ChristmasScene/PumpkinCollider1",
             "position": {
-              "x": -0.092,
-              "y": 1.228,
-              "z": 1.786752
+              "x": 0.8978,
+              "y": 1.052,
+              "z": 0.893
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          },
+          {
+            "uid": "PumpkinCollider2",
+            "path": "ChristmasScene/PumpkinCollider2",
+            "position": {
+              "x": 0.8978,
+              "y": 1.052,
+              "z": 0.797
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          },
+          {
+            "uid": "PumpkinCollider3",
+            "path": "ChristmasScene/PumpkinCollider3",
+            "position": {
+              "x": 0.8978,
+              "y": 1.01,
+              "z": 0.845
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          },
+          {
+            "uid": "PumpkinCollider4",
+            "path": "ChristmasScene/PumpkinCollider4",
+            "position": {
+              "x": 0.8978,
+              "y": 0.955,
+              "z": 0.848
             },
             "rotation": {
               "x": 0,
@@ -85,473 +104,58 @@
             }
           }
         ],
-        "targetsToDeactivate": [],
+        "targetsToDeactivate": [ "PumpkinCollider1", "PumpkinCollider2", "PumpkinCollider3", "PumpkinCollider4" ],
         "othersToActivate": [
           {
-            "uid": "Arrow",
-            "path": "ChristmasScene/Arrow",
+            "uid": "Pumpkin_back",
+            "path": "ChristmasScene/Pumpkin_back",
             "position": {
-              "x": 0.125,
-              "y": 0.901,
-              "z": 1.297
+              "x": 1.019,
+              "y": 0.9,
+              "z": 0.847
             },
             "rotation": {
-              "x": 180,
-              "y": 0,
+              "x": 0,
+              "y": -90,
               "z": 0
             },
             "scale": {
-              "x": 1,
-              "y": 0.5,
-              "z": 1
+              "x": 0.07,
+              "y": 0.07,
+              "z": 0.07
             }
           }
         ],
-        "othersToDeactivate": [ "Arrow" ]
-      },
-      "parameters": {
-        "correctGrabbable": [ "BallRed" ],
-        "wrongGrabbable": [ "BallBlue", "CandyCane" ],
-        "correctTarget": [ "TreeCollider" ],
-        "wrongTarget": [],
-        "finalPosition": {
-          "x": 0.133,
-          "y": 0.744,
-          "z": 1.288
-        },
-        "finalRotation": {
-          "x": 37.296,
-          "y": 0,
-          "z": 0
-        }
-      },
-      "audioFeedback": {
-        "audio": [ "ChristmasScene/Christmas-intro", "ChristmasScene/Christmas-redball" ],
-        "audioOk": "ChristmasScene/Correct",
-        "audioWrong": "ChristmasScene/Wrong"
-      }
-    },
-    {
-      "type": "dragrelease",
-      "sceneObjs": {
-        "grabbablesToActivate": [],
-        "grabbablesToDeactivate": [],
-        "targetsToActivate": [],
-        "targetsToDeactivate": [],
-        "othersToActivate": [
-          {
-            "uid": "Arrow",
-            "path": "ChristmasScene/Arrow",
-            "position": {
-              "x": -0.1592,
-              "y": 1.104,
-              "z": 1.309
-            },
-            "rotation": {
-              "x": 180,
-              "y": 0,
-              "z": 0
-            },
-            "scale": {
-              "x": 1,
-              "y": 0.5,
-              "z": 1
-            }
-          }
-        ],
-        "othersToActivateToDeactivate": [ "Arrow" ]
-      },
-      "parameters": {
-        "correctGrabbable": [ "BallBlue" ],
-        "wrongGrabbable": [ "CandyCane" ],
-        "correctTarget": [ "TreeCollider" ],
-        "wrongTarget": [],
-        "finalPosition": {
-          "x": -0.161,
-          "y": 0.968,
-          "z": 1.229
-        },
-        "finalRotation": {
-          "x": 32.676,
-          "y": 0,
-          "z": 0
-        }
-      },
-      "audioFeedback": {
-        "audio": [ "ChristmasScene/Christmas-blueball" ],
-        "audioOk": "ChristmasScene/Correct",
-        "audioWrong": "ChristmasScene/Wrong"
-      }
-    },
-    {
-      "type": "dragrelease",
-      "sceneObjs": {
-        "grabbablesToActivate": [],
-        "grabbablesToDeactivate": [],
-        "targetsToActivate": [],
-        "targetsToDeactivate": [ "TreeCollider" ],
-        "othersToActivate": [
-          {
-            "uid": "Arrow",
-            "path": "ChristmasScene/Arrow",
-            "position": {
-              "x": -0.176,
-              "y": 1.373,
-              "z": 1.4634
-            },
-            "rotation": {
-              "x": 180,
-              "y": 0,
-              "z": 0
-            },
-            "scale": {
-              "x": 1,
-              "y": 0.5,
-              "z": 1
-            }
-          }
-        ],
-        "othersToDeactivate": [ "Arrow" ]
-      },
-      "parameters": {
-        "correctGrabbable": [ "CandyCane" ],
-        "wrongGrabbable": [],
-        "correctTarget": [ "TreeCollider" ],
-        "wrongTarget": [],
-        "finalPosition": {
-          "x": -0.167,
-          "y": 1.373,
-          "z": 1.382
-        },
-        "finalRotation": {
-          "x": 30.905,
-          "y": 0,
-          "z": 0
-        }
-      },
-      "audioFeedback": {
-        "audio": [ "ChristmasScene/Christmas-candycane" ],
-        "audioOk": "ChristmasScene/Correct",
-        "audioWrong": "ChristmasScene/Wrong"
-      }
-    },
-    {
-      "type": "dragrelease",
-      "sceneObjs": {
-        "grabbablesToDeactivate": [],
-        "grabbablesToActivate": [
-          {
-            "uid": "Gift red",
-            "path": "ChristmasScene/Gift red",
-            "position": {
-              "x": 1.198,
-              "y": 0.019,
-              "z": 0.9430001
-            },
-            "rotation": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            },
-            "scale": {
-              "x": 0.7,
-              "y": 0.7,
-              "z": 0.7
-            }
-          },
-          {
-            "uid": "Gift green white",
-            "path": "ChristmasScene/Gift green white",
-            "position": {
-              "x": 1.198,
-              "y": 0.019,
-              "z": 0.507
-            },
-            "rotation": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            },
-            "scale": {
-              "x": 0.7,
-              "y": 0.7,
-              "z": 0.7
-            }
-          },
-          {
-            "uid": "Gift green full",
-            "path": "ChristmasScene/Gift green full",
-            "position": {
-              "x": 1.198,
-              "y": 0.019,
-              "z": 0.107
-            },
-            "rotation": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            },
-            "scale": {
-              "x": 0.7,
-              "y": 0.7,
-              "z": 0.7
-            }
-          }
-        ],
-        "targetsToActivate": [
-          {
-            "uid": "GiftCollider 1",
-            "path": "ChristmasScene/GiftCollider 1",
-            "position": {
-              "x": -0.922,
-              "y": 0.47,
-              "z": 1.435
-            },
-            "rotation": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            },
-            "scale": {
-              "x": 1,
-              "y": 1,
-              "z": 1
-            }
-          },
-          {
-            "uid": "GiftCollider 2",
-            "path": "ChristmasScene/GiftCollider 2",
-            "position": {
-              "x": -0.501,
-              "y": 0.47,
-              "z": 0.898
-            },
-            "rotation": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            },
-            "scale": {
-              "x": 1,
-              "y": 1,
-              "z": 1
-            }
-          },
-          {
-            "uid": "GiftCollider 3",
-            "path": "ChristmasScene/GiftCollider 3",
-            "position": {
-              "x": 0.024,
-              "y": 0.47,
-              "z": 0.918
-            },
-            "rotation": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            },
-            "scale": {
-              "x": 1,
-              "y": 1,
-              "z": 1
-            }
-          }
-        ],
-        "targetsToDeactivate": [ "GiftCollider 1" ],
-        "othersToActivate": [],
-        "othersToDeactivate": []
-      },
-      "parameters": {
-        "correctGrabbable": [ "Gift green white" ],
-        "wrongGrabbable": [ "Gift green full", "Gift red" ],
-        "correctTarget": [ "GiftCollider 1" ],
-        "wrongTarget": [ "GiftCollider 2", "GiftCollider 3" ],
-        "finalPosition": {
-          "x": -0.85,
-          "y": -0.623,
-          "z": 1.246
-        },
-        "finalRotation": {
-          "x": 0,
-          "y": 0,
-          "z": 0
-        }
-      },
-      "audioFeedback": {
-        "audio": [ "ChristmasScene/Correct" ],
-        "audioOk": "ChristmasScene/Correct",
-        "audioWrong": "ChristmasScene/Wrong"
-      }
-    },
-    {
-      "type": "dragrelease",
-      "sceneObjs": {
-        "grabbablesToDeactivate": [],
-        "grabbablesToActivate": [],
-        "targetsToActivate": [],
-        "targetsToDeactivate": [ "GiftCollider 2" ],
-        "othersToActivate": [],
-        "othersToDeactivate": []
-      },
-      "parameters": {
-        "correctGrabbable": [ "Gift red" ],
-        "wrongGrabbable": [ "Gift green full" ],
-        "correctTarget": [ "GiftCollider 2" ],
-        "wrongTarget": [ "GiftCollider 3" ],
-        "finalPosition": {
-          "x": -0.438,
-          "y": -0.622,
-          "z": 0.76
-        },
-        "finalRotation": {
-          "x": 0,
-          "y": 0,
-          "z": 0
-        }
-      },
-      "audioFeedback": {
-        "audio": [ "ChristmasScene/Correct" ],
-        "audioOk": "ChristmasScene/Correct",
-        "audioWrong": "ChristmasScene/Wrong"
-      }
-    },
-    {
-      "type": "dragrelease",
-      "sceneObjs": {
-        "grabbablesToDeactivate": [],
-        "grabbablesToActivate": [],
-        "targetsToActivate": [],
-        "targetsToDeactivate": [ "GiftCollider 3" ],
-        "othersToActivate": [],
-        "othersToDeactivate": []
-      },
-      "parameters": {
-        "correctGrabbable": [ "Gift green full" ],
-        "wrongGrabbable": [],
-        "correctTarget": [ "GiftCollider 3" ],
-        "wrongTarget": [],
-        "finalPosition": {
-          "x": 0.114,
-          "y": -0.614,
-          "z": 0.765
-        },
-        "finalRotation": {
-          "x": 0,
-          "y": 0,
-          "z": 0
-        }
-      },
-      "audioFeedback": {
-        "audio": [ "ChristmasScene/Correct" ],
-        "audioOk": "ChristmasScene/Correct",
-        "audioWrong": "ChristmasScene/Wrong"
-      }
-    },
-    {
-      "type": "dragrelease",
-      "sceneObjs": {
-        "grabbablesToActivate": [
-          {
-            "uid": "GiftTop",
-            "path": "ChristmasScene/GiftTop",
-            "position": {
-              "x": 1.198,
-              "y": 0.019,
-              "z": 0.526
-            },
-            "rotation": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            },
-            "scale": {
-              "x": 0.7,
-              "y": 0.7,
-              "z": 0.7
-            }
-          }
-        ],
-        "grabbablesToDeactivate": [ "GiftTop" ],
-        "targetsToActivate": 
-        [
-          {
-            "uid": "GiftTopCollider",
-            "path": "ChristmasScene/GiftTopCollider",
-            "position": {
-              "x": 1.037438,
-              "y": 1.475,
-              "z": 0.726
-            },
-            "rotation": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            },
-            "scale": {
-              "x": 1,
-              "y": 1,
-              "z": 1
-            }
-          }
-        ],
-        "targetsToDeactivate": [ "GiftTopCollider" ],
-        "othersToActivate": [
-          {
-            "uid": "GiftBottom",
-            "path": "ChristmasScene/GiftBottom",
-            "position": {
-              "x": 1.198,
-              "y": 0.019,
-              "z": 0.526
-            },
-            "rotation": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            },
-            "scale": {
-              "x": 0.7,
-              "y": 0.7,
-              "z": 0.7
-            }
-          },
-          {
-            "uid": "Arrow",
-            "path": "ChristmasScene/Arrow",
-            "position": {
-              "x": 1.125,
-              "y": 1.386,
-              "z": 0.731
-            },
-            "rotation": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            },
-            "scale": {
-              "x": 1,
-              "y": 0.5,
-              "z": 1
-            }
-          }
-        ],
-        "othersToDeactivate": [ "Arrow", "GiftBottom" ]
+        "othersToDeactivate": [ "Pumpkin" ]
       },
       "parameters": {
         "correctGrabbable": [ "GiftTop" ],
         "wrongGrabbable": [],
         "correctTarget": [ "GiftTopCollider" ],
         "wrongTarget": [],
-        "finalPosition": {
-          "x": 1.198,
-          "y": -0.19,
-          "z": 0.12
-        },
-        "finalRotation": {
-          "x": 0,
-          "y": 0,
-          "z": 0
-        }
+        "numericParameter": 3,
+        "objsToActivate": [
+          {
+            "uid": "Pumpkin",
+            "path": "ChristmasScene/Pumpkin",
+            "position": {
+              "x": 1.019,
+              "y": 0.9,
+              "z": 0.847
+            },
+            "rotation": {
+              "x": 0,
+              "y": 90,
+              "z": 0
+            },
+            "scale": {
+              "x": 0.07,
+              "y": 0.07,
+              "z": 0.07
+            }
+          }
+        ],
+        "objsToDeactivate": [ "Pumpkin_back" ]
       },
       "audioFeedback": {
         "audio": [ "ChristmasScene/Correct" ],
