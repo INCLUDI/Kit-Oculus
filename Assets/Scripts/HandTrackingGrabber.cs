@@ -6,6 +6,7 @@ public class HandTrackingGrabber : OVRGrabber
 {
     private Hand hand;
     public float pinchTreshold = 0.7f;
+
     protected override void Start()
     {
         base.Start();

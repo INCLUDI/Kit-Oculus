@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class VirtualAssistantManager : MonoBehaviour
 {
-    private Transform camera;
+    private Transform mainCamera;
 
     private Animator animator;
 
@@ -16,7 +16,7 @@ public class VirtualAssistantManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        camera = GameObject.Find("OVRCameraRig").transform;
+        mainCamera = GameObject.Find("OVRCameraRig").transform;
 
         EventManager.StartListening("startTalking", startTalking);
         EventManager.StartListening("stopTalking", stopTalking);
@@ -25,7 +25,7 @@ public class VirtualAssistantManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 relativePos = camera.position - transform.position;
+        Vector3 relativePos = mainCamera.position - transform.position;
         Quaternion rotation = Quaternion.LookRotation(relativePos);
         rotation.x = 0f;
         rotation.z = 0f;

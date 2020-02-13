@@ -16,6 +16,31 @@ public class ActivityManager : MonoBehaviour
 
     public bool isFree = true;
 
+    public static ActivityManager instance
+    {
+        get;
+        private set;
+    }
+
+    private void Awake()
+    {
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
+    }
+
+    private void OnDestroy() 
+    { 
+        if (this == instance) 
+        { 
+            instance = null; 
+        } 
+    }
 
     // Start is called before the first frame update
     void Start()

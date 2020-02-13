@@ -6,7 +6,6 @@ public class TargetManager : MonoBehaviour
 {
     public int hitCounter;
 
-    private ActivityManager activityManager;
     private Collider target;
 
     public TargetManager(int hitCounter)
@@ -21,15 +20,13 @@ public class TargetManager : MonoBehaviour
 
     void Start()
     {
-        activityManager = GameObject.Find("ActivityManager").GetComponent<ActivityManager>();
-
         EventManager.StartListening("EnableInteraction", EnableTarget);
         EventManager.StartListening("DisableInteraction", DisableTarget);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        activityManager.checkCorrectObject(other.gameObject, this.gameObject);
+        ActivityManager.instance.checkCorrectObject(other.gameObject, gameObject);
     }
 
     private void EnableTarget()

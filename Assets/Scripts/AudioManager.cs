@@ -13,6 +13,7 @@ public class AudioManager : MonoBehaviour
         get;
         private set;
     }
+
     private void Awake()
     {
         if (instance == null)
