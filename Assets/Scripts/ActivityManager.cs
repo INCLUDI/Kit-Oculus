@@ -170,8 +170,10 @@ public class ActivityManager : MonoBehaviour
                 AudioManager.instance.playAudioFromString(_eventList[_eventStep].audioFeedback.audioWrong);
             }
         }
-        if (_eventList[_eventStep].type == "dragmove") 
+        if (_eventList[_eventStep].type == "dragmove" && isFree) 
         {
+            isFree = false;
+
             if (target.GetComponent<TargetManager>().hitCounter > 0)
             {
                 target.GetComponent<TargetManager>().hitCounter--;
@@ -205,6 +207,8 @@ public class ActivityManager : MonoBehaviour
                     nextEvent();
                 });
             }
+
+            isFree = true;
         }
     }
 

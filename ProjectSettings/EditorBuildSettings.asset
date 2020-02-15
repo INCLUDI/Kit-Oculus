@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MenuScene.unity
+    guid: e7fa2eb78b5d56045aecd4bfcdd27c7a
+  - enabled: 1
     path: Assets/Scenes/ChristmasScene.unity
     guid: fe1950e452a0a9048ad0c87644b728a7
   m_configObjects: {}
