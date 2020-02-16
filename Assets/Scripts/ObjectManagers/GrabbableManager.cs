@@ -9,11 +9,14 @@ public class GrabbableManager : MonoBehaviour
     public Vector3 initialPosition;
     [HideInInspector]
     public Quaternion initialRotation;
+    [HideInInspector]
+    public Vector3 initialScale;
 
     private void Awake()
     {
         initialPosition = transform.position;
         initialRotation = transform.rotation;
+        initialScale = transform.localScale;
     }
 
 }

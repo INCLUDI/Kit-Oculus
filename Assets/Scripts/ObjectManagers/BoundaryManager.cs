@@ -9,9 +9,10 @@ public class BoundaryManager : MonoBehaviour
     {
         if (other.gameObject.tag == "Grabbable")
         {
-            Vector3 originalScale = other.transform.localScale;
-            Vector3 initialPosition = other.GetComponent<GrabbableManager>().initialPosition;
-            Quaternion initialRotation = other.GetComponent<GrabbableManager>().initialRotation;
+            GrabbableManager grabbableManager = other.GetComponent<GrabbableManager>();
+            Vector3 originalScale = grabbableManager.initialScale;
+            Vector3 initialPosition = grabbableManager.initialPosition;
+            Quaternion initialRotation = grabbableManager.initialRotation;
 
             Sequence sequence = DOTween.Sequence();
             sequence.Append(other.transform.DOScale(new Vector3(0, 0, 0), 0.5f));
