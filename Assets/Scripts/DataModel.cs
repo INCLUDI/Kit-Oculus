@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class DataModel : MonoBehaviour
 {
+    // JSON per l'attività
     [Serializable]
     public class CustomVector3
     {
@@ -68,6 +69,32 @@ public class DataModel : MonoBehaviour
     {
         public string sceneName;
         public List<EventConfiguration> events;
+    }
+
+
+    // JSON per il menu
+    [Serializable]
+    public class ActivityDetails
+    {
+        public string name;
+        public string desctiption;
+        public string imagePath;
+        public string scene;
+    }
+
+    public class ExperienceDetails
+    {
+        public string name;
+        public string description;
+        public string imagePath;
+        public List<ActivityDetails> activities;
+    }
+
+    [Serializable]
+    public class MenuItems
+    {
+        public List<ActivityDetails> activities;
+        public List<ExperienceDetails> experiences;
     }
 
 }

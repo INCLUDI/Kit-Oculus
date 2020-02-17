@@ -281,7 +281,6 @@ GameObject:
   - component: {fileID: 762545976253262801}
   - component: {fileID: 787288379393450258}
   - component: {fileID: 2948026203360022302}
-  - component: {fileID: 4018245643713006451}
   m_Layer: 0
   m_Name: VRUI-Card
   m_TagString: VRUIBackground
@@ -520,7 +519,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4018245643713006451}
+      - m_Target: {fileID: 0}
         m_MethodName: SceneLauncher
         m_Mode: 1
         m_Arguments:
@@ -531,18 +530,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &4018245643713006451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 794196178541543169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc5db01abb06bd349b00e460887b55d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &794282822493034141
 GameObject:
   m_ObjectHideFlags: 0
