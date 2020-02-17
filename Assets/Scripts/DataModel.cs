@@ -78,16 +78,17 @@ public class DataModel : MonoBehaviour
     {
         public string name;
         public string description;
-        public string imagePath;
+        public string image;
         public string scene;
         public string jsonPath;
     }
 
+    [Serializable]
     public class ExperienceDetails
     {
         public string name;
         public string description;
-        public string imagePath;
+        public string image;
         public List<ActivityDetails> activities;
     }
 
@@ -97,5 +98,4 @@ public class DataModel : MonoBehaviour
         public List<ActivityDetails> activities;
         public List<ExperienceDetails> experiences;
     }
-
 }
