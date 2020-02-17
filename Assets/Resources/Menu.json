@@ -3,72 +3,72 @@
     {
       "name": "Christmas",
       "description": "Scena di natale",
-      "image": "",
+      "image": "ChristmasScene/Christmas",
       "scene": "ChristmasScene",
-      "jsonPath": "ChristmasScene/ChristmasScene.json"
+      "jsonPath": "ChristmasScene/ChristmasScene"
     },
     {
       "name": "Christmas 2",
       "description": "Scena di natale però versione 2",
-      "image": "",
+      "image": "ChristmasScene/Christmas",
       "scene": "ChristmasScene",
-      "jsonPath": "ChristmasScene/Backup.json"
+      "jsonPath": "ChristmasScene/Backup"
     },
     {
       "name": "Christmas 2",
       "description": "Scena di natale però versione 2",
-      "image": "",
+      "image": "ChristmasScene/Christmas",
       "scene": "ChristmasScene",
-      "jsonPath": "ChristmasScene/Backup.json"
+      "jsonPath": "ChristmasScene/Backup"
     },
     {
       "name": "Christmas 2",
       "description": "Scena di natale però versione 2",
-      "image": "",
+      "image": "ChristmasScene/Christmas",
       "scene": "ChristmasScene",
-      "jsonPath": "ChristmasScene/Backup.json"
+      "jsonPath": "ChristmasScene/Backup"
     }
   ],
   "experiences": [
     {
       "name": "Daily Routine",
       "description": "Esperienza di daily routine",
-      "image": "",
+      "image": "ChristmasScene/Christmas",
       "activities": [
         {
           "name": "Christmas",
           "description": "Scena di natale",
-          "image": "",
+          "image": "ChristmasScene/Christmas",
           "scene": "ChristmasScene",
-          "jsonPath": "ChristmasScene/ChristmasScene.json"
+          "jsonPath": "ChristmasScene/ChristmasScene"
         },
         {
           "name": "Christmas 2",
           "description": "Scena di natale però versione 2",
-          "image": "",
+          "image": "ChristmasScene/Christmas",
           "scene": "ChristmasScene",
-          "jsonPath": "ChristmasScene/Backup.json"
+          "jsonPath": "ChristmasScene/Backup"
         }
       ]
     },
     {
       "name": "Daily Routine",
       "description": "Esperienza di daily routine",
-      "image": "",
+      "image": "ChristmasScene/Christmas",
       "activities": [
         {
           "name": "Christmas",
           "description": "Scena di natale",
-          "image": "",
+          "image": "ChristmasScene/Christmas",
           "scene": "ChristmasScene",
-          "jsonPath": "ChristmasScene/ChristmasScene.json"
+          "jsonPath": "ChristmasScene/ChristmasScene"
         },
         {
           "name": "Christmas 2",
           "description": "Scena di natale però versione 2",
-          "image": "",
+          "image": "ChristmasScene/Christmas",
           "scene": "ChristmasScene",
-          "jsonPath": "ChristmasScene/Backup.json"
+          "jsonPath": "ChristmasScene/Backup"
         }
       ]
     }

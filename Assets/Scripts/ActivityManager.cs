@@ -112,7 +112,7 @@ public class ActivityManager : MonoBehaviour
 
         if (_eventStep + 1 >= _eventList.Count)
         {
-            Debug.Log("Finito");
+            GameManager.instance.ChangeScene();
         }
         else
         {
