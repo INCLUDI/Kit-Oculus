@@ -4,13 +4,29 @@
       "name": "Christmas",
       "description": "Scena di natale",
       "image": "",
-      "scene": "ChristmasScene"
+      "scene": "ChristmasScene",
+      "jsonPath":  "ChristmasScene/ChristmasScene.json"
     },
     {
       "name": "Christmas 2",
       "description": "Scena di natale però versione 2",
       "image": "",
-      "scene": "ChristmasScene"
+      "scene": "ChristmasScene",
+      "jsonPath": "ChristmasScene/Backup.json"
+    },
+    {
+      "name": "Christmas 2",
+      "description": "Scena di natale però versione 2",
+      "image": "",
+      "scene": "ChristmasScene",
+      "jsonPath": "ChristmasScene/Backup.json"
+    },
+    {
+      "name": "Christmas 2",
+      "description": "Scena di natale però versione 2",
+      "image": "",
+      "scene": "ChristmasScene",
+      "jsonPath": "ChristmasScene/Backup.json"
     }
   ],
   "experiences": [
@@ -18,7 +34,22 @@
       "name": "Daily Routine",
       "description": "Esperienza di daily routine",
       "image": "",
-      "activitites": [ "Christmas", "Christmas 2" ]
+      "activitites": [
+        {
+          "name": "Christmas",
+          "description": "Scena di natale",
+          "image": "",
+          "scene": "ChristmasScene",
+          "jsonPath": "ChristmasScene/ChristmasScene.json"
+        },
+        {
+          "name": "Christmas 2",
+          "description": "Scena di natale però versione 2",
+          "image": "",
+          "scene": "ChristmasScene",
+          "jsonPath": "ChristmasScene/Backup.json"
+        }
+      ]
     }
   ]
 }

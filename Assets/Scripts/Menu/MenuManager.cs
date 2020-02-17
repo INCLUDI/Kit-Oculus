@@ -9,9 +9,8 @@ using static DataModel;
 public class MenuManager : MonoBehaviour
 {
     public GameObject carouselItem;
-    public Transform carouselWrapper;
-
-    private List<SceneConfiguration> sceneConfigurations = new List<SceneConfiguration>();
+    public Transform activityWrapper;
+    public Transform experienceWrapper;
 
     private void Start()
     {
@@ -20,18 +19,21 @@ public class MenuManager : MonoBehaviour
         List<ActivityDetails> activityList = JsonUtility.FromJson<MenuItems>(file.text).activities;
         foreach (ActivityDetails activity in activityList)
         {
-            GameObject item = Instantiate(carouselItem, carouselItem.transform.position, carouselItem.transform.rotation, carouselWrapper);
+            GameObject item = Instantiate(carouselItem, carouselItem.transform.position, carouselItem.transform.rotation, activityWrapper);
             item.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = activity.name;
-            item.transform.GetChild(1).GetChild(1).GetComponent<Text>().text = activity.desctiption;
-            item.GetComponent<Button>().onClick.AddListener(() => { LaunchActivity(activity.scene);});
+            item.transform.GetChild(1).GetChild(1).GetComponent<Text>().text = activity.description;
+            // set image
+            item.GetComponent<Button>().onClick.AddListener(() => { GameManager.instance.LaunchActivity(activity);});
         }
 
         List<ExperienceDetails> experienceList = JsonUtility.FromJson<MenuItems>(file.text).experiences;
+        /*foreach (ExperienceDetails experience in experienceList)
+        {
+            GameObject item = Instantiate(carouselItem, carouselItem.transform.position, carouselItem.transform.rotation, experienceWrapper);
+            item.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = experience.name;
+            item.transform.GetChild(1).GetChild(1).GetComponent<Text>().text = experience.description;
+            // set image
+            item.GetComponent<Button>().onClick.AddListener(() => { GameManager.instance.LaunchExperience(experience); });
+        }*/
     }
-    
-    public void LaunchActivity(string sceneName)
-    {
-        SceneManager.LoadScene(sceneName);
-    }
-    
 }

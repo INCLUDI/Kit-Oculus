@@ -48,7 +48,7 @@ public class ActivityManager : MonoBehaviour
         string sceneName = SceneManager.GetActiveScene().name;
 
         //Parso il json giusto
-        TextAsset file = Resources.Load<TextAsset>(sceneName + "/" + sceneName);
+        TextAsset file = Resources.Load<TextAsset>(GameManager.instance.Getjson());
 
         _eventList = JsonUtility.FromJson<SceneConfiguration>(file.text).events;
 

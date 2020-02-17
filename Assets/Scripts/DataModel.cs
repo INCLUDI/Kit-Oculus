@@ -77,9 +77,10 @@ public class DataModel : MonoBehaviour
     public class ActivityDetails
     {
         public string name;
-        public string desctiption;
+        public string description;
         public string imagePath;
         public string scene;
+        public string jsonPath;
     }
 
     public class ExperienceDetails
