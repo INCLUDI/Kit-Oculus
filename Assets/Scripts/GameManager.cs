@@ -29,16 +29,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void LaunchActivity(ActivityDetails activity)
+    public void LaunchGame(List<ActivityDetails> activities)
     {
-        sceneList = new List<string> { activity.scene };
-        jsonPathList = new List<string> { activity.jsonPath };
-        ChangeScene();
-    }
-
-    public void LaunchExperience(ExperienceDetails experience)
-    {
-        foreach (ActivityDetails activity in experience.activities)
+        foreach (ActivityDetails activity in activities)
         {
             sceneList.Add(activity.scene);
             jsonPathList.Add(activity.jsonPath);
@@ -60,7 +53,6 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene(sceneList[_sceneStep]);
         }
-
     }
 
     public string Getjson()

@@ -24,7 +24,7 @@ public class MenuManager : MonoBehaviour
             item.transform.GetChild(1).GetChild(1).GetComponent<Text>().text = activity.description;
             Texture2D img = Resources.Load<Texture2D>(activity.image);
             item.transform.GetChild(0).GetChild(0).GetComponent<RawImage>().texture = img;
-            item.GetComponent<Button>().onClick.AddListener(() => { GameManager.instance.LaunchActivity(activity);});
+            item.GetComponent<Button>().onClick.AddListener(() => { GameManager.instance.LaunchGame(new List<ActivityDetails> { activity });});
         }
 
         List<ExperienceDetails> experienceList = JsonUtility.FromJson<MenuItems>(file.text).experiences;
@@ -35,7 +35,7 @@ public class MenuManager : MonoBehaviour
             item.transform.GetChild(1).GetChild(1).GetComponent<Text>().text = experience.description;
             Texture2D img = Resources.Load<Texture2D>(experience.image);
             item.transform.GetChild(0).GetChild(0).GetComponent<RawImage>().texture = img;
-            item.GetComponent<Button>().onClick.AddListener(() => { GameManager.instance.LaunchExperience(experience); });
+            item.GetComponent<Button>().onClick.AddListener(() => { GameManager.instance.LaunchGame(experience.activities); });
         }
     }
 }
