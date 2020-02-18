@@ -10,6 +10,11 @@ public class EventManager : MonoBehaviour
 
     private static EventManager eventManager;
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(this);
+    }
+
     public static EventManager instance
     {
         get

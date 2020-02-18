@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
     private List<string> sceneList = new List<string>();
     private List<string> jsonPathList = new List<string>();
-    private int _sceneStep;
+    public int _sceneStep;
 
     public static GameManager instance
     {
@@ -41,10 +41,9 @@ public class GameManager : MonoBehaviour
 
     public void ChangeScene()
     {
-        _sceneStep++;
-
         if (_sceneStep >= sceneList.Count)
         {
+            _sceneStep = 0;
             SceneManager.LoadScene("MenuScene");
             sceneList = new List<string>();
             jsonPathList = new List<string>();

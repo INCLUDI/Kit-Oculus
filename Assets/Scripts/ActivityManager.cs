@@ -45,16 +45,12 @@ public class ActivityManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        string sceneName = SceneManager.GetActiveScene().name;
-
-        //Parso il json giusto
         TextAsset file = Resources.Load<TextAsset>(GameManager.instance.Getjson());
-
         _eventList = JsonUtility.FromJson<SceneConfiguration>(file.text).events;
 
         _audioStep = 0;
         _eventStep = 0;
-        // Instanzio gli oggetti nella scena 
+
         generateSceneObjectsFromEvent(_eventStep);
 
         playAudioSequence();
@@ -112,6 +108,7 @@ public class ActivityManager : MonoBehaviour
 
         if (_eventStep + 1 >= _eventList.Count)
         {
+            GameManager.instance._sceneStep++;
             GameManager.instance.ChangeScene();
         }
         else
