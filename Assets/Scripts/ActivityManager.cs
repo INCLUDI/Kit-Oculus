@@ -108,8 +108,7 @@ public class ActivityManager : MonoBehaviour
 
         if (_eventStep + 1 >= _eventList.Count)
         {
-            GameManager.instance._sceneStep++;
-            GameManager.instance.ChangeScene();
+            GameManager.instance.NextScene();
         }
         else
         {
