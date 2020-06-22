@@ -14,7 +14,7 @@ public class ActivityManager : MonoBehaviour
 
     public Transform dynamicObjects;
 
-    public bool isFree = true;
+    private bool isFree = true;
 
     public static ActivityManager instance
     {

@@ -7,6 +7,20 @@ TagManager:
   - Grabbable
   - Target
   - Other
+  - VRUIButtonIcon
+  - VRUIIcon
+  - VRUIBackground
+  - VRUIRadio
+  - VRUIButtonControlBar
+  - VRUIText
+  - VRUIOutline
+  - VRUIButton
+  - VRUIButtonTab
+  - VRUIButtonList
+  - VRUICheckbox
+  - VRUIToggle
+  - VRUISlider
+  - VRUIAccent
   layers:
   - Default
   - TransparentFX
