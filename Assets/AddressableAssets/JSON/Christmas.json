@@ -1,0 +1,96 @@
+{
+  "id": "Christmas",
+  "name": "Christmas",
+  "description": "Description",
+  "image": "Christmas",
+  "difficulty": 1,
+  "scene": "Christmas",
+  "playerTransform": {
+    "position": { "x": 0, "y": 0, "z": 0 },
+    "rotation": { "x": 0, "y": 0, "z": 0 }
+  },
+  "assistantTransform": {
+    "position": { "x": 0.998, "y": 0.267, "z": 1.725 },
+    "rotation": { "x": -0.695, "y": -117.126, "z": 0.674 },
+    "scale": { "x": 0.7, "y": 0.7, "z": 0.7 }
+  },
+  "eventGroups": [
+    {
+      "type": "DragReleaseManager",
+      "instructionIntro": [
+        "Hello, nice to see you!",
+        "Let’s play together!",
+        "Are you ready? Let’s start!"
+      ],
+      "instructionEnd": [
+        "Congratulations! You put all the objects on the tree."
+      ],
+      "randomEvents": true,
+      "eventGroupObjs": {
+        "interactablesToActivate": [
+          {
+            "prefab": "BallBlue"
+          },
+          {
+            "prefab": "BallRed"
+          },
+          {
+            "prefab": "CandyCane"
+          }
+        ],
+        "targetsToActivate": [
+          {
+            "prefab": "TreeCollider"
+          }
+        ]
+      },
+      "events": [
+        {
+          "eventObjs": {
+            "othersToActivate": [{ "prefab": "Arrow_blueball" }],
+            "othersToDeactivate": ["Arrow_blueball"]
+          },
+          "parameters": {
+            "correctInteractable": ["BallBlue"],
+            "correctTarget": ["TreeCollider"]
+          },
+          "audio": {
+            "request": ["Pick the blue ball and hang it on the tree"],
+            "correct": ["Well done!"],
+            "wrong": ["Try again"]
+          }
+        },
+        {
+          "eventObjs": {
+            "othersToActivate": [{ "prefab": "Arrow_redball" }],
+            "othersToDeactivate": ["Arrow_redball"]
+          },
+          "parameters": {
+            "correctInteractable": ["BallRed"],
+            "correctTarget": ["TreeCollider"]
+          },
+          "audio": {
+            "request": ["Pick the red ball and hang it on the tree"],
+            "correct": ["Well done!"],
+            "wrong": ["Try again"]
+          }
+        },
+        {
+          "eventObjs": {
+            "othersToActivate": [{ "prefab": "Arrow_candycane" }],
+            "othersToDeactivate": ["Arrow_candycane"]
+          },
+          "parameters": {
+            "correctInteractable": ["CandyCane"],
+            "correctTarget": ["TreeCollider"]
+          },
+          "audio": {
+            "request": ["Pick the candy cane and hang it on the tree"],
+            "correct": ["Well done!"],
+            "wrong": ["Try again"]
+          }
+        }
+      ]
+    }
+  ]
+}

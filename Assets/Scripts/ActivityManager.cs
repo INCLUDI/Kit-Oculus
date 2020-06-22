@@ -1,20 +1,83 @@
-﻿using System.Collections;
+﻿using DG.Tweening;
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using TMPro;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using static DataModel;
-using DG.Tweening;
 
 public class ActivityManager : MonoBehaviour
 {
-    private List<EventConfiguration> _eventList;
+    private ActivityConfiguration _activityConfiguration;
 
+    private int _eventGroupStep;
     private int _eventStep;
-    private int _audioStep;
 
-    public Transform dynamicObjects;
+    private List<GameObject> _activityAssets;
 
-    private bool isFree = true;
+    private bool _isFree;
+    public bool IsFree
+    {
+        get => _isFree;
+        set
+        {
+            _isFree = value;
+            if (_isFree == true && eventGroupManager != null)
+            {
+                eventGroupManager.Ready();
+            }
+        }
+    }
+
+    public Transform _dynamicObjects;
+
+    public SpeechToText speechToText = new SpeechToText();
+
+    public string ActivityPath { get => "Activities/" + _activityConfiguration.id; }
+    private List<EventGroup> EventGroups { get => _activityConfiguration.eventGroups; }
+
+    public EventGroup CurrentEventGroup { get => EventGroups[_eventGroupStep]; }
+    private EventObjs EventGroupObjs { get => CurrentEventGroup.eventGroupObjs; }
+    private List<string> InstructionIntro { get => CurrentEventGroup.instructionIntro; }
+    private List<string> InstructionEnd { get => CurrentEventGroup.instructionEnd; }
+    private int InteractablesToSpawn { get => CurrentEventGroup.interactablesToSpawn; }
+    private int TargetsToSpawn { get => CurrentEventGroup.targetsToSpawn; }
+    private bool InteractablesRandomSpawn { get => CurrentEventGroup.interactablesRandomSpawn; }
+    private bool TargetsRandomSpawn { get => CurrentEventGroup.targetsRandomSpawn; }
+    private List<CustomTransform> InteractablesSpawnPoints { get => CurrentEventGroup.interactablesSpawnPoints; }
+    private List<CustomTransform> TargetsSpawnPoints { get => CurrentEventGroup.targetsSpawnPoints; }
+    private int StepsToReproduce { get => CurrentEventGroup.stepsToReproduce; }
+
+    private List<EventConfiguration> _eventsInCurrentGroup;
+    private List<EventConfiguration> EventsInCurrentGroup
+    {
+        get => _eventsInCurrentGroup;
+        set
+        {
+            System.Random rnd = new System.Random();
+            _eventsInCurrentGroup = value.OrderBy(c => CurrentEventGroup.randomEvents ? rnd.Next() : 0)
+                    .Take(StepsToReproduce != 0 ? StepsToReproduce : CurrentEventGroup.events.Count)
+                    .ToList();
+        }
+    }
+
+    public EventConfiguration CurrentEvent { get => EventsInCurrentGroup[_eventStep]; }
+    public EventObjs EventObjs { get => CurrentEvent.eventObjs; }
+    public EventParameters Parameters { get => CurrentEvent.parameters; }
+    private List<string> Request { get => CurrentEvent.instructions.request; }
+
+
+    private EventGroupManagerBase eventGroupManager;
+    private void setEventGroupManager(string type)
+    {
+        eventGroupManager = (EventGroupManagerBase)ScriptableObject.CreateInstance(Type.GetType(type));
+    }
+
 
     public static ActivityManager instance
     {
@@ -34,191 +97,293 @@ public class ActivityManager : MonoBehaviour
         }
     }
 
-    private void OnDestroy() 
-    { 
-        if (this == instance) 
-        { 
-            instance = null; 
-        } 
-    }
-
     // Start is called before the first frame update
-    void Start()
+    private async void Start()
     {
-        TextAsset file = Resources.Load<TextAsset>(GameManager.instance.Getjson());
-        _eventList = JsonUtility.FromJson<SceneConfiguration>(file.text).events;
+        //GameManager.instance.EnableVR();
 
-        _audioStep = 0;
+        _dynamicObjects = Instantiate(new GameObject("DynamicObjects")).transform;
+
+        _eventGroupStep = 0;
         _eventStep = 0;
 
-        generateSceneObjectsFromEvent(_eventStep);
+        _activityConfiguration = GameManager.instance.currentActivity;
 
-        playAudioSequence();
+        _activityAssets = await Addressables.LoadAssetsAsync<GameObject>(_activityConfiguration.id, null).Task as List<GameObject>;
+
+        GameManager.instance.AcrivityReady();
     }
 
-    private void generateSceneObjectsFromEvent(int eventStep)
+    public void Initialize()
     {
-        foreach (SceneObj obj in _eventList[eventStep].sceneObjs.grabbablesToActivate)
+        EventsInCurrentGroup = CurrentEventGroup.events;
+        setEventGroupManager(CurrentEventGroup.type);
+
+        generateSceneObjects(EventGroupObjs);
+        playInstructionSequence(InstructionIntro, 0, () =>
         {
-            GameObject temp = ActivateObj(obj);
-            temp.AddComponent<GrabbableManager>();
+            generateSceneObjects(EventObjs);
+            playSingleInstruction(eventGroupManager.selectRequest(Request), "Talk");
+        });
+    }
+
+    public virtual void generateSceneObjects(EventObjs objs)
+    {
+        if (objs.interactablesToActivate != null && objs.interactablesToActivate.Count != 0)
+        {
+            generateObjCategory(objs.interactablesToActivate, InteractablesToSpawn, InteractablesSpawnPoints, InteractablesRandomSpawn, typeof(InteractableTrigger));
         }
-        foreach (SceneObj obj in _eventList[eventStep].sceneObjs.targetsToActivate)
+
+        if (objs.targetsToActivate != null && objs.targetsToActivate.Count != 0)
         {
-            GameObject temp = ActivateObj(obj);
-            temp.AddComponent<TargetManager>();
-            temp.GetComponent<TargetManager>().hitCounter = 
-                _eventList[_eventStep].parameters.numericParameter == 0 ? 1 : _eventList[_eventStep].parameters.numericParameter;
+            generateObjCategory(objs.targetsToActivate, TargetsToSpawn, TargetsSpawnPoints, TargetsRandomSpawn, typeof(TargetTrigger));
         }
-        foreach (SceneObj obj in _eventList[eventStep].sceneObjs.othersToActivate)
+
+        if (objs.othersToActivate != null && objs.othersToActivate.Count != 0)
         {
-            ActivateObj(obj);
+            foreach (SceneObj obj in objs.othersToActivate)
+            {
+                InstantiateObj(obj);
+            }
         }
     }
 
-    private GameObject ActivateObj(SceneObj obj)
+    private void generateObjCategory(List<SceneObj> objs, int objsToSpawn, List<CustomTransform> spawnPoints, bool randomSpawn, Type type)
     {
-        GameObject temp = (GameObject)Instantiate(Resources.Load(obj.path), new Vector3(obj.position.x, obj.position.y, obj.position.z),
-                Quaternion.identity, dynamicObjects);
-        temp.transform.localScale = new Vector3(obj.scale.x, obj.scale.y, obj.scale.z);
-        temp.transform.rotation = Quaternion.Euler(obj.rotation.x, obj.rotation.y, obj.rotation.z);
-        temp.name = obj.uid;
+        objsToSpawn = objsToSpawn != 0 ? objsToSpawn : objs.Count;
+
+        if (objsToSpawn <= objs.Count)
+        {
+            objs = eventGroupManager.randomizeObjects(objs, objsToSpawn);
+        }
+
+        List<GameObject> instantiatedObjs = new List<GameObject>();
+
+        foreach (SceneObj obj in objs)
+        {
+            GameObject temp = InstantiateObj(obj);
+            instantiatedObjs.Add(temp);
+            addTriggers(temp, type);
+        }
+
+        if (spawnPoints != null && spawnPoints.Count > 0)
+        {
+            assignSpawnPoints(instantiatedObjs, spawnPoints);
+        }
+
+        if (randomSpawn)
+        {
+            randomizeObjSpawn(instantiatedObjs);
+        }
+    }
+
+    public void addTriggers(GameObject temp, Type type) 
+    {
+        temp.AddComponent(type);
+        temp.AddComponent<EventTrigger>();
+        EventTrigger trigger = temp.GetComponent<EventTrigger>();
+        EventTrigger.Entry pointerEnter_entry = new EventTrigger.Entry();
+        pointerEnter_entry.eventID = EventTriggerType.PointerEnter;
+        pointerEnter_entry.callback.AddListener((data) => { temp.GetComponent<TriggerBase>().gvrOn(); });
+        EventTrigger.Entry pointerExit_entry = new EventTrigger.Entry();
+        pointerExit_entry.eventID = EventTriggerType.PointerExit;
+        pointerExit_entry.callback.AddListener((data) => { temp.GetComponent<TriggerBase>().gvrOff(); });
+        trigger.triggers.Add(pointerEnter_entry);
+        trigger.triggers.Add(pointerExit_entry);
+    }
+
+    public GameObject InstantiateObj(SceneObj obj) 
+    {
+        GameObject temp = Instantiate(_activityAssets.Find(x => x.name == obj.prefab), _dynamicObjects);
+        temp.transform.DOScale(new Vector3(0, 0, 0), 1f).From();
+
+        temp.name = obj.name ?? obj.text ?? obj.prefab;
+        if (obj.text != null)
+        {
+            temp.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = obj.text;
+        }
+
         return temp;
     }
-    
-    private void removeSceneObjectsFromEvent(int eventStep)
+
+    public void assignSpawnPoints(List<GameObject> objs, List<CustomTransform> spawnPoints)
     {
-        foreach (string toRemove in _eventList[eventStep].sceneObjs.grabbablesToDeactivate)
+        for (int i = 0; i < objs.Count; i++)
         {
-            Destroy(GameObject.Find(toRemove));
-        };
-        foreach (string toRemove in _eventList[eventStep].sceneObjs.targetsToDeactivate)
-        {
-            Destroy(GameObject.Find(toRemove));
-        };
-        foreach (string toRemove in _eventList[eventStep].sceneObjs.othersToDeactivate)
-        {
-            Destroy(GameObject.Find(toRemove));
+            objs[i].transform.position = new Vector3(spawnPoints[i].position.x, spawnPoints[i].position.y, spawnPoints[i].position.z);
+            objs[i].transform.rotation = Quaternion.Euler(spawnPoints[i].rotation.x, spawnPoints[i].rotation.y, spawnPoints[i].rotation.z);
         }
     }
 
-    public void nextEvent()
+    public void randomizeObjSpawn(List<GameObject> objs)
     {
-        removeSceneObjectsFromEvent(_eventStep);
+        System.Random rnd = new System.Random();
+        List<Tuple<Vector3, Quaternion>> shuffled = objs
+            .Select(c => new Tuple<Vector3, Quaternion>(c.transform.position, c.transform.rotation))
+            .OrderBy(c => rnd.Next())
+            .ToList();
 
-        if (_eventStep + 1 >= _eventList.Count)
+        for (int i = 0; i < objs.Count; i++)
         {
-            GameManager.instance.NextScene();
-        }
-        else
-        {
-            _audioStep = 0;
-            _eventStep++;
-
-            generateSceneObjectsFromEvent(_eventStep);
-            playAudioSequence();
+            objs[i].transform.position = shuffled[i].Item1;
+            objs[i].transform.rotation = shuffled[i].Item2;
         }
     }
 
-    private void playAudioSequence()
+    public void removeSceneObjects(EventObjs objs)
     {
-        EventManager.TriggerEvent("DisableInteraction");
-        AudioManager.instance.playAudioFromString(_eventList[_eventStep].audioFeedback.audio[_audioStep], () => {
-            if (_audioStep + 1 < _eventList[_eventStep].audioFeedback.audio.Count)
+        if (objs.interactablesToDeactivate != null)
+        {
+            foreach (string toRemove in objs.interactablesToDeactivate)
             {
-                _audioStep++;
-                playAudioSequence();
+                GameObject temp = GameObject.Find(toRemove);
+                if (temp != null)
+                {
+                    temp.transform.DOScale(new Vector3(0, 0, 0), 1f).OnComplete(() => Destroy(temp));
+                }
+            }
+        }
+
+        if (objs.targetsToDeactivate != null)
+        {
+            foreach (string toRemove in objs.targetsToDeactivate)
+            {
+                GameObject temp = GameObject.Find(toRemove);
+                if (temp != null)
+                {
+                    temp.transform.DOScale(new Vector3(0, 0, 0), 1f).OnComplete(() => Destroy(temp));
+                }
+            }
+        }
+
+        if (objs.othersToDeactivate != null)
+        {
+            foreach (string toRemove in objs.othersToDeactivate)
+            {
+                GameObject temp = GameObject.Find(toRemove); 
+                if (temp != null)
+                {
+                    temp.transform.DOScale(new Vector3(0, 0, 0), 1f).OnComplete(() => Destroy(temp));
+                }
+            }
+        }
+    }
+
+    private void nextEventGroup()
+    {
+        playInstructionSequence(InstructionEnd, 0, () =>
+        {
+            removeSceneObjects(EventGroupObjs);
+
+            if (_eventGroupStep + 1 >= EventGroups.Count)
+            {
+                GameManager.instance.ActivityCompleted();
             }
             else
             {
-                EventManager.TriggerEvent("stopTalking");
-                EventManager.TriggerEvent("EnableInteraction");
+                _eventStep = 0;
+                _eventGroupStep++;
+
+                EventsInCurrentGroup = CurrentEventGroup.events;
+                setEventGroupManager(CurrentEventGroup.type);
+
+                generateSceneObjects(EventGroupObjs);
+                playInstructionSequence(InstructionIntro, 0, () =>
+                {
+                    generateSceneObjects(EventObjs);
+                    playSingleInstruction(eventGroupManager.selectRequest(Request), "Talk");
+                });
             }
         });
     }
 
-
-    public void checkCorrectObject(GameObject collidingObject, GameObject target)
+    public void nextEvent()
     {
-        Debug.Log(collidingObject, target);
+        removeSceneObjects(EventObjs);
 
-        if (_eventList[_eventStep].type == "dragrelease")
+        if (_eventStep + 1 >= EventsInCurrentGroup.Count)
         {
-            List<string> correctGrabbables = _eventList[_eventStep].parameters.correctGrabbable;
-            List<string> correctTargets = _eventList[_eventStep].parameters.correctTarget;
-
-            if (correctGrabbables.Contains(collidingObject.name) && correctTargets.Contains(target.name))
-            {
-                collidingObject.GetComponent<Collider>().enabled = false;
-                collidingObject.GetComponent<Rigidbody>().isKinematic = true;
-                collidingObject.GetComponent<OVRGrabbable>().enabled = false;
-                EventManager.TriggerEvent("ReleaseObject");
-
-                SetFinalPosition(collidingObject);
-                SetFinalRotation(collidingObject);
-
-                AudioManager.instance.playAudioFromString(_eventList[_eventStep].audioFeedback.audioOk, () => {
-                    nextEvent();
-                });
-            }
-            else
-            {
-                AudioManager.instance.playAudioFromString(_eventList[_eventStep].audioFeedback.audioWrong);
-            }
+            nextEventGroup();
         }
-        if (_eventList[_eventStep].type == "dragmove" && isFree) 
+        else
         {
-            isFree = false;
+            _eventStep++;
 
-            if (target.GetComponent<TargetManager>().hitCounter > 0)
-            {
-                target.GetComponent<TargetManager>().hitCounter--;
-            }
-            else
-            {
-                target.GetComponent<Collider>().enabled = false;
-            }
-
-            TargetManager[] targets = dynamicObjects.GetComponentsInChildren<TargetManager>();
-            int totalCount = 0;
-            foreach (TargetManager t in targets)
-            {
-                totalCount += t.hitCounter;
-            }
-
-            Debug.Log(totalCount);
-
-            if (totalCount == 0)
-            {
-                foreach (string toRemove in _eventList[_eventStep].parameters.objsToDeactivate)
-                {
-                    Destroy(GameObject.Find(toRemove));
-                };
-                foreach (SceneObj obj in _eventList[_eventStep].parameters.objsToActivate)
-                {
-                    ActivateObj(obj);
-                }
-
-                AudioManager.instance.playAudioFromString(_eventList[_eventStep].audioFeedback.audioOk, () => {
-                    nextEvent();
-                });
-            }
-
-            isFree = true;
+            generateSceneObjects(EventObjs);
+            playSingleInstruction(eventGroupManager.selectRequest(Request), "Talk");
         }
     }
 
-    private void SetFinalPosition(GameObject collidingObject)
+    public void playInstructionSequence(List<string> instructions, int index, UnityAction call = null)
     {
-        CustomVector3 finalPosition = _eventList[_eventStep].parameters.objsToActivate[0].position;
-        collidingObject.transform.DOMove(new Vector3(finalPosition.x, finalPosition.y, finalPosition.z), 1);
+        IsFree = false;
+        if (instructions == null || index == instructions.Count)
+        {
+            IsFree = call == null;
+            call?.Invoke();
+        }
+        else
+        {
+            VirtualAssistantManager.instance.startTalking(instructions[index], "Talk", () =>
+            {
+                VirtualAssistantManager.instance.stopTalking("Talk", () => 
+                {
+                    index++;
+                    playInstructionSequence(instructions, index, call);
+                });
+            });
+        }
     }
 
-    private void SetFinalRotation(GameObject collidingObject)
+    public void playSingleInstruction(string instruction, string animatorParam, UnityAction call = null)
     {
-        CustomVector3 finalRotation = _eventList[_eventStep].parameters.objsToActivate[0].rotation;
-        collidingObject.transform.DORotate(new Vector3(finalRotation.x, finalRotation.y, finalRotation.z), 1);
+        if (instruction != null)
+        {
+            IsFree = false;
+            VirtualAssistantManager.instance.startTalking(instruction, animatorParam, () =>
+            {
+                VirtualAssistantManager.instance.stopTalking(animatorParam, () =>
+                {
+                    IsFree = call == null;
+                    call?.Invoke();
+                });
+            });
+        }
+        else
+        {
+            IsFree = true;
+        }
     }
 
+    public void checkCorrectAction(GameObject interactable)
+    {
+        if (IsFree)
+        {
+            eventGroupManager.checkCorrectAction(interactable);
+        }
+    }
 
+    public void checkCorrectAction(GameObject target, GameObject interactable = null)
+    {
+        if (IsFree)
+        {
+            eventGroupManager.checkCorrectAction(target, interactable);
+        }
+    }
+
+    public void checkCorrectAction(string answer)
+    {
+        if (IsFree)
+        {
+            eventGroupManager.checkCorrectAction(answer);
+        }
+    }
+
+    public void AssistantTriggered()
+    {
+        if (IsFree && EventsInCurrentGroup != null)
+        {
+            playSingleInstruction(eventGroupManager.selectRequest(Request), "Talk");
+        }
+    }
 }

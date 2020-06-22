@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class DataModel : MonoBehaviour
 {
-    // JSON per l'attività
     [Serializable]
     public class CustomVector3
     {
@@ -15,40 +13,47 @@ public class DataModel : MonoBehaviour
     }
 
     [Serializable]
-    public class SceneObj
+    public class CustomTransform
     {
-        public string uid;
-        public string path;
         public CustomVector3 position;
         public CustomVector3 rotation;
         public CustomVector3 scale;
     }
 
+
     [Serializable]
-    public class AudioFeedback
+    public class SceneObj
     {
-        public List<string> audio;
-        public string audioOk;
-        public string audioWrong;
+        public string prefab;
+        public string name;
+        public string text;
+    }
+
+    [Serializable]
+    public class Instructions
+    {
+        public List<string> request;
+        public List<string> correct;
+        public List<string> wrong;
     }
 
     [Serializable]
     public class EventParameters
     {
-        public List<string> correctGrabbable;
-        public List<string> wrongGrabbable;
-        public List<string> correctTarget;
-        public List<string> wrongTarget;
-        public int numericParameter;
+        public List<string> correctInteractables;
+        public List<string> correctTargets;
+        public List<string> correctAnswers;
+        public CustomTransform finalTransform;
         public List<SceneObj> objsToActivate;
         public List<string> objsToDeactivate;
+        public int numericParameter;
     }
 
     [Serializable]
     public class EventObjs
     {
-        public List<SceneObj> grabbablesToActivate;
-        public List<string> grabbablesToDeactivate;
+        public List<SceneObj> interactablesToActivate;
+        public List<string> interactablesToDeactivate;
         public List<SceneObj> targetsToActivate;
         public List<string> targetsToDeactivate;
         public List<SceneObj> othersToActivate;
@@ -58,44 +63,41 @@ public class DataModel : MonoBehaviour
     [Serializable]
     public class EventConfiguration
     {
-        public string type;
-        public EventObjs sceneObjs;
+        public EventObjs eventObjs;
         public EventParameters parameters;
-        public AudioFeedback audioFeedback;
+        public Instructions instructions;
     }
 
     [Serializable]
-    public class SceneConfiguration
+    public class EventGroup
     {
-        public string sceneName;
+        public string type;
+        public EventObjs eventGroupObjs;
+        public List<string> instructionIntro;
+        public List<string> instructionEnd;
+        public int stepsToReproduce;
+        public bool randomEvents;
+        public int interactablesToSpawn;
+        public int targetsToSpawn;
+        public bool interactablesRandomSpawn;
+        public bool targetsRandomSpawn;
+        public List<CustomTransform> interactablesSpawnPoints;
+        public List<CustomTransform> targetsSpawnPoints;
         public List<EventConfiguration> events;
     }
 
-
-    // JSON per il menu
     [Serializable]
-    public class ActivityDetails
+    public class ActivityConfiguration
     {
+        public string id;
         public string name;
         public string description;
         public string image;
+        public int difficulty;
         public string scene;
         public string jsonPath;
-    }
-
-    [Serializable]
-    public class ExperienceDetails
-    {
-        public string name;
-        public string description;
-        public string image;
-        public List<ActivityDetails> activities;
-    }
-
-    [Serializable]
-    public class MenuItems
-    {
-        public List<ActivityDetails> activities;
-        public List<ExperienceDetails> experiences;
+        public CustomTransform assistantTransform;
+        public CustomTransform playerTransform;
+        public List<EventGroup> eventGroups;
     }
 }

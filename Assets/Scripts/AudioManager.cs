@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
+using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Networking;
+using static DataModel;
 
 public class AudioManager : MonoBehaviour
 {
-    private AudioSource audioSource;
 
     public static AudioManager instance
     {
@@ -27,25 +27,16 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        audioSource = GetComponent<AudioSource>();
-    }
 
-    public void playAudioFromString(string audioName, UnityAction call = null)
+    public void PlayAudioAndWait(AudioSource source, AudioClip audio, UnityAction call = null)
     {
-        EventManager.TriggerEvent("startTalking");
-        AudioClip audioClip = (AudioClip)Resources.Load(audioName);
-        audioSource.PlayOneShot(audioClip);
-        StartCoroutine(waitForAudioCompleted(audioClip.length, call));
+        source.PlayOneShot(audio);
+        StartCoroutine(waitForAudioCompleted(audio.length, call));
     }
 
     private IEnumerator waitForAudioCompleted(float clipLength, UnityAction call = null)
     {
         yield return new WaitForSeconds(clipLength);
-        {
-            call?.Invoke();
-        }
+        call?.Invoke();
     }
-
 }

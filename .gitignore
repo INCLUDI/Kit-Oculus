@@ -60,7 +60,15 @@ crashlytics-build.properties
 
 
 
-# Altro
+# Other
 /Assets/TextMesh Pro/
 /Assets/TextMesh Pro.meta
+
 /OVRAssetBundles
+
+ServerData/
+
+/Assets/Heureka/
+/Assets/Heureka.meta
+/SerializedBuildInfo/
+AH_GeneratedBuild.exe

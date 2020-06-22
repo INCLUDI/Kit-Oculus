@@ -1,44 +1,99 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class VirtualAssistantManager : MonoBehaviour
 {
-    private Transform mainCamera;
-
     private Animator animator;
+    private AudioSource audioSource;
+    private TextToSpeech textToSpeech;
+    private GameObject speechBubble;
+    private TextMeshProUGUI speechBubbleText;
+
+    public string voice;
+    public string pitch;
+    private bool speechBubbleEnabled;
+    private float speechRate;
+    private float speechPausesDuration;
+
+    public Transform head;
+
+    public static VirtualAssistantManager instance
+    {
+        get;
+        private set;
+    }
 
     private void Awake()
     {
-        animator = GetComponent<Animator>();
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+
+            animator = GetComponent<Animator>();
+            audioSource = GetComponent<AudioSource>();
+            speechBubble = transform.GetChild(0).gameObject;
+            speechBubbleText = speechBubble.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>();
+            speechBubbleEnabled = PlayerPrefs.GetInt("SpeechBubble") == 0 ? false : true;
+            speechRate = PlayerPrefs.GetFloat("SpeechRate");
+            speechPausesDuration = PlayerPrefs.GetFloat("SpeechPausesDuration");
+        }
     }
+
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        mainCamera = GameObject.Find("OVRCameraRig").transform;
-
-        EventManager.StartListening("startTalking", startTalking);
-        EventManager.StartListening("stopTalking", stopTalking);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        Vector3 relativePos = mainCamera.position - transform.position;
+        Vector3 relativePos = Camera.allCameras[0].transform.position - transform.position;
         Quaternion rotation = Quaternion.LookRotation(relativePos);
         rotation.x = 0f;
         rotation.z = 0f;
         transform.rotation = rotation;
     }
 
-    public void startTalking()
+    public void Initialize()
     {
-        animator.SetTrigger("StartTalking");
+        textToSpeech = new TextToSpeech(voice, pitch, speechRate);
+        ActivityManager.instance.Initialize();
     }
 
-    public void stopTalking()
+    public void startTalking(string instruction, string animatorParam, UnityAction call = null)
     {
-        animator.SetTrigger("StopTalking");
+        textToSpeech.SyntetizeInstruction(instruction, audioSource, () =>
+        {
+            animator.SetBool(animatorParam, true);
+            ActivateBubble(instruction);
+        }, 
+        call);
+    }
+
+    public void stopTalking(string animatorParam, UnityAction call)
+    {
+        animator.SetBool(animatorParam, false);
+        StartCoroutine(WaitAndCallback(call));
+    }
+
+    public void ActivateBubble(string text)
+    {
+        speechBubble.SetActive(speechBubbleEnabled && true);
+        speechBubbleText.text = text;
+    }
+
+    public void DeactivateBubble()
+    {
+        speechBubble.SetActive(false);
+        speechBubbleText.text = "";
+    }
+
+    private IEnumerator WaitAndCallback(UnityAction call)
+    {
+        yield return new WaitForSeconds(speechPausesDuration);
+        DeactivateBubble();
+        call.Invoke();
     }
 }
