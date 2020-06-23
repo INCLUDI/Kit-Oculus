@@ -82,19 +82,33 @@ public abstract class EventGroupManagerBase : ScriptableObject
 
     protected virtual void SetFinalPosition(GameObject interactable)
     {
-        Vector3 finalPosition = new Vector3(
-            ActivityManager.instance.Parameters.finalTransform.position.x,
-            ActivityManager.instance.Parameters.finalTransform.position.y,
-            ActivityManager.instance.Parameters.finalTransform.position.z);
-        interactable.transform.DOMove(finalPosition, 1);
+        if (ActivityManager.instance.Parameters.finalTransform.position != null)
+        {
+            Vector3 finalPosition = new Vector3(
+                ActivityManager.instance.Parameters.finalTransform.position.x,
+                ActivityManager.instance.Parameters.finalTransform.position.y,
+                ActivityManager.instance.Parameters.finalTransform.position.z);
+            interactable.transform.DOMove(finalPosition, 1);
+        }
     }
 
     protected virtual void SetFinalRotation(GameObject interactable)
     {
-        Vector3 finalRotation = new Vector3(
-            ActivityManager.instance.Parameters.finalTransform.rotation.x,
-            ActivityManager.instance.Parameters.finalTransform.rotation.y,
-            ActivityManager.instance.Parameters.finalTransform.rotation.z);
-        interactable.transform.DORotate(finalRotation, 1);
+        if (ActivityManager.instance.Parameters.finalTransform.rotation != null)
+        {
+            Vector3 finalRotation = new Vector3(
+                ActivityManager.instance.Parameters.finalTransform.rotation.x,
+                ActivityManager.instance.Parameters.finalTransform.rotation.y,
+                ActivityManager.instance.Parameters.finalTransform.rotation.z);
+            interactable.transform.DORotate(finalRotation, 1);
+        }
+    }
+
+    protected virtual void SetDeactivation(GameObject interactable)
+    {
+        if (ActivityManager.instance.Parameters.booleanParameter)
+        {
+            interactable.transform.DOScale(new Vector3(0, 0, 0), 1).OnComplete(() => Destroy(interactable));
+        }
     }
 }

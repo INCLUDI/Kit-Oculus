@@ -38,23 +38,25 @@
             "prefab": "CandyCane"
           }
         ],
-        "targetsToActivate": [
-          {
-            "prefab": "TreeCollider"
-          }
-        ]
+        "interatablesToDeactivate": ["BallBlue", "BallRed", "CandyCane"]
       },
       "events": [
         {
           "eventObjs": {
             "othersToActivate": [{ "prefab": "Arrow_blueball" }],
-            "othersToDeactivate": ["Arrow_blueball"]
+            "othersToDeactivate": ["Arrow_blueball"],
+            "targetsToActivate": [{ "prefab": "Target_blueball" }],
+            "targetsToDeactivate": ["Target_blueball"]
           },
           "parameters": {
-            "correctInteractable": ["BallBlue"],
-            "correctTarget": ["TreeCollider"]
+            "correctInteractables": ["BallBlue"],
+            "correctTargets": ["Target_blueball"],
+            "finalTransform": {
+              "position": { "x": -0.161, "y": 0.968, "z": 1.229 },
+              "rotation": { "x": 32.676, "y": 0, "z": 0 }
+            }
           },
-          "audio": {
+          "instructions": {
             "request": ["Pick the blue ball and hang it on the tree"],
             "correct": ["Well done!"],
             "wrong": ["Try again"]
@@ -63,13 +65,19 @@
         {
           "eventObjs": {
             "othersToActivate": [{ "prefab": "Arrow_redball" }],
-            "othersToDeactivate": ["Arrow_redball"]
+            "othersToDeactivate": ["Arrow_redball"],
+            "targetsToActivate": [{ "prefab": "Target_redball" }],
+            "targetsToDeactivate": ["Target_redball"]
           },
           "parameters": {
-            "correctInteractable": ["BallRed"],
-            "correctTarget": ["TreeCollider"]
+            "correctInteractables": ["BallRed"],
+            "correctTargets": ["Target_redball"],
+            "finalTransform": {
+              "position": { "x": 0.133, "y": 0.744, "z": 1.288 },
+              "rotation": { "x": 16.285, "y": -1.767, "z": 20.989 }
+            }
           },
-          "audio": {
+          "instructions": {
             "request": ["Pick the red ball and hang it on the tree"],
             "correct": ["Well done!"],
             "wrong": ["Try again"]
@@ -78,13 +86,19 @@
         {
           "eventObjs": {
             "othersToActivate": [{ "prefab": "Arrow_candycane" }],
-            "othersToDeactivate": ["Arrow_candycane"]
+            "othersToDeactivate": ["Arrow_candycane"],
+            "targetsToActivate": [{ "prefab": "Target_candycane" }],
+            "targetsToDeactivate": ["Target_candycane"]
           },
           "parameters": {
-            "correctInteractable": ["CandyCane"],
-            "correctTarget": ["TreeCollider"]
+            "correctInteractables": ["CandyCane"],
+            "correctTargets": ["Target_candycane"],
+            "finalTransform": {
+              "position": { "x": -0.167, "y": 1.373, "z": 1.382 },
+              "rotation": { "x": 30.905, "y": 0, "z": 0 }
+            }
           },
-          "audio": {
+          "instructions": {
             "request": ["Pick the candy cane and hang it on the tree"],
             "correct": ["Well done!"],
             "wrong": ["Try again"]

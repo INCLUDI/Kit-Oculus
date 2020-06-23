@@ -28,6 +28,7 @@ public class DragReleaseManager : EventGroupManagerBase
 
             SetFinalPosition(interactable);
             SetFinalRotation(interactable);
+            SetDeactivation(interactable);
             ParameterObjects();
 
             StartVisualFeedback(checkmark, interactable);

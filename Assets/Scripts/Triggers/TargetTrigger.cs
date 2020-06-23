@@ -26,7 +26,7 @@ public class TargetTrigger : TriggerBase
 
     private void OnTriggerEnter(Collider other)
     {
-        ActivityManager.instance.checkCorrectAction(other.gameObject, gameObject);
+        ActivityManager.instance.checkCorrectAction(gameObject, other.gameObject);
     }
 
     //private void EnableTarget()
