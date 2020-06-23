@@ -51,22 +51,8 @@ MonoBehaviour:
     - Christmas
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
-  - m_GUID: 1492d498d85e83d46933345494a466a5
-    m_Address: Pumpkin
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Christmas
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 1649b3371afcc0e419ed1e2a2b887f3c
     m_Address: BallBlue
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Christmas
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  - m_GUID: 1cee7c9fa9c144e49aa6306eba576065
-    m_Address: Pumpkin_back
     m_ReadOnly: 0
     m_SerializedLabels:
     - Christmas
@@ -81,34 +67,6 @@ MonoBehaviour:
     m_TargetAsset: {fileID: 0}
   - m_GUID: 4681eab3634660f42a7a63dc1bb242c1
     m_Address: GiftBottom
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Christmas
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  - m_GUID: 495141e7801f1ca4db4c39de1e4aa47d
-    m_Address: PumpkinCollider1
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Christmas
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  - m_GUID: 5e408266b80a9ae4da5d788ad5136b07
-    m_Address: PumpkinCollider2
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Christmas
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  - m_GUID: 635d565021c03dd45a001d7e3d857103
-    m_Address: PumpkinCollider4
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Christmas
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  - m_GUID: 6aecb62ecc2f60c468d19665c2c784e3
-    m_Address: Knife
     m_ReadOnly: 0
     m_SerializedLabels:
     - Christmas
@@ -144,15 +102,6 @@ MonoBehaviour:
     - Christmas
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
-  - m_GUID: 8d7c16a687e75c443be2b51676846b9e
-    m_Address: PumpkinCollider3
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Christmas
-    m_MainAsset: {fileID: 2870844289484544882, guid: 8d7c16a687e75c443be2b51676846b9e,
-      type: 3}
-    m_TargetAsset: {fileID: 2870844289484544882, guid: 8d7c16a687e75c443be2b51676846b9e,
-      type: 3}
   - m_GUID: 9087ad2c237ba4a4b98e350e500ad2b4
     m_Address: Gift green full
     m_ReadOnly: 0
@@ -169,13 +118,6 @@ MonoBehaviour:
       type: 3}
     m_TargetAsset: {fileID: 2627447636053282153, guid: bda76b7fa3e23e249a6542ef92eaff50,
       type: 3}
-  - m_GUID: c60fadb9f52205b438ae415f89927bbc
-    m_Address: GiftOpen
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Christmas
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: c8a5ed697a4dc4745886c75e17284a88
     m_Address: BallRed
     m_ReadOnly: 0
