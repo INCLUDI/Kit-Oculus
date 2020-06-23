@@ -47,7 +47,6 @@ public class DataModel : MonoBehaviour
         public List<SceneObj> objsToActivate;
         public List<string> objsToDeactivate;
         public int numericParameter;
-        public bool booleanParameter;
     }
 
     [Serializable]

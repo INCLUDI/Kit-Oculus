@@ -17,6 +17,33 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 360079a34f41dc04eb9bd9abc6950273
   m_SerializeEntries:
+  - m_GUID: 03e0f2a3c15a4c644b456f875f7f1663
+    m_Address: Target_candycane
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Christmas
+    m_MainAsset: {fileID: 7780241711395944388, guid: 03e0f2a3c15a4c644b456f875f7f1663,
+      type: 3}
+    m_TargetAsset: {fileID: 7780241711395944388, guid: 03e0f2a3c15a4c644b456f875f7f1663,
+      type: 3}
+  - m_GUID: 0886a0bdc7553f24787bed0200979b0d
+    m_Address: TargetGift1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Christmas
+    m_MainAsset: {fileID: 864724134099180757, guid: 0886a0bdc7553f24787bed0200979b0d,
+      type: 3}
+    m_TargetAsset: {fileID: 864724134099180757, guid: 0886a0bdc7553f24787bed0200979b0d,
+      type: 3}
+  - m_GUID: 11b7e649657c7774db5f4a84c3e6f685
+    m_Address: Target_blueball
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Christmas
+    m_MainAsset: {fileID: 9099232278540631007, guid: 11b7e649657c7774db5f4a84c3e6f685,
+      type: 3}
+    m_TargetAsset: {fileID: 9099232278540631007, guid: 11b7e649657c7774db5f4a84c3e6f685,
+      type: 3}
   - m_GUID: 134bb3b6ef1db09408249859d90ca516
     m_Address: GiftTopCollider
     m_ReadOnly: 0
@@ -50,10 +77,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - Christmas
-    m_MainAsset: {fileID: 6580787657733982961, guid: 27992b3145ad0ef43a373dc2bbf49fce,
-      type: 3}
-    m_TargetAsset: {fileID: 6580787657733982961, guid: 27992b3145ad0ef43a373dc2bbf49fce,
-      type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 4681eab3634660f42a7a63dc1bb242c1
     m_Address: GiftBottom
     m_ReadOnly: 0
@@ -68,22 +93,8 @@ MonoBehaviour:
     - Christmas
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
-  - m_GUID: 50fbd8813c333d142996dc443319251c
-    m_Address: GiftCollider 1
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Christmas
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 5e408266b80a9ae4da5d788ad5136b07
     m_Address: PumpkinCollider2
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Christmas
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  - m_GUID: 610d95377a4ee704eb5284aab3135784
-    m_Address: GiftCollider 2
     m_ReadOnly: 0
     m_SerializedLabels:
     - Christmas
@@ -117,15 +128,17 @@ MonoBehaviour:
     - Christmas
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
-  - m_GUID: 7fcb5952156da484a80ced5230bd2a45
-    m_Address: Arrow
+  - m_GUID: 76695a21223e96e4b9ab8a05be15e641
+    m_Address: TargetGift3
     m_ReadOnly: 0
     m_SerializedLabels:
     - Christmas
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  - m_GUID: 832cf0c60c13bfa428e30c2b9898a1cb
-    m_Address: GiftCollider 3
+    m_MainAsset: {fileID: 2104049695896608212, guid: 76695a21223e96e4b9ab8a05be15e641,
+      type: 3}
+    m_TargetAsset: {fileID: 2104049695896608212, guid: 76695a21223e96e4b9ab8a05be15e641,
+      type: 3}
+  - m_GUID: 7fcb5952156da484a80ced5230bd2a45
+    m_Address: Arrow
     m_ReadOnly: 0
     m_SerializedLabels:
     - Christmas
@@ -136,17 +149,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - Christmas
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 2870844289484544882, guid: 8d7c16a687e75c443be2b51676846b9e,
+      type: 3}
+    m_TargetAsset: {fileID: 2870844289484544882, guid: 8d7c16a687e75c443be2b51676846b9e,
+      type: 3}
   - m_GUID: 9087ad2c237ba4a4b98e350e500ad2b4
     m_Address: Gift green full
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Christmas
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  - m_GUID: a980090a55e2cd841ae3a16dfeb9c0c4
-    m_Address: TreeCollider
     m_ReadOnly: 0
     m_SerializedLabels:
     - Christmas
@@ -157,8 +165,10 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - Christmas
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 2627447636053282153, guid: bda76b7fa3e23e249a6542ef92eaff50,
+      type: 3}
+    m_TargetAsset: {fileID: 2627447636053282153, guid: bda76b7fa3e23e249a6542ef92eaff50,
+      type: 3}
   - m_GUID: c60fadb9f52205b438ae415f89927bbc
     m_Address: GiftOpen
     m_ReadOnly: 0
@@ -171,16 +181,34 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - Christmas
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 7326903146340334859, guid: c8a5ed697a4dc4745886c75e17284a88,
+      type: 3}
+    m_TargetAsset: {fileID: 7326903146340334859, guid: c8a5ed697a4dc4745886c75e17284a88,
+      type: 3}
+  - m_GUID: d44e348a9bd84d34fa6f2030351870f3
+    m_Address: TargetGift2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Christmas
+    m_MainAsset: {fileID: 1978173310400189710, guid: d44e348a9bd84d34fa6f2030351870f3,
+      type: 3}
+    m_TargetAsset: {fileID: 1978173310400189710, guid: d44e348a9bd84d34fa6f2030351870f3,
+      type: 3}
   - m_GUID: da6410b6be8f09743beb6e3dbbba659a
     m_Address: Arrow_gift
     m_ReadOnly: 0
     m_SerializedLabels:
     - Christmas
-    m_MainAsset: {fileID: 5228848057014444710, guid: da6410b6be8f09743beb6e3dbbba659a,
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: dcd5f8e86ea247a4f9a7fb4aa49bd825
+    m_Address: Target_redball
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Christmas
+    m_MainAsset: {fileID: 2790615812122810724, guid: dcd5f8e86ea247a4f9a7fb4aa49bd825,
       type: 3}
-    m_TargetAsset: {fileID: 5228848057014444710, guid: da6410b6be8f09743beb6e3dbbba659a,
+    m_TargetAsset: {fileID: 2790615812122810724, guid: dcd5f8e86ea247a4f9a7fb4aa49bd825,
       type: 3}
   - m_GUID: e38314edf679d5e4db2b71b12c5c1cca
     m_Address: Gift red
@@ -196,10 +224,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - Christmas
-    m_MainAsset: {fileID: 4429163828618569112, guid: eb57d755b7e982a46b2d4d20a7e068b9,
-      type: 3}
-    m_TargetAsset: {fileID: 4429163828618569112, guid: eb57d755b7e982a46b2d4d20a7e068b9,
-      type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: f0849e91710e02a499998a1eee0189e2
     m_Address: Arrow_redball
     m_ReadOnly: 0

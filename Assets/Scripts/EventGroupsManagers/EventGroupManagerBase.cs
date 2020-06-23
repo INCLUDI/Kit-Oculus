@@ -72,7 +72,8 @@ public abstract class EventGroupManagerBase : ScriptableObject
     {
         foreach (string toRemove in ActivityManager.instance.Parameters.objsToDeactivate)
         {
-            Destroy(GameObject.Find(toRemove));
+            GameObject objToRemove = GameObject.Find(toRemove);
+            objToRemove.transform.DOScale(new Vector3(0, 0, 0), 1).OnComplete(() => Destroy(objToRemove));
         };
         foreach (SceneObj obj in ActivityManager.instance.Parameters.objsToActivate)
         {
@@ -101,14 +102,6 @@ public abstract class EventGroupManagerBase : ScriptableObject
                 ActivityManager.instance.Parameters.finalTransform.rotation.y,
                 ActivityManager.instance.Parameters.finalTransform.rotation.z);
             interactable.transform.DORotate(finalRotation, 1);
-        }
-    }
-
-    protected virtual void SetDeactivation(GameObject interactable)
-    {
-        if (ActivityManager.instance.Parameters.booleanParameter)
-        {
-            interactable.transform.DOScale(new Vector3(0, 0, 0), 1).OnComplete(() => Destroy(interactable));
         }
     }
 }
