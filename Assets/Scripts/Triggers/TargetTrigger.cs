@@ -39,8 +39,4 @@ public class TargetTrigger : TriggerBase
     //    target.enabled = false;
     //}
 
-    protected override void Trigger()
-    {
-        ActivityManager.instance.checkCorrectAction(gameObject, null);
-    }
 }

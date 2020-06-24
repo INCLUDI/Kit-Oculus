@@ -17,9 +17,4 @@ public class InteractableTrigger : TriggerBase
         initialRotation = transform.rotation;
         initialScale = transform.localScale;
     }
-
-    protected override void Trigger()
-    {
-        ActivityManager.instance.checkCorrectAction(gameObject);
-    }
 }

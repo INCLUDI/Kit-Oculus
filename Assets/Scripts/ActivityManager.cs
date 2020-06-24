@@ -160,7 +160,7 @@ public class ActivityManager : MonoBehaviour
         {
             GameObject temp = InstantiateObj(obj);
             instantiatedObjs.Add(temp);
-            addTriggers(temp, type);
+            temp.AddComponent(type);
         }
 
         if (spawnPoints != null && spawnPoints.Count > 0)
@@ -172,21 +172,6 @@ public class ActivityManager : MonoBehaviour
         {
             randomizeObjSpawn(instantiatedObjs);
         }
-    }
-
-    public void addTriggers(GameObject temp, Type type) 
-    {
-        temp.AddComponent(type);
-        temp.AddComponent<EventTrigger>();
-        EventTrigger trigger = temp.GetComponent<EventTrigger>();
-        EventTrigger.Entry pointerEnter_entry = new EventTrigger.Entry();
-        pointerEnter_entry.eventID = EventTriggerType.PointerEnter;
-        pointerEnter_entry.callback.AddListener((data) => { temp.GetComponent<TriggerBase>().gvrOn(); });
-        EventTrigger.Entry pointerExit_entry = new EventTrigger.Entry();
-        pointerExit_entry.eventID = EventTriggerType.PointerExit;
-        pointerExit_entry.callback.AddListener((data) => { temp.GetComponent<TriggerBase>().gvrOff(); });
-        trigger.triggers.Add(pointerEnter_entry);
-        trigger.triggers.Add(pointerExit_entry);
     }
 
     public GameObject InstantiateObj(SceneObj obj) 

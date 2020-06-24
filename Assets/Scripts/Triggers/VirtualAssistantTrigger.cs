@@ -4,8 +4,5 @@ using UnityEngine;
 
 public class VirtualAssistantTrigger : TriggerBase
 {
-    protected override void Trigger()
-    {
-        ActivityManager.instance.AssistantTriggered();
-    }
+
 }
