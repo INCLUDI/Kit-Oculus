@@ -59,10 +59,7 @@ public class ActivityManager : MonoBehaviour
         get => _eventsInCurrentGroup;
         set
         {
-            System.Random rnd = new System.Random();
-            _eventsInCurrentGroup = value.OrderBy(c => CurrentEventGroup.randomEvents ? rnd.Next() : 0)
-                    .Take(StepsToReproduce != 0 ? StepsToReproduce : CurrentEventGroup.events.Count)
-                    .ToList();
+            _eventsInCurrentGroup = eventGroupManager.SetEventsInCurrentGroup(value, CurrentEventGroup.randomEvents, StepsToReproduce);
         }
     }
 
@@ -116,8 +113,8 @@ public class ActivityManager : MonoBehaviour
 
     public void Initialize()
     {
-        EventsInCurrentGroup = CurrentEventGroup.events;
         setEventGroupManager(CurrentEventGroup.type);
+        EventsInCurrentGroup = CurrentEventGroup.events;
 
         generateSceneObjects(EventGroupObjs);
         playInstructionSequence(InstructionIntro, 0, () =>
@@ -284,8 +281,8 @@ public class ActivityManager : MonoBehaviour
                 _eventStep = 0;
                 _eventGroupStep++;
 
-                EventsInCurrentGroup = CurrentEventGroup.events;
                 setEventGroupManager(CurrentEventGroup.type);
+                EventsInCurrentGroup = CurrentEventGroup.events;
 
                 generateSceneObjects(EventGroupObjs);
                 playInstructionSequence(InstructionIntro, 0, () =>

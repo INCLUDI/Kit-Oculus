@@ -1,0 +1,213 @@
+{
+  "id": "Christmas",
+  "name": "Christmas Prova",
+  "description": "Description",
+  "image": "Christmas",
+  "difficulty": 1,
+  "scene": "Christmas",
+  "playerTransform": {
+    "position": { "x": 0, "y": 0, "z": 0 },
+    "rotation": { "x": 0, "y": 0, "z": 0 }
+  },
+  "assistantTransform": {
+    "position": { "x": 0.998, "y": 0.267, "z": 1.725 },
+    "rotation": { "x": -0.695, "y": -117.126, "z": 0.674 },
+    "scale": { "x": 0.7, "y": 0.7, "z": 0.7 }
+  },
+  "eventGroups": [
+    {
+      "type": "DragReleaseManager",
+      "instructionIntro": ["Now it's time to put the presents around."],
+      "instructionEnd": ["Congratulations!"],
+      "randomEvents": true,
+      "stepsToReproduce": 3,
+      "eventGroupObjs": {
+        "interactablesToActivate": [
+          {
+            "prefab": "Gift green full"
+          },
+          {
+            "prefab": "Gift green white"
+          },
+          {
+            "prefab": "Gift red"
+          }
+        ],
+        "interactablesToDeactivate": [
+          "Gift green full",
+          "Gift green white",
+          "Gift red"
+        ],
+        "targetsToActivate": [
+          {
+            "prefab": "TargetGift1"
+          },
+          {
+            "prefab": "TargetGift2"
+          },
+          {
+            "prefab": "TargetGift3"
+          }
+        ]
+      },
+      "events": [
+        {
+          "parameters": {
+            "correctInteractables": ["Gift green white"],
+            "correctTargets": ["TargetGift1"],
+            "finalTransform": {
+              "position": { "x": -0.125, "y": 0.279, "z": 0.811 },
+              "rotation": { "x": 0, "y": 0, "z": 0 }
+            },
+            "objsToDeactivate": ["TargetGift1"]
+          },
+          "instructions": {
+            "request": [
+              "Pick the white and green gift and put it front of the tree."
+            ],
+            "correct": ["Well done!"],
+            "wrong": ["Try again"]
+          }
+        },
+        {
+          "parameters": {
+            "correctInteractables": ["Gift green white"],
+            "correctTargets": ["TargetGift2"],
+            "finalTransform": {
+              "position": { "x": -0.897, "y": 0.279, "z": 1.5 },
+              "rotation": { "x": 0, "y": 0, "z": 0 }
+            },
+            "objsToDeactivate": ["TargetGift2"]
+          },
+          "instructions": {
+            "request": [
+              "Pick the white and green gift and put next to the tree."
+            ],
+            "correct": ["Well done!"],
+            "wrong": ["Try again"]
+          }
+        },
+        {
+          "parameters": {
+            "correctInteractables": ["Gift green white"],
+            "correctTargets": ["TargetGift3"],
+            "finalTransform": {
+              "position": { "x": 1.025, "y": 0.279, "z": 0.662 },
+              "rotation": { "x": 0, "y": 0, "z": 0 }
+            },
+            "objsToDeactivate": ["TargetGift3"]
+          },
+          "instructions": {
+            "request": [
+              "Pick the white and green gift and put it under the table."
+            ],
+            "correct": ["Well done!"],
+            "wrong": ["Try again"]
+          }
+        },
+        {
+          "parameters": {
+            "correctInteractables": ["Gift green full"],
+            "correctTargets": ["TargetGift1"],
+            "finalTransform": {
+              "position": { "x": -0.125, "y": 0.279, "z": 0.811 },
+              "rotation": { "x": 0, "y": 0, "z": 0 }
+            },
+            "objsToDeactivate": ["TargetGift1"]
+          },
+          "instructions": {
+            "request": [
+              "Pick the red and green gift and put it in front of the tree."
+            ],
+            "correct": ["Well done!"],
+            "wrong": ["Try again"]
+          }
+        },
+        {
+          "parameters": {
+            "correctInteractables": ["Gift green full"],
+            "correctTargets": ["TargetGift2"],
+            "finalTransform": {
+              "position": { "x": -0.897, "y": 0.279, "z": 1.5 },
+              "rotation": { "x": 0, "y": 0, "z": 0 }
+            },
+            "objsToDeactivate": ["TargetGift2"]
+          },
+          "instructions": {
+            "request": [
+              "Pick the red and green gift and put it next to the tree."
+            ],
+            "correct": ["Well done!"],
+            "wrong": ["Try again"]
+          }
+        },
+        {
+          "parameters": {
+            "correctInteractables": ["Gift green full"],
+            "correctTargets": ["TargetGift3"],
+            "finalTransform": {
+              "position": { "x": 1.025, "y": 0.279, "z": 0.662 },
+              "rotation": { "x": 0, "y": 0, "z": 0 }
+            },
+            "objsToDeactivate": ["TargetGift3"]
+          },
+          "instructions": {
+            "request": [
+              "Pick the red and green gift and put it under the table."
+            ],
+            "correct": ["Well done!"],
+            "wrong": ["Try again"]
+          }
+        },
+        {
+          "parameters": {
+            "correctInteractables": ["Gift red"],
+            "correctTargets": ["TargetGift1"],
+            "finalTransform": {
+              "position": { "x": -0.125, "y": 0.279, "z": 0.811 },
+              "rotation": { "x": 0, "y": 0, "z": 0 }
+            },
+            "objsToDeactivate": ["TargetGift1"]
+          },
+          "instructions": {
+            "request": ["Pick the red gift and put in front of the tree."],
+            "correct": ["Well done!"],
+            "wrong": ["Try again"]
+          }
+        },
+        {
+          "parameters": {
+            "correctInteractables": ["Gift red"],
+            "correctTargets": ["TargetGift2"],
+            "finalTransform": {
+              "position": { "x": -0.897, "y": 0.279, "z": 1.5 },
+              "rotation": { "x": 0, "y": 0, "z": 0 }
+            },
+            "objsToDeactivate": ["TargetGift2"]
+          },
+          "instructions": {
+            "request": ["Pick the red gift and put it next to the tree."],
+            "correct": ["Well done!"],
+            "wrong": ["Try again"]
+          }
+        },
+        {
+          "parameters": {
+            "correctInteractables": ["Gift red"],
+            "correctTargets": ["TargetGift3"],
+            "finalTransform": {
+              "position": { "x": 1.025, "y": 0.279, "z": 0.662 },
+              "rotation": { "x": 0, "y": 0, "z": 0 }
+            },
+            "objsToDeactivate": ["TargetGift3"]
+          },
+          "instructions": {
+            "request": ["Pick the red gift and put it under the table."],
+            "correct": ["Well done!"],
+            "wrong": ["Try again"]
+          }
+        }
+      ]
+    }
+  ]
+}

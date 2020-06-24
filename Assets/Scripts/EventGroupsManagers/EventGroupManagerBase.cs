@@ -18,6 +18,14 @@ public abstract class EventGroupManagerBase : ScriptableObject
     
     public virtual void Ready() { }
 
+    public virtual List<EventConfiguration> SetEventsInCurrentGroup(List<EventConfiguration> events, bool randomEvents, int stepsToReproduce)
+    {
+        System.Random rnd = new System.Random();
+        return events.OrderBy(c => randomEvents ? rnd.Next() : 0)
+                .Take(stepsToReproduce != 0 ? stepsToReproduce : events.Count)
+                .ToList();
+    }
+
     public virtual List<SceneObj> randomizeObjects(List<SceneObj> objs, int objectsToSpawn)
     {
         System.Random rnd = new System.Random();

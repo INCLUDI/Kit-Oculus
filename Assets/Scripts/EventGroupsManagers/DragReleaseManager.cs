@@ -16,6 +16,25 @@ public class DragReleaseManager : EventGroupManagerBase
         cross = Instantiate(Resources.Load<GameObject>("Cross"));
     }
 
+    public override List<EventConfiguration> SetEventsInCurrentGroup(List<EventConfiguration> events, bool randomEvents, int stepsToReproduce)
+    {
+        List<EventConfiguration> filtered = new List<EventConfiguration>();
+        List<string> targets = new List<string>();
+        List<string> interactables = new List<string>();
+        int steps = stepsToReproduce == 0 ? events.Count() : stepsToReproduce;
+        System.Random rnd = new System.Random();
+        events = events.OrderBy(c => randomEvents ? rnd.Next() : 0).ToList();
+        for (int i = 0; i < steps; i++)
+        {
+            events = events.Where(x => x.parameters.correctTargets.Except(targets).Count() != 0 && x.parameters.correctInteractables.Except(interactables).Count() != 0).ToList();
+            EventConfiguration selected = events[0];
+            filtered.Add(selected);
+            targets.AddRange(selected.parameters.correctTargets);
+            interactables.AddRange(selected.parameters.correctInteractables);
+        }
+        return filtered;
+    }
+
     public override void checkCorrectAction(GameObject target, GameObject interactable)
     {
         if (ActivityManager.instance.Parameters.correctInteractables.Contains(interactable.name) && 
