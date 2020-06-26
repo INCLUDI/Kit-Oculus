@@ -8,11 +8,6 @@ public class TargetTrigger : TriggerBase
 
     //private Collider target;
 
-    public TargetTrigger(int hitCounter)
-    {
-        this.hitCounter = hitCounter;
-    }
-
     //private void Awake()
     //{
     //    target = GetComponent<Collider>();
@@ -20,6 +15,7 @@ public class TargetTrigger : TriggerBase
 
     void Start()
     {
+        hitCounter = ActivityManager.instance.CurrentEvent.parameters.numericParameter;
         //EventManager.StartListening("EnableInteraction", EnableTarget);
         //EventManager.StartListening("DisableInteraction", DisableTarget);
     }
