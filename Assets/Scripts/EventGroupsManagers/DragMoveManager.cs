@@ -18,32 +18,43 @@ public class DragMoveManager : EventGroupManagerBase
 
     public override void checkCorrectAction(GameObject target, GameObject interactable)
     {
-        if (target.GetComponent<TargetTrigger>().hitCounter > 0)
+        if (ActivityManager.instance.Parameters.correctInteractables.Contains(interactable.name) &&
+               ActivityManager.instance.Parameters.correctTargets.Contains(target.name))
         {
-            target.GetComponent<TargetTrigger>().hitCounter--;
+            if (target.GetComponent<TargetTrigger>().hitCounter > 0)
+            {
+                target.GetComponent<TargetTrigger>().hitCounter--;
+            }
+            else
+            {
+                target.GetComponent<Collider>().enabled = false;
+            }
+
+            TargetTrigger[] targets = ActivityManager.instance._dynamicObjects.GetComponentsInChildren<TargetTrigger>();
+            int totalCount = 0;
+            foreach (TargetTrigger t in targets)
+            {
+                totalCount += t.hitCounter;
+            }
+
+            if (totalCount == 0)
+            {
+                SetFinalPosition(interactable);
+                SetFinalRotation(interactable);
+                ParameterObjects();
+
+                StartVisualFeedback(checkmark, interactable);
+                ActivityManager.instance.playSingleInstruction(selectCorrect(Correct), "Correct", () =>
+                    StopVisualFeedback(checkmark, () => ActivityManager.instance.nextEvent()));
+            }
         }
         else
         {
-            target.GetComponent<Collider>().enabled = false;
+            StartVisualFeedback(cross, interactable);
+            ActivityManager.instance.playSingleInstruction(selectWrong(Wrong, interactable.name), "Wrong",
+                () => StopVisualFeedback(cross, () => ActivityManager.instance.IsFree = true));
         }
 
-        TargetTrigger[] targets = ActivityManager.instance._dynamicObjects.GetComponentsInChildren<TargetTrigger>();
-        int totalCount = 0;
-        foreach (TargetTrigger t in targets)
-        {
-            totalCount += t.hitCounter;
-        }
-
-        if (totalCount == 0)
-        {
-            SetFinalPosition(interactable);
-            SetFinalRotation(interactable);
-            ParameterObjects();
-
-            StartVisualFeedback(checkmark, interactable);
-            ActivityManager.instance.playSingleInstruction(selectCorrect(Correct), "Correct", () =>
-                StopVisualFeedback(checkmark, () => ActivityManager.instance.nextEvent()));
-        }
     }
 
     public override string selectRequest(List<string> instructions)
