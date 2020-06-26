@@ -34,7 +34,7 @@ public class ActivityManager : MonoBehaviour
         }
     }
 
-    public Transform _dynamicObjects;
+    private Transform _dynamicObjects;
 
     public SpeechToText speechToText = new SpeechToText();
 
@@ -52,16 +52,7 @@ public class ActivityManager : MonoBehaviour
     private List<CustomTransform> InteractablesSpawnPoints { get => CurrentEventGroup.interactablesSpawnPoints; }
     private List<CustomTransform> TargetsSpawnPoints { get => CurrentEventGroup.targetsSpawnPoints; }
     private int StepsToReproduce { get => CurrentEventGroup.stepsToReproduce; }
-
-    private List<EventConfiguration> _eventsInCurrentGroup;
-    private List<EventConfiguration> EventsInCurrentGroup
-    {
-        get => _eventsInCurrentGroup;
-        set
-        {
-            _eventsInCurrentGroup = eventGroupManager.SetEventsInCurrentGroup(value, CurrentEventGroup.randomEvents, StepsToReproduce);
-        }
-    }
+    private List<EventConfiguration> EventsInCurrentGroup { get; set; }
 
     public EventConfiguration CurrentEvent { get => EventsInCurrentGroup[_eventStep]; }
     public EventObjs EventObjs { get => CurrentEvent.eventObjs; }
@@ -97,9 +88,7 @@ public class ActivityManager : MonoBehaviour
     // Start is called before the first frame update
     private async void Start()
     {
-        //GameManager.instance.EnableVR();
-
-        _dynamicObjects = Instantiate(new GameObject("DynamicObjects")).transform;
+        _dynamicObjects = new GameObject("DynamicObjects").transform;
 
         _eventGroupStep = 0;
         _eventStep = 0;
@@ -108,13 +97,13 @@ public class ActivityManager : MonoBehaviour
 
         _activityAssets = await Addressables.LoadAssetsAsync<GameObject>(_activityConfiguration.id, null).Task as List<GameObject>;
 
-        GameManager.instance.AcrivityReady();
+        GameManager.instance.ActivityReady();
     }
 
     public void Initialize()
     {
         setEventGroupManager(CurrentEventGroup.type);
-        EventsInCurrentGroup = CurrentEventGroup.events;
+        EventsInCurrentGroup = eventGroupManager.SetEventsInCurrentGroup(CurrentEventGroup.events, CurrentEventGroup.randomEvents, StepsToReproduce);
 
         generateSceneObjects(EventGroupObjs);
         playInstructionSequence(InstructionIntro, 0, () =>
@@ -174,7 +163,8 @@ public class ActivityManager : MonoBehaviour
         }
     }
 
-    public GameObject InstantiateObj(SceneObj obj) 
+
+    public GameObject InstantiateObj(SceneObj obj)
     {
         GameObject temp = Instantiate(_activityAssets.Find(x => x.name == obj.prefab), _dynamicObjects);
         temp.transform.DOScale(new Vector3(0, 0, 0), 1f).From();
@@ -242,7 +232,7 @@ public class ActivityManager : MonoBehaviour
         {
             foreach (string toRemove in objs.othersToDeactivate)
             {
-                GameObject temp = GameObject.Find(toRemove); 
+                GameObject temp = GameObject.Find(toRemove);
                 if (temp != null)
                 {
                     temp.transform.DOScale(new Vector3(0, 0, 0), 1f).OnComplete(() => Destroy(temp));
@@ -253,30 +243,27 @@ public class ActivityManager : MonoBehaviour
 
     private void nextEventGroup()
     {
-        playInstructionSequence(InstructionEnd, 0, () =>
+        removeSceneObjects(EventGroupObjs);
+
+        if (_eventGroupStep + 1 >= EventGroups.Count)
         {
-            removeSceneObjects(EventGroupObjs);
+            GameManager.instance.ActivityCompleted();
+        }
+        else
+        {
+            _eventStep = 0;
+            _eventGroupStep++;
 
-            if (_eventGroupStep + 1 >= EventGroups.Count)
+            setEventGroupManager(CurrentEventGroup.type);
+            EventsInCurrentGroup = eventGroupManager.SetEventsInCurrentGroup(CurrentEventGroup.events, CurrentEventGroup.randomEvents, StepsToReproduce);
+
+            generateSceneObjects(EventGroupObjs);
+            playInstructionSequence(InstructionIntro, 0, () =>
             {
-                GameManager.instance.ActivityCompleted();
-            }
-            else
-            {
-                _eventStep = 0;
-                _eventGroupStep++;
-
-                setEventGroupManager(CurrentEventGroup.type);
-                EventsInCurrentGroup = CurrentEventGroup.events;
-
-                generateSceneObjects(EventGroupObjs);
-                playInstructionSequence(InstructionIntro, 0, () =>
-                {
-                    generateSceneObjects(EventObjs);
-                    playSingleInstruction(eventGroupManager.selectRequest(Request), "Talk");
-                });
-            }
-        });
+                generateSceneObjects(EventObjs);
+                playSingleInstruction(eventGroupManager.selectRequest(Request), "Talk");
+            });
+        }
     }
 
     public void nextEvent()
@@ -285,7 +272,7 @@ public class ActivityManager : MonoBehaviour
 
         if (_eventStep + 1 >= EventsInCurrentGroup.Count)
         {
-            nextEventGroup();
+            playInstructionSequence(InstructionEnd, 0, () => nextEventGroup());
         }
         else
         {
@@ -308,7 +295,7 @@ public class ActivityManager : MonoBehaviour
         {
             VirtualAssistantManager.instance.startTalking(instructions[index], "Talk", () =>
             {
-                VirtualAssistantManager.instance.stopTalking("Talk", () => 
+                VirtualAssistantManager.instance.stopTalking("Talk", () =>
                 {
                     index++;
                     playInstructionSequence(instructions, index, call);

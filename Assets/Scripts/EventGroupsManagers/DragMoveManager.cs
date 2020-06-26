@@ -30,7 +30,7 @@ public class DragMoveManager : EventGroupManagerBase
                 target.GetComponent<Collider>().enabled = false;
             }
 
-            TargetTrigger[] targets = ActivityManager.instance._dynamicObjects.GetComponentsInChildren<TargetTrigger>();
+            TargetTrigger[] targets = GameObject.Find("DynamicObjects").GetComponentsInChildren<TargetTrigger>();
             int totalCount = 0;
             foreach (TargetTrigger t in targets)
             {

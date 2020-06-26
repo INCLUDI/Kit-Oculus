@@ -118,7 +118,7 @@ public class GameManager : MonoBehaviour
     //    }
     //}
 
-    public void AcrivityReady()
+    public void ActivityReady()
     {
         //Popup.GetComponent<PopupManager>().ActivatePopup("Message", "Ready to go! Insert your phone into the headset and look the OK button!", "Let's start", true, () =>
         //{
