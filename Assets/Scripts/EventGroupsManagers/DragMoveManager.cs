@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using static DataModel;
+using static StatsManager;
 
 public class DragMoveManager : EventGroupManagerBase
 {
@@ -46,13 +47,9 @@ public class DragMoveManager : EventGroupManagerBase
                 StartVisualFeedback(checkmark, interactable);
                 ActivityManager.instance.playSingleInstruction(selectCorrect(Correct), "Correct", () =>
                     StopVisualFeedback(checkmark, () => ActivityManager.instance.nextEvent()));
+
+                instance.ActionCompleted(request, ActivityManager.instance.hints);
             }
-        }
-        else
-        {
-            StartVisualFeedback(cross, interactable);
-            ActivityManager.instance.playSingleInstruction(selectWrong(Wrong, interactable.name), "Wrong",
-                () => StopVisualFeedback(cross, () => ActivityManager.instance.IsFree = true));
         }
 
     }

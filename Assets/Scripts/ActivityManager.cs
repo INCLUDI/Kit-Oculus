@@ -1,5 +1,6 @@
 ﻿using DG.Tweening;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -33,6 +34,9 @@ public class ActivityManager : MonoBehaviour
             }
         }
     }
+
+    public int hints;
+
 
     private Transform _dynamicObjects;
 
@@ -268,6 +272,7 @@ public class ActivityManager : MonoBehaviour
 
     public void nextEvent()
     {
+        hints = 0;
         removeSceneObjects(EventObjs);
 
         if (_eventStep + 1 >= EventsInCurrentGroup.Count)
@@ -308,6 +313,7 @@ public class ActivityManager : MonoBehaviour
     {
         if (instruction != null)
         {
+            hints++;
             IsFree = false;
             VirtualAssistantManager.instance.startTalking(instruction, animatorParam, () =>
             {

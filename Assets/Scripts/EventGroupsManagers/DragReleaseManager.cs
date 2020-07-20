@@ -52,12 +52,16 @@ public class DragReleaseManager : EventGroupManagerBase
             StartVisualFeedback(checkmark, interactable);
             ActivityManager.instance.playSingleInstruction(selectCorrect(Correct), "Correct", () =>
                 StopVisualFeedback(checkmark, () => ActivityManager.instance.nextEvent()));
+
+            StatsManager.instance.ActionCompleted(request, ActivityManager.instance.hints, ActivityManager.instance.Parameters.correctInteractables, new List<string> { interactable.name }, true);
         }
         else
         {
             StartVisualFeedback(cross, interactable);
             ActivityManager.instance.playSingleInstruction(selectWrong(Wrong, interactable.name), "Wrong",
                 () => StopVisualFeedback(cross, () => ActivityManager.instance.IsFree = true));
+
+            StatsManager.instance.ActionCompleted(request, ActivityManager.instance.hints);
         }
     }
 

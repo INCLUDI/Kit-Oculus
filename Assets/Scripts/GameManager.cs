@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public GameObject Player;
     public GameObject ActivityManager;
     //public GameObject Popup;
+    public GameObject StatsManager;
 
     public ActivityConfiguration currentActivity;
 
@@ -96,6 +97,8 @@ public class GameManager : MonoBehaviour
 
         //Popup = Instantiate(Popup);
         //Popup.SetActive(false);
+
+        StatsManager = Instantiate(StatsManager);
     }
 
 

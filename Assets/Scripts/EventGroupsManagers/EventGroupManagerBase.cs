@@ -11,11 +11,16 @@ using static DataModel;
 
 public abstract class EventGroupManagerBase : ScriptableObject
 {
+    protected string request;
+
     protected Vector3 _initialScale;
 
     public List<string> Correct { get => ActivityManager.instance.CurrentEvent.instructions.correct; }
     public List<string> Wrong { get => ActivityManager.instance.CurrentEvent.instructions.wrong; }
-    
+
+    private int instructionIndex = 0;
+
+
     public virtual void Ready() { }
 
     public virtual List<EventConfiguration> SetEventsInCurrentGroup(List<EventConfiguration> events, bool randomEvents, int stepsToReproduce)
@@ -43,7 +48,8 @@ public abstract class EventGroupManagerBase : ScriptableObject
 
     public virtual string selectRequest(List<string> instructions)
     {
-        return selectRandomInstruction(instructions);
+        request = selectNextInstruction(instructions);
+        return request;
     }
 
     public virtual string selectCorrect(List<string> instructions, string param = null)
@@ -62,6 +68,20 @@ public abstract class EventGroupManagerBase : ScriptableObject
         {
             System.Random rnd = new System.Random();
             return instructions?[rnd.Next(0, instructions.Count)];
+        }
+        else return null;
+    }
+
+    private string selectNextInstruction(List<string> instructions)
+    {
+        if (instructions != null && instructions.Count != 0)
+        {
+            string selectedInstruction = instructions[instructionIndex];
+            if (instructionIndex <= instructions.Count - 2)
+            {
+                instructionIndex++;
+            }
+            return selectedInstruction;
         }
         else return null;
     }
@@ -111,5 +131,10 @@ public abstract class EventGroupManagerBase : ScriptableObject
                 ActivityManager.instance.Parameters.finalTransform.rotation.z);
             interactable.transform.DORotate(finalRotation, 1);
         }
+    }
+
+    protected virtual void SaveAction(string request, int hints, List<string> correctParameters = null, List<string> action = null, bool error = false)
+    {
+        StatsManager.instance.ActionCompleted(request, hints, correctParameters, action, error);
     }
 }
