@@ -35,8 +35,8 @@ public class ActivityManager : MonoBehaviour
         }
     }
 
+    [HideInInspector]
     public int hints;
-
 
     private Transform _dynamicObjects;
 
@@ -61,7 +61,7 @@ public class ActivityManager : MonoBehaviour
     public EventConfiguration CurrentEvent { get => EventsInCurrentGroup[_eventStep]; }
     public EventObjs EventObjs { get => CurrentEvent.eventObjs; }
     public EventParameters Parameters { get => CurrentEvent.parameters; }
-    private List<string> Request { get => CurrentEvent.instructions.request; }
+    public List<string> Request { get => CurrentEvent.instructions.request; }
 
 
     private EventGroupManagerBase eventGroupManager;

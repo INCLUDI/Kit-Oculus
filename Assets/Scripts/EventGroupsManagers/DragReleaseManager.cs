@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using static DataModel;
+using static StatsManager;
 
 public class DragReleaseManager : EventGroupManagerBase
 {
@@ -53,7 +54,7 @@ public class DragReleaseManager : EventGroupManagerBase
             ActivityManager.instance.playSingleInstruction(selectCorrect(Correct), "Correct", () =>
                 StopVisualFeedback(checkmark, () => ActivityManager.instance.nextEvent()));
 
-            StatsManager.instance.ActionCompleted(request, ActivityManager.instance.hints, ActivityManager.instance.Parameters.correctInteractables, new List<string> { interactable.name }, true);
+            SaveAction(request: ActivityManager.instance.Request, correctParameters: ActivityManager.instance.Parameters, action: new ActionParameters { interactable = interactable.name, target = target.name }, hints: ActivityManager.instance.hints);
         }
         else
         {
@@ -61,7 +62,7 @@ public class DragReleaseManager : EventGroupManagerBase
             ActivityManager.instance.playSingleInstruction(selectWrong(Wrong, interactable.name), "Wrong",
                 () => StopVisualFeedback(cross, () => ActivityManager.instance.IsFree = true));
 
-            StatsManager.instance.ActionCompleted(request, ActivityManager.instance.hints);
+            SaveAction(request: ActivityManager.instance.Request, correctParameters: ActivityManager.instance.Parameters, action: new ActionParameters { interactable = interactable.name, target = target.name }, hints: ActivityManager.instance.hints, error: true);
         }
     }
 

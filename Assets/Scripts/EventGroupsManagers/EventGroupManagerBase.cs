@@ -8,6 +8,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using static DataModel;
+using static StatsManager;
 
 public abstract class EventGroupManagerBase : ScriptableObject
 {
@@ -133,8 +134,8 @@ public abstract class EventGroupManagerBase : ScriptableObject
         }
     }
 
-    protected virtual void SaveAction(string request, int hints, List<string> correctParameters = null, List<string> action = null, bool error = false)
+    protected virtual void SaveAction(List<string> request, EventParameters correctParameters = null, ActionParameters action = null, bool error = false, int hints = 0)
     {
-        StatsManager.instance.ActionCompleted(request, hints, correctParameters, action, error);
+        StatsManager.instance.ActionCompleted(request, correctParameters, action, error, hints);
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static DataModel;
 
 public class StatsManager : MonoBehaviour
 {
@@ -70,15 +71,15 @@ public class StatsManager : MonoBehaviour
         startActionTime = DateTime.Now;
     }
 
-    public void ActionCompleted(string request, int hints, List<string> correctParameters = null, List<string> action = null, bool error = false)
+    public void ActionCompleted(List<string> request, EventParameters correctParameters, ActionParameters action, bool error, int hints)
     {
         UserAction userAction = new UserAction
         {
             request = request,
-            hints = hints,
             correctParameters = correctParameters,
             action = action,
             error = error,
+            hints = hints,
             actionDuration = (DateTime.Now - startActionTime).TotalSeconds
         };
         userActions.Add(userAction);
@@ -99,13 +100,20 @@ public class StatsManager : MonoBehaviour
     [Serializable]
     public class UserAction
     {
-        public string request;
-        public List<string> correctParameters;
-        public List<string> action;
+        public List<string> request;
+        public EventParameters correctParameters;
+        public ActionParameters action;
         public bool error;
         public double actionDuration;
         public int hints;
     }
 
+    [Serializable]
+    public class ActionParameters
+    {
+        public string interactable;
+        public string target;
+        public string answer;
+    }
 }
 

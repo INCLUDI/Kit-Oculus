@@ -48,7 +48,7 @@ public class DragMoveManager : EventGroupManagerBase
                 ActivityManager.instance.playSingleInstruction(selectCorrect(Correct), "Correct", () =>
                     StopVisualFeedback(checkmark, () => ActivityManager.instance.nextEvent()));
 
-                instance.ActionCompleted(request, ActivityManager.instance.hints);
+                SaveAction(request: ActivityManager.instance.Request, hints: ActivityManager.instance.hints);
             }
         }
 

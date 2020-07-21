@@ -46,6 +46,8 @@ MonoBehaviour:
   Player: {fileID: 9127530448673096051, guid: 4b9ec7d966eea44418e40be57aff9f73, type: 3}
   ActivityManager: {fileID: 886379263796691855, guid: fc033901a16940b4aabfbfe2ce0fa947,
     type: 3}
+  StatsManager: {fileID: 5544384937278356479, guid: 18ff3f3bddd0e1145a442e12f32d6804,
+    type: 3}
   currentActivity:
     id: 
     name: 
