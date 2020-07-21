@@ -25,26 +25,66 @@
             "prefab": "TShirt_Folded_Yellow"
           }
         ],
-        "interactablesToDeactivate": "TShirt_Folded_Yellow",
-        "targetsToActivate": {
-          "prefab": "TshirtTarget"
-        },
-        "targetsToDeactivate": "TshirtTarget"
+        "interactablesToDeactivate": ["TShirt_Folded_Yellow"],
+        "targetsToActivate": [
+          {
+            "prefab": "TshirtTarget"
+          }
+        ]
       },
       "events": [
         {
           "parameters": {
-            "correctInteractables": ["TShirt_folded_yellow"],
+            "correctInteractables": ["TShirt_Folded_Yellow"],
             "correctTargets": ["TshirtTarget"],
             "finalTransform": {
               "position": { "x": -1.105224, "y": 0.502416, "z": 1.83927 },
               "rotation": { "x": 3.142, "y": 1.062, "z": -6.804 }
-            }
+            },
+            "objsToDeactivate": ["TshirtTarget"]
           },
           "instructions": {
             "request": [
               "Put the t-shirt on the pillow",
               "Place the t-shirt on the cushion "
+            ],
+            "correct": ["Well done!"],
+            "wrong": ["Sorry, try again."]
+          }
+        }
+      ]
+    },
+    {
+      "type": "DragReleaseManager",
+      "eventGroupObjs": {
+        "interactablesToActivate": [
+          {
+            "prefab": "Poster"
+          }
+        ],
+        "interactablesToDeactivate": ["Poster"],
+        "targetsToActivate": [
+          {
+            "prefab": "PosterTarget"
+          }
+        ],
+        "othersToActivate": ["Arrow"]
+      },
+      "events": [
+        {
+          "parameters": {
+            "correctInteractables": ["Poster"],
+            "correctTargets": ["PosterTarget"],
+            "finalTransform": {
+              "position": { "x": 2.235, "y": 1.415, "z": -0.291 },
+              "rotation": { "x": 0, "y": 90, "z": 0 }
+            },
+            "objsToDeactivate": ["PosterTarget", "Arrow"]
+          },
+          "instructions": {
+            "request": [
+              "Stick the poster on the wall.",
+              "Attach the poster on the wall."
             ],
             "correct": ["Well done!"],
             "wrong": ["Sorry, try again."]
