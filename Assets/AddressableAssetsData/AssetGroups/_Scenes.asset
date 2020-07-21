@@ -17,12 +17,30 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 249259beca3b8c4409437a617ced9032
   m_SerializeEntries:
+  - m_GUID: 3e315c65de0c0cd46a615f075c67a9a3
+    m_Address: Bedroom
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 102900000, guid: 3e315c65de0c0cd46a615f075c67a9a3, type: 3}
+    m_TargetAsset: {fileID: 102900000, guid: 3e315c65de0c0cd46a615f075c67a9a3, type: 3}
+  - m_GUID: 88b9fc12e42adb345adfb212a7b7d139
+    m_Address: Kitchen
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 102900000, guid: 88b9fc12e42adb345adfb212a7b7d139, type: 3}
+    m_TargetAsset: {fileID: 102900000, guid: 88b9fc12e42adb345adfb212a7b7d139, type: 3}
+  - m_GUID: a387106ae4f92ae40b64c9d381192cf4
+    m_Address: DoctorsOffice
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 102900000, guid: a387106ae4f92ae40b64c9d381192cf4, type: 3}
+    m_TargetAsset: {fileID: 102900000, guid: a387106ae4f92ae40b64c9d381192cf4, type: 3}
   - m_GUID: fe1950e452a0a9048ad0c87644b728a7
     m_Address: Christmas
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 102900000, guid: fe1950e452a0a9048ad0c87644b728a7, type: 3}
-    m_TargetAsset: {fileID: 102900000, guid: fe1950e452a0a9048ad0c87644b728a7, type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 84b9e0eb6389152478e25e856e50d1bb, type: 2}
   m_SchemaSet:
