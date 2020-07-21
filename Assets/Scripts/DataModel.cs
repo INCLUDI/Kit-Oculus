@@ -81,7 +81,6 @@ public class DataModel : MonoBehaviour
         public int targetsToSpawn;
         public bool interactablesRandomSpawn;
         public bool targetsRandomSpawn;
-        public int timeout;
         public List<CustomTransform> interactablesSpawnPoints;
         public List<CustomTransform> targetsSpawnPoints;
         public List<EventConfiguration> events;

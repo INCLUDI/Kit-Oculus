@@ -938,6 +938,7 @@ GameObject:
   - component: {fileID: 3915443977900036617}
   - component: {fileID: 3915443977900036616}
   - component: {fileID: 3915443977900036620}
+  - component: {fileID: 251296586687359434}
   m_Layer: 0
   m_Name: MainMenu
   m_TagString: Untagged
@@ -1042,6 +1043,25 @@ MonoBehaviour:
     type: 3}
   activityScrollView: {fileID: 3915443978956412742}
   activityContent: {fileID: 3915443978441019891}
+--- !u!114 &251296586687359434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3915443977900036631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aaf960227867044282d921171d2d7ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  pointer: {fileID: 0}
+  sortOrder: 0
 --- !u!1 &3915443977916335316
 GameObject:
   m_ObjectHideFlags: 0

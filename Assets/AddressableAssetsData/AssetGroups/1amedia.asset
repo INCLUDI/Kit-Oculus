@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: 1amedia
+  m_EditorClassIdentifier: 
+  m_GroupName: 1amedia
+  m_Data:
+    m_SerializedData: []
+  m_GUID: d335f89e53d314a4298d9ae9f633eb4e
+  m_SerializeEntries:
+  - m_GUID: acb36a0ccb650084d9b63c053e5791d9
+    m_Address: TshirtTarget
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 1amedia
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: d25477b53bd51ff4d9eb2328613cc9ae
+    m_Address: TShirt_Folded_Yellow
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 1amedia
+    m_MainAsset: {fileID: 159710, guid: d25477b53bd51ff4d9eb2328613cc9ae, type: 3}
+    m_TargetAsset: {fileID: 159710, guid: d25477b53bd51ff4d9eb2328613cc9ae, type: 3}
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 84b9e0eb6389152478e25e856e50d1bb, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: a3a54da87cfe89646b65977de8ab7762, type: 2}
+    - {fileID: 11400000, guid: 1bb34fba79460364eb389f152d73c17a, type: 2}

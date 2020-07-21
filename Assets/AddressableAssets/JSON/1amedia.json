@@ -1,0 +1,56 @@
+{
+  "id": "1amedia",
+  "name": "Bedroom",
+  "description": "Description",
+  "image": "Bedroom",
+  "difficulty": 1,
+  "scene": "Bedroom",
+  "playerTransform": {
+    "position": { "x": 0, "y": -0.5577, "z": 0 },
+    "rotation": { "x": 0, "y": 74.26, "z": 0 }
+  },
+  "assistantTransform": {
+    "position": { "x": 1.784284, "y": -0.155, "z": 0.717057 },
+    "rotation": { "x": 0, "y": -111.17, "z": 0 },
+    "scale": { "x": 0.7, "y": 0.7, "z": 0.7 }
+  },
+  "eventGroups": [
+    {
+      "type": "DragReleaseManager",
+      "instructionIntro": ["Hello, nice to see you!"],
+      "instructionEnd": ["Congratulations!"],
+      "eventGroupObjs": {
+        "interactablesToActivate": [
+          {
+            "prefab": "TShirt_Folded_Yellow"
+          }
+        ],
+        "interactablesToDeactivate": "TShirt_Folded_Yellow",
+        "targetsToActivate": {
+          "prefab": "TshirtTarget"
+        },
+        "targetsToDeactivate": "TshirtTarget"
+      },
+      "events": [
+        {
+          "parameters": {
+            "correctInteractables": ["TShirt_folded_yellow"],
+            "correctTargets": ["TshirtTarget"],
+            "finalTransform": {
+              "position": { "x": -1.105224, "y": 0.502416, "z": 1.83927 },
+              "rotation": { "x": 3.142, "y": 1.062, "z": -6.804 }
+            }
+          },
+          "instructions": {
+            "request": [
+              "Put the t-shirt on the pillow",
+              "Place the t-shirt on the cushion "
+            ],
+            "correct": ["Well done!"],
+            "wrong": ["Sorry, try again."]
+          }
+        }
+      ]
+    }
+  ]
+}
