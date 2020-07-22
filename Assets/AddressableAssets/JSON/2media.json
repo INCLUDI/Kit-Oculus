@@ -69,19 +69,16 @@
               "plant3Collider",
               "plant4Collider"
             ],
-            "finalTransform": {
-              "position": { "x": -1.105224, "y": 0.502416, "z": 1.83927 },
-              "rotation": { "x": 3.142, "y": 1.062, "z": -6.804 }
-            },
             "objsToDeactivate": [
               "plant1Collider",
               "plant2Collider",
               "plant3Collider",
-              "plant4Collider"
+              "plant4Collider",
+              "WateringCan"
             ]
           },
           "instructions": {
-            "request": ["Water the plants.", "Irrigate the plants"],
+            "request": ["Water the plants.", "Irrigate the plants."],
             "correct": ["Well done!"],
             "wrong": ["Sorry, try again."]
           }
