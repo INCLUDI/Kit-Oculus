@@ -16,6 +16,47 @@
   },
   "eventGroups": [
     {
+      "type": "DragReleaseManager",
+      "eventGroupObjs": {
+        "interactablesToActivate": [
+          {
+            "prefab": "catfood_01"
+          }
+        ],
+        "interactablesToDeactivate": ["catfood_01"],
+        "targetsToActivate": [
+          {
+            "prefab": "petbowl_01"
+          }
+        ],
+        "targetsToDeactivate": ["petbowl_01"],
+        "othersToActivate": [
+          {
+            "prefab": "GreyCat1"
+          }
+        ],
+        "othersToDeactivate": ["GreyCat1", "petpowl 03 food"]
+      },
+      "events": [
+        {
+          "parameters": {
+            "correctInteractables": ["catfood_01"],
+            "correctTargets": ["petbowl_01"],
+            "objsToActivate": [
+              {
+                "prefab": "petpowl 03 food"
+              }
+            ]
+          },
+          "instructions": {
+            "request": ["Feed the cat.", "Give some food to the cat."],
+            "correct": ["Well done!"],
+            "wrong": ["Sorry, try again."]
+          }
+        }
+      ]
+    },
+    {
       "type": "DragMoveManager",
       "eventGroupObjs": {
         "interactablesToActivate": [

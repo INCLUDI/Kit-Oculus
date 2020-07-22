@@ -24,13 +24,6 @@ MonoBehaviour:
     - _JSON
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
-  - m_GUID: 378413d494b25584386d1e5bc2a0214f
-    m_Address: ChristmasProva
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - _JSON
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 3b212252e05ad604ba678e94d099c9db
     m_Address: 3media
     m_ReadOnly: 0

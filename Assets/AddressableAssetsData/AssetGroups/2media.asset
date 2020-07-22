@@ -62,6 +62,15 @@ MonoBehaviour:
       type: 3}
     m_TargetAsset: {fileID: 8280344252182153652, guid: 265e7932c8c9bab4ba887f6752e23171,
       type: 3}
+  - m_GUID: 28f51ce28f76fdb41a31865ab230a14e
+    m_Address: petbowl_01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 2media
+    m_MainAsset: {fileID: 7243670052546372824, guid: 28f51ce28f76fdb41a31865ab230a14e,
+      type: 3}
+    m_TargetAsset: {fileID: 7243670052546372824, guid: 28f51ce28f76fdb41a31865ab230a14e,
+      type: 3}
   - m_GUID: 3151eedc942da494cba9da1ff5b66d8a
     m_Address: WateringCan
     m_ReadOnly: 0
@@ -71,6 +80,15 @@ MonoBehaviour:
       type: 3}
     m_TargetAsset: {fileID: 7501297760790469731, guid: 3151eedc942da494cba9da1ff5b66d8a,
       type: 3}
+  - m_GUID: 527b90d2efa05874cb3b20b848043dae
+    m_Address: GreyCat1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 2media
+    m_MainAsset: {fileID: 136490199116398453, guid: 527b90d2efa05874cb3b20b848043dae,
+      type: 3}
+    m_TargetAsset: {fileID: 136490199116398453, guid: 527b90d2efa05874cb3b20b848043dae,
+      type: 3}
   - m_GUID: 5efbdff695d22544890988ce1a13dd25
     m_Address: plant1 Variant
     m_ReadOnly: 0
@@ -79,6 +97,15 @@ MonoBehaviour:
     m_MainAsset: {fileID: 4909321149650273713, guid: 5efbdff695d22544890988ce1a13dd25,
       type: 3}
     m_TargetAsset: {fileID: 4909321149650273713, guid: 5efbdff695d22544890988ce1a13dd25,
+      type: 3}
+  - m_GUID: 71f30eb9c3e76b94eaa16937c8a67f94
+    m_Address: catfood_01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 2media
+    m_MainAsset: {fileID: 9094446971669420959, guid: 71f30eb9c3e76b94eaa16937c8a67f94,
+      type: 3}
+    m_TargetAsset: {fileID: 9094446971669420959, guid: 71f30eb9c3e76b94eaa16937c8a67f94,
       type: 3}
   - m_GUID: 73832573c608adb48abb0339b55cb111
     m_Address: plant4Collider
@@ -97,6 +124,15 @@ MonoBehaviour:
     m_MainAsset: {fileID: 4454161756409938151, guid: 83159a856da2fe641bdbe4edf84b1761,
       type: 3}
     m_TargetAsset: {fileID: 4454161756409938151, guid: 83159a856da2fe641bdbe4edf84b1761,
+      type: 3}
+  - m_GUID: 8466e7a266be8ed4497d32ce37ae2cee
+    m_Address: petpowl 03 food
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 2media
+    m_MainAsset: {fileID: 263082750766634688, guid: 8466e7a266be8ed4497d32ce37ae2cee,
+      type: 3}
+    m_TargetAsset: {fileID: 263082750766634688, guid: 8466e7a266be8ed4497d32ce37ae2cee,
       type: 3}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 84b9e0eb6389152478e25e856e50d1bb, type: 2}
