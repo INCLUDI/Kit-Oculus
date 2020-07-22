@@ -170,6 +170,7 @@ public class ActivityManager : MonoBehaviour
 
     public GameObject InstantiateObj(SceneObj obj)
     {
+        Debug.Log(obj.prefab);
         GameObject temp = Instantiate(_activityAssets.Find(x => x.name == obj.prefab), _dynamicObjects);
         temp.transform.DOScale(new Vector3(0, 0, 0), 1f).From();
 

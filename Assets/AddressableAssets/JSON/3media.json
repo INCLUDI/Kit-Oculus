@@ -1,10 +1,10 @@
 {
-  "id": "1amedia",
-  "name": "Bedroom",
+  "id": "3media",
+  "name": "Doctor",
   "description": "Description",
-  "image": "Bedroom",
+  "image": "DoctorsOffice",
   "difficulty": 1,
-  "scene": "Bedroom",
+  "scene": "DoctorsOffice",
   "playerTransform": {
     "position": { "x": 0, "y": -0.5577, "z": 0 },
     "rotation": { "x": 0, "y": 74.26, "z": 0 }

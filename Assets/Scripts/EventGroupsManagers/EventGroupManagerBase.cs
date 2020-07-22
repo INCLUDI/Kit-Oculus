@@ -112,7 +112,7 @@ public abstract class EventGroupManagerBase : ScriptableObject
 
     protected virtual void SetFinalPosition(GameObject interactable)
     {
-        if (ActivityManager.instance.Parameters.finalTransform.position != null)
+        if (ActivityManager.instance.Parameters.finalTransform?.position != null)
         {
             Vector3 finalPosition = new Vector3(
                 ActivityManager.instance.Parameters.finalTransform.position.x,
@@ -124,7 +124,7 @@ public abstract class EventGroupManagerBase : ScriptableObject
 
     protected virtual void SetFinalRotation(GameObject interactable)
     {
-        if (ActivityManager.instance.Parameters.finalTransform.rotation != null)
+        if (ActivityManager.instance.Parameters.finalTransform?.rotation != null)
         {
             Vector3 finalRotation = new Vector3(
                 ActivityManager.instance.Parameters.finalTransform.rotation.x,

@@ -31,6 +31,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f82bff348d99e9347bfaea5ba62b99ec, type: 2}
   - {fileID: 11400000, guid: 4127212f49cc98946ae2f33fa2576a99, type: 2}
   - {fileID: 11400000, guid: 12e2c8966d5780441965e6e7bf108bb6, type: 2}
+  - {fileID: 11400000, guid: b5e89b971745f1542ac4b8db4fa98fff, type: 2}
+  - {fileID: 11400000, guid: 6f289c831bd5a4745a899f2dd602cb75, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -75,7 +77,9 @@ MonoBehaviour:
     - _JSON
     - Christmas
     - Halloween
-    - 1amedia
+    - 1media
+    - 2media
+    - 3media
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 429e7eace6ac1ab4f949b65f2867e3d8, type: 2}

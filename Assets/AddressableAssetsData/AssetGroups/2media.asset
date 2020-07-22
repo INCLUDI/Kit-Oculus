@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: 2media
+  m_EditorClassIdentifier: 
+  m_GroupName: 2media
+  m_Data:
+    m_SerializedData: []
+  m_GUID: b7eed7d251099d549a61c3d1c1fba7d0
+  m_SerializeEntries:
+  - m_GUID: 0c5c9b0a55097064eaa7d0f7993ea0b9
+    m_Address: plant1Collider
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 2media
+    m_MainAsset: {fileID: 8233529210040397655, guid: 0c5c9b0a55097064eaa7d0f7993ea0b9,
+      type: 3}
+    m_TargetAsset: {fileID: 8233529210040397655, guid: 0c5c9b0a55097064eaa7d0f7993ea0b9,
+      type: 3}
+  - m_GUID: 0cd6613eb8793674aa4e0ce35ad5c6e7
+    m_Address: plant3 Variant
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 2media
+    m_MainAsset: {fileID: 4143664204994331989, guid: 0cd6613eb8793674aa4e0ce35ad5c6e7,
+      type: 3}
+    m_TargetAsset: {fileID: 4143664204994331989, guid: 0cd6613eb8793674aa4e0ce35ad5c6e7,
+      type: 3}
+  - m_GUID: 0efa1fb5cb624254b8f99e8f8c10ec7e
+    m_Address: plant3Collider
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 2media
+    m_MainAsset: {fileID: 2181435986042582008, guid: 0efa1fb5cb624254b8f99e8f8c10ec7e,
+      type: 3}
+    m_TargetAsset: {fileID: 2181435986042582008, guid: 0efa1fb5cb624254b8f99e8f8c10ec7e,
+      type: 3}
+  - m_GUID: 249cf98a34b9eed48b98adc07185d9cd
+    m_Address: plant2 Variant
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 2media
+    m_MainAsset: {fileID: 9177085781913225758, guid: 249cf98a34b9eed48b98adc07185d9cd,
+      type: 3}
+    m_TargetAsset: {fileID: 9177085781913225758, guid: 249cf98a34b9eed48b98adc07185d9cd,
+      type: 3}
+  - m_GUID: 265e7932c8c9bab4ba887f6752e23171
+    m_Address: plant2Collider
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 2media
+    m_MainAsset: {fileID: 8280344252182153652, guid: 265e7932c8c9bab4ba887f6752e23171,
+      type: 3}
+    m_TargetAsset: {fileID: 8280344252182153652, guid: 265e7932c8c9bab4ba887f6752e23171,
+      type: 3}
+  - m_GUID: 3151eedc942da494cba9da1ff5b66d8a
+    m_Address: WateringCan
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 2media
+    m_MainAsset: {fileID: 7501297760790469731, guid: 3151eedc942da494cba9da1ff5b66d8a,
+      type: 3}
+    m_TargetAsset: {fileID: 7501297760790469731, guid: 3151eedc942da494cba9da1ff5b66d8a,
+      type: 3}
+  - m_GUID: 5efbdff695d22544890988ce1a13dd25
+    m_Address: plant1 Variant
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 2media
+    m_MainAsset: {fileID: 4909321149650273713, guid: 5efbdff695d22544890988ce1a13dd25,
+      type: 3}
+    m_TargetAsset: {fileID: 4909321149650273713, guid: 5efbdff695d22544890988ce1a13dd25,
+      type: 3}
+  - m_GUID: 73832573c608adb48abb0339b55cb111
+    m_Address: plant4Collider
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 2media
+    m_MainAsset: {fileID: 7903607643205061532, guid: 73832573c608adb48abb0339b55cb111,
+      type: 3}
+    m_TargetAsset: {fileID: 7903607643205061532, guid: 73832573c608adb48abb0339b55cb111,
+      type: 3}
+  - m_GUID: 83159a856da2fe641bdbe4edf84b1761
+    m_Address: plant4 Variant
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 2media
+    m_MainAsset: {fileID: 4454161756409938151, guid: 83159a856da2fe641bdbe4edf84b1761,
+      type: 3}
+    m_TargetAsset: {fileID: 4454161756409938151, guid: 83159a856da2fe641bdbe4edf84b1761,
+      type: 3}
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 84b9e0eb6389152478e25e856e50d1bb, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: db92af20b3db14444870b4f5209fa2a8, type: 2}
+    - {fileID: 11400000, guid: b500d9d119e60db4a80c7aed3d505f0d, type: 2}

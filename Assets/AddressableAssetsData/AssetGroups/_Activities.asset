@@ -31,6 +31,13 @@ MonoBehaviour:
     - _JSON
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: 3b212252e05ad604ba678e94d099c9db
+    m_Address: 3media
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - _JSON
+    m_MainAsset: {fileID: 4900000, guid: 3b212252e05ad604ba678e94d099c9db, type: 3}
+    m_TargetAsset: {fileID: 4900000, guid: 3b212252e05ad604ba678e94d099c9db, type: 3}
   - m_GUID: 452b369f48784054fad825f80167229c
     m_Address: Halloween
     m_ReadOnly: 0
@@ -43,8 +50,15 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - _JSON
-    m_MainAsset: {fileID: 4900000, guid: 5d5cd83332bf7a94888fb9b7c5da5769, type: 3}
-    m_TargetAsset: {fileID: 4900000, guid: 5d5cd83332bf7a94888fb9b7c5da5769, type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: e1b4874bcb7fa174b906e3effddd31ce
+    m_Address: 2media
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - _JSON
+    m_MainAsset: {fileID: 4900000, guid: e1b4874bcb7fa174b906e3effddd31ce, type: 3}
+    m_TargetAsset: {fileID: 4900000, guid: e1b4874bcb7fa174b906e3effddd31ce, type: 3}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 84b9e0eb6389152478e25e856e50d1bb, type: 2}
   m_SchemaSet:

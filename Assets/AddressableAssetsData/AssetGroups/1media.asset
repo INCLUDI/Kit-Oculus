@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: 1amedia
+  m_Name: 1media
   m_EditorClassIdentifier: 
-  m_GroupName: 1amedia
+  m_GroupName: 1media
   m_Data:
     m_SerializedData: []
   m_GUID: d335f89e53d314a4298d9ae9f633eb4e
@@ -22,6 +22,7 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - 1amedia
+    - 1media
     m_MainAsset: {fileID: 2243410176158335316, guid: 5a4c465c07d32134c933da02c00202a8,
       type: 3}
     m_TargetAsset: {fileID: 2243410176158335316, guid: 5a4c465c07d32134c933da02c00202a8,
@@ -31,6 +32,7 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - 1amedia
+    - 1media
     m_MainAsset: {fileID: 6788419703546990382, guid: 87533ff7d08d2904ba9c50df3247b683,
       type: 3}
     m_TargetAsset: {fileID: 6788419703546990382, guid: 87533ff7d08d2904ba9c50df3247b683,
@@ -40,6 +42,7 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - 1amedia
+    - 1media
     m_MainAsset: {fileID: 3739261007380630773, guid: 91243d8c002a32742888885e2d73a8e8,
       type: 3}
     m_TargetAsset: {fileID: 3739261007380630773, guid: 91243d8c002a32742888885e2d73a8e8,
@@ -49,13 +52,17 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - 1amedia
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    - 1media
+    m_MainAsset: {fileID: 892807510263547459, guid: acb36a0ccb650084d9b63c053e5791d9,
+      type: 3}
+    m_TargetAsset: {fileID: 892807510263547459, guid: acb36a0ccb650084d9b63c053e5791d9,
+      type: 3}
   - m_GUID: d25477b53bd51ff4d9eb2328613cc9ae
     m_Address: TShirt_Folded_Yellow
     m_ReadOnly: 0
     m_SerializedLabels:
     - 1amedia
+    - 1media
     m_MainAsset: {fileID: 159710, guid: d25477b53bd51ff4d9eb2328613cc9ae, type: 3}
     m_TargetAsset: {fileID: 159710, guid: d25477b53bd51ff4d9eb2328613cc9ae, type: 3}
   m_ReadOnly: 0
