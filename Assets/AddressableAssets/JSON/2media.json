@@ -16,7 +16,49 @@
   },
   "eventGroups": [
     {
-      "type": "DragReleaseManager",
+      "type": "DragMoveManager",
+      "eventGroupObjs": {
+        "interactablesToActivate": [
+          {
+            "prefab": "Salt"
+          },
+          {
+            "prefab": "Pepper"
+          }
+        ],
+        "interactablesToDeactivate": ["Salt", "Pepper"],
+        "targetsToActivate": [
+          {
+            "prefab": "PotCollider"
+          }
+        ],
+        "targetsToDeactivate": ["PotCollider"],
+        "othersToActivate": [
+          {
+            "prefab": "Pot"
+          }
+        ],
+        "othersToDeactivate": ["Pot"]
+      },
+      "events": [
+        {
+          "parameters": {
+            "correctInteractables": ["Salt"],
+            "correctTargets": ["PotCollider"]
+          },
+          "instructions": {
+            "request": [
+              "Salt the water on the fire.",
+              "Put some salt into the pot."
+            ],
+            "correct": ["Well done!"],
+            "wrong": ["Sorry, try again."]
+          }
+        }
+      ]
+    },
+    {
+      "type": "DragMoveManager",
       "eventGroupObjs": {
         "interactablesToActivate": [
           {
