@@ -20,6 +20,40 @@
       "eventGroupObjs": {
         "interactablesToActivate": [
           {
+            "prefab": "Bottle"
+          }
+        ],
+        "interactablesToDeactivate": ["Bottle"],
+        "targetsToActivate": [
+          {
+            "prefab": "Glass"
+          }
+        ],
+        "targetsToDeactivate": ["Glass"]
+      },
+      "events": [
+        {
+          "parameters": {
+            "correctInteractables": ["Bottle"],
+            "correctTargets": ["Glass"],
+            "numericParameter": 1
+          },
+          "instructions": {
+            "request": [
+              "Pour some water into the glass.",
+              "Spill some water into the glass."
+            ],
+            "correct": ["Well done!"],
+            "wrong": ["Sorry, try again."]
+          }
+        }
+      ]
+    },
+    {
+      "type": "DragMoveManager",
+      "eventGroupObjs": {
+        "interactablesToActivate": [
+          {
             "prefab": "Salt"
           },
           {
