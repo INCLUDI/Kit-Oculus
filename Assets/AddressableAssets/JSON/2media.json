@@ -20,6 +20,39 @@
       "eventGroupObjs": {
         "interactablesToActivate": [
           {
+            "prefab": "Knife"
+          }
+        ],
+        "interactablesToDeactivate": ["Knife"],
+        "targetsToActivate": [
+          {
+            "prefab": "Ham"
+          }
+        ],
+        "othersToDeactivate": ["HamSliced"]
+      },
+      "events": [
+        {
+          "parameters": {
+            "correctInteractables": ["Knife"],
+            "correctTargets": ["Ham"],
+            "objsToActivate": [{ "prefab": "HamSliced" }],
+            "objsToDeactivate": ["Ham"],
+            "numericParameter": 3
+          },
+          "instructions": {
+            "request": ["Slice the ham.", "Cut the ham into slices."],
+            "correct": ["Well done!"],
+            "wrong": ["Sorry, try again."]
+          }
+        }
+      ]
+    },
+    {
+      "type": "DragMoveManager",
+      "eventGroupObjs": {
+        "interactablesToActivate": [
+          {
             "prefab": "Bottle"
           }
         ],

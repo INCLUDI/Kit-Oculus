@@ -22,73 +22,66 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - 2media
-    m_MainAsset: {fileID: 8233529210040397655, guid: 0c5c9b0a55097064eaa7d0f7993ea0b9,
-      type: 3}
-    m_TargetAsset: {fileID: 8233529210040397655, guid: 0c5c9b0a55097064eaa7d0f7993ea0b9,
-      type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 0cd6613eb8793674aa4e0ce35ad5c6e7
     m_Address: plant3 Variant
     m_ReadOnly: 0
     m_SerializedLabels:
     - 2media
-    m_MainAsset: {fileID: 4143664204994331989, guid: 0cd6613eb8793674aa4e0ce35ad5c6e7,
-      type: 3}
-    m_TargetAsset: {fileID: 4143664204994331989, guid: 0cd6613eb8793674aa4e0ce35ad5c6e7,
-      type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 0efa1fb5cb624254b8f99e8f8c10ec7e
     m_Address: plant3Collider
     m_ReadOnly: 0
     m_SerializedLabels:
     - 2media
-    m_MainAsset: {fileID: 2181435986042582008, guid: 0efa1fb5cb624254b8f99e8f8c10ec7e,
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 1b6cd56c09411d54481d3d4e240e7fe6
+    m_Address: Bottle
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 2media
+    m_MainAsset: {fileID: 6032640874890167668, guid: 1b6cd56c09411d54481d3d4e240e7fe6,
       type: 3}
-    m_TargetAsset: {fileID: 2181435986042582008, guid: 0efa1fb5cb624254b8f99e8f8c10ec7e,
+    m_TargetAsset: {fileID: 6032640874890167668, guid: 1b6cd56c09411d54481d3d4e240e7fe6,
       type: 3}
   - m_GUID: 249cf98a34b9eed48b98adc07185d9cd
     m_Address: plant2 Variant
     m_ReadOnly: 0
     m_SerializedLabels:
     - 2media
-    m_MainAsset: {fileID: 9177085781913225758, guid: 249cf98a34b9eed48b98adc07185d9cd,
-      type: 3}
-    m_TargetAsset: {fileID: 9177085781913225758, guid: 249cf98a34b9eed48b98adc07185d9cd,
-      type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 265e7932c8c9bab4ba887f6752e23171
     m_Address: plant2Collider
     m_ReadOnly: 0
     m_SerializedLabels:
     - 2media
-    m_MainAsset: {fileID: 8280344252182153652, guid: 265e7932c8c9bab4ba887f6752e23171,
-      type: 3}
-    m_TargetAsset: {fileID: 8280344252182153652, guid: 265e7932c8c9bab4ba887f6752e23171,
-      type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 28f51ce28f76fdb41a31865ab230a14e
     m_Address: petbowl_01
     m_ReadOnly: 0
     m_SerializedLabels:
     - 2media
-    m_MainAsset: {fileID: 7243670052546372824, guid: 28f51ce28f76fdb41a31865ab230a14e,
-      type: 3}
-    m_TargetAsset: {fileID: 7243670052546372824, guid: 28f51ce28f76fdb41a31865ab230a14e,
-      type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 3151eedc942da494cba9da1ff5b66d8a
     m_Address: WateringCan
     m_ReadOnly: 0
     m_SerializedLabels:
     - 2media
-    m_MainAsset: {fileID: 7501297760790469731, guid: 3151eedc942da494cba9da1ff5b66d8a,
-      type: 3}
-    m_TargetAsset: {fileID: 7501297760790469731, guid: 3151eedc942da494cba9da1ff5b66d8a,
-      type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 474b9872c8944794796fce8228103c75
     m_Address: Pepper
     m_ReadOnly: 0
     m_SerializedLabels:
     - 2media
-    m_MainAsset: {fileID: 1826063317946550273, guid: 474b9872c8944794796fce8228103c75,
-      type: 3}
-    m_TargetAsset: {fileID: 1826063317946550273, guid: 474b9872c8944794796fce8228103c75,
-      type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 527b90d2efa05874cb3b20b848043dae
     m_Address: GreyCat1
     m_ReadOnly: 0
@@ -103,63 +96,67 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - 2media
-    m_MainAsset: {fileID: 5843915177454893196, guid: 5beab40511506f648bf8bda720d7f989,
-      type: 3}
-    m_TargetAsset: {fileID: 5843915177454893196, guid: 5beab40511506f648bf8bda720d7f989,
-      type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 5efbdff695d22544890988ce1a13dd25
     m_Address: plant1 Variant
     m_ReadOnly: 0
     m_SerializedLabels:
     - 2media
-    m_MainAsset: {fileID: 4909321149650273713, guid: 5efbdff695d22544890988ce1a13dd25,
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 687d1af4d53dd744eb4fe9afe30662c8
+    m_Address: Knife
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 2media
+    m_MainAsset: {fileID: 3073575411792674690, guid: 687d1af4d53dd744eb4fe9afe30662c8,
       type: 3}
-    m_TargetAsset: {fileID: 4909321149650273713, guid: 5efbdff695d22544890988ce1a13dd25,
+    m_TargetAsset: {fileID: 3073575411792674690, guid: 687d1af4d53dd744eb4fe9afe30662c8,
       type: 3}
   - m_GUID: 71f30eb9c3e76b94eaa16937c8a67f94
     m_Address: catfood_01
     m_ReadOnly: 0
     m_SerializedLabels:
     - 2media
-    m_MainAsset: {fileID: 9094446971669420959, guid: 71f30eb9c3e76b94eaa16937c8a67f94,
-      type: 3}
-    m_TargetAsset: {fileID: 9094446971669420959, guid: 71f30eb9c3e76b94eaa16937c8a67f94,
-      type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 73832573c608adb48abb0339b55cb111
     m_Address: plant4Collider
     m_ReadOnly: 0
     m_SerializedLabels:
     - 2media
-    m_MainAsset: {fileID: 7903607643205061532, guid: 73832573c608adb48abb0339b55cb111,
-      type: 3}
-    m_TargetAsset: {fileID: 7903607643205061532, guid: 73832573c608adb48abb0339b55cb111,
-      type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 83159a856da2fe641bdbe4edf84b1761
     m_Address: plant4 Variant
     m_ReadOnly: 0
     m_SerializedLabels:
     - 2media
-    m_MainAsset: {fileID: 4454161756409938151, guid: 83159a856da2fe641bdbe4edf84b1761,
-      type: 3}
-    m_TargetAsset: {fileID: 4454161756409938151, guid: 83159a856da2fe641bdbe4edf84b1761,
-      type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 8466e7a266be8ed4497d32ce37ae2cee
     m_Address: petpowl 03 food
     m_ReadOnly: 0
     m_SerializedLabels:
     - 2media
-    m_MainAsset: {fileID: 263082750766634688, guid: 8466e7a266be8ed4497d32ce37ae2cee,
-      type: 3}
-    m_TargetAsset: {fileID: 263082750766634688, guid: 8466e7a266be8ed4497d32ce37ae2cee,
-      type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: b0114fdeda2d2ee4da7dfa07633485f6
     m_Address: Salt
     m_ReadOnly: 0
     m_SerializedLabels:
     - 2media
-    m_MainAsset: {fileID: 4365621691128014550, guid: b0114fdeda2d2ee4da7dfa07633485f6,
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: bcabc1adcb44b4742956a3b123fce6b6
+    m_Address: Glass
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 2media
+    m_MainAsset: {fileID: 5959893323815889955, guid: bcabc1adcb44b4742956a3b123fce6b6,
       type: 3}
-    m_TargetAsset: {fileID: 4365621691128014550, guid: b0114fdeda2d2ee4da7dfa07633485f6,
+    m_TargetAsset: {fileID: 5959893323815889955, guid: bcabc1adcb44b4742956a3b123fce6b6,
       type: 3}
   - m_GUID: ce85f8793733fe04db907f2955bc7509
     m_Address: Pot
@@ -169,6 +166,24 @@ MonoBehaviour:
     m_MainAsset: {fileID: 6714204193443443670, guid: ce85f8793733fe04db907f2955bc7509,
       type: 3}
     m_TargetAsset: {fileID: 6714204193443443670, guid: ce85f8793733fe04db907f2955bc7509,
+      type: 3}
+  - m_GUID: e107ddc589b97344b8dc6b91514c37c3
+    m_Address: HamSliced
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 2media
+    m_MainAsset: {fileID: 5924658028255100885, guid: e107ddc589b97344b8dc6b91514c37c3,
+      type: 3}
+    m_TargetAsset: {fileID: 5924658028255100885, guid: e107ddc589b97344b8dc6b91514c37c3,
+      type: 3}
+  - m_GUID: e297fb99e04b29c4e9678ab9d5b7913a
+    m_Address: Ham
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 2media
+    m_MainAsset: {fileID: 4386731539394635838, guid: e297fb99e04b29c4e9678ab9d5b7913a,
+      type: 3}
+    m_TargetAsset: {fileID: 4386731539394635838, guid: e297fb99e04b29c4e9678ab9d5b7913a,
       type: 3}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 84b9e0eb6389152478e25e856e50d1bb, type: 2}
