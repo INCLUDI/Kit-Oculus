@@ -80,6 +80,15 @@ MonoBehaviour:
       type: 3}
     m_TargetAsset: {fileID: 7501297760790469731, guid: 3151eedc942da494cba9da1ff5b66d8a,
       type: 3}
+  - m_GUID: 474b9872c8944794796fce8228103c75
+    m_Address: Pepper
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 2media
+    m_MainAsset: {fileID: 1826063317946550273, guid: 474b9872c8944794796fce8228103c75,
+      type: 3}
+    m_TargetAsset: {fileID: 1826063317946550273, guid: 474b9872c8944794796fce8228103c75,
+      type: 3}
   - m_GUID: 527b90d2efa05874cb3b20b848043dae
     m_Address: GreyCat1
     m_ReadOnly: 0
@@ -88,6 +97,15 @@ MonoBehaviour:
     m_MainAsset: {fileID: 136490199116398453, guid: 527b90d2efa05874cb3b20b848043dae,
       type: 3}
     m_TargetAsset: {fileID: 136490199116398453, guid: 527b90d2efa05874cb3b20b848043dae,
+      type: 3}
+  - m_GUID: 5beab40511506f648bf8bda720d7f989
+    m_Address: PotCollider
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 2media
+    m_MainAsset: {fileID: 5843915177454893196, guid: 5beab40511506f648bf8bda720d7f989,
+      type: 3}
+    m_TargetAsset: {fileID: 5843915177454893196, guid: 5beab40511506f648bf8bda720d7f989,
       type: 3}
   - m_GUID: 5efbdff695d22544890988ce1a13dd25
     m_Address: plant1 Variant
@@ -133,6 +151,24 @@ MonoBehaviour:
     m_MainAsset: {fileID: 263082750766634688, guid: 8466e7a266be8ed4497d32ce37ae2cee,
       type: 3}
     m_TargetAsset: {fileID: 263082750766634688, guid: 8466e7a266be8ed4497d32ce37ae2cee,
+      type: 3}
+  - m_GUID: b0114fdeda2d2ee4da7dfa07633485f6
+    m_Address: Salt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 2media
+    m_MainAsset: {fileID: 4365621691128014550, guid: b0114fdeda2d2ee4da7dfa07633485f6,
+      type: 3}
+    m_TargetAsset: {fileID: 4365621691128014550, guid: b0114fdeda2d2ee4da7dfa07633485f6,
+      type: 3}
+  - m_GUID: ce85f8793733fe04db907f2955bc7509
+    m_Address: Pot
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 2media
+    m_MainAsset: {fileID: 6714204193443443670, guid: ce85f8793733fe04db907f2955bc7509,
+      type: 3}
+    m_TargetAsset: {fileID: 6714204193443443670, guid: ce85f8793733fe04db907f2955bc7509,
       type: 3}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 84b9e0eb6389152478e25e856e50d1bb, type: 2}
