@@ -16,9 +16,117 @@
   },
   "eventGroups": [
     {
+      "type": "DragMoveManager",
+      "eventGroupObjs": {
+        "interactablesToActivate": [
+          {
+            "prefab": "Pen_blue"
+          }
+        ],
+        "interactablesToDeactivate": ["Pen_blue"],
+        "targetsToActivate": [
+          {
+            "prefab": "Notepad"
+          }
+        ],
+        "targetsToDeactivate": ["Notepad"],
+        "othersToActivate": [
+          {
+            "prefab": "Pen_cap_blue"
+          }
+        ],
+        "othersToDeactivate": ["Pen_cap_blue"]
+      },
+      "events": [
+        {
+          "parameters": {
+            "correctInteractables": ["Pen_blue"],
+            "correctTargets": ["Notepad"],
+            "numericParameter": 1
+          },
+          "instructions": {
+            "request": ["Make a note in the diary.", "Write in the diary."],
+            "correct": ["Well done!"],
+            "wrong": ["Sorry, try again."]
+          }
+        }
+      ]
+    },
+    {
+      "type": "DragMoveManager",
+      "eventGroupObjs": {
+        "interactablesToActivate": [
+          {
+            "prefab": "Highlighter_pen_blue"
+          },
+          {
+            "prefab": "Highlighter_pen_green"
+          },
+          {
+            "prefab": "Highlighter_pen_pink"
+          },
+          {
+            "prefab": "Highlighter_pen_yellow"
+          }
+        ],
+        "interactablesToDeactivate": [
+          "Highlighter_pen_blue",
+          "Highlighter_pen_green",
+          "Highlighter_pen_pink",
+          "Highlighter_pen_yellow"
+        ],
+        "targetsToActivate": [
+          {
+            "prefab": "BookCollider1"
+          },
+          {
+            "prefab": "BookCollider2"
+          },
+          {
+            "prefab": "BookCollider3"
+          },
+          {
+            "prefab": "BookCollider4"
+          }
+        ],
+        "targetsToDeactivate": [
+          "BookCollider1",
+          "BookCollider2",
+          "BookCollider3",
+          "BookCollider4"
+        ],
+        "othersToActivate": [
+          {
+            "prefab": "Book"
+          }
+        ],
+        "othersToDeactivate": ["Book"]
+      },
+      "events": [
+        {
+          "parameters": {
+            "correctInteractables": ["Highlighter_pen_green"],
+            "correctTargets": [
+              "BookCollider1",
+              "BookCollider2",
+              "BookCollider3",
+              "BookCollider4"
+            ],
+            "numericParameter": 1
+          },
+          "instructions": {
+            "request": [
+              "Underline the book title with a green marker.",
+              "Highlight the book title with a green marker."
+            ],
+            "correct": ["Well done!"],
+            "wrong": ["Sorry, try again."]
+          }
+        }
+      ]
+    },
+    {
       "type": "DragReleaseManager",
-      "instructionIntro": ["Hello, nice to see you!"],
-      "instructionEnd": ["Congratulations!"],
       "eventGroupObjs": {
         "interactablesToActivate": [
           {
