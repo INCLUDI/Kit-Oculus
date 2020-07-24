@@ -4,10 +4,12 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using static DataModel;
 using static StatsManager;
 
-public class DragMoveManager : EventGroupManagerBase
+public class DragHoldManager : EventGroupManagerBase
 {
     private GameObject checkmark;
     private GameObject cross;
@@ -18,39 +20,44 @@ public class DragMoveManager : EventGroupManagerBase
         cross = Instantiate(Resources.Load<GameObject>("Cross"));
     }
 
+    public override List<EventConfiguration> SetEventsInCurrentGroup(List<EventConfiguration> events, bool randomEvents, int stepsToReproduce)
+    {
+        List<EventConfiguration> filtered = new List<EventConfiguration>();
+        List<string> targets = new List<string>();
+        List<string> interactables = new List<string>();
+        int steps = stepsToReproduce == 0 ? events.Count() : stepsToReproduce;
+        System.Random rnd = new System.Random();
+        events = events.OrderBy(c => randomEvents ? rnd.Next() : 0).ToList();
+        for (int i = 0; i < steps; i++)
+        {
+            events = events.Where(x => x.parameters.correctTargets.Except(targets).Count() != 0 && x.parameters.correctInteractables.Except(interactables).Count() != 0).ToList();
+            EventConfiguration selected = events[0];
+            filtered.Add(selected);
+            targets.AddRange(selected.parameters.correctTargets);
+            interactables.AddRange(selected.parameters.correctInteractables);
+        }
+        return filtered;
+    }
+
     public override void checkCorrectAction(GameObject target, GameObject interactable)
     {
         if (ActivityManager.instance.Parameters.correctInteractables.Contains(interactable.name) &&
-               ActivityManager.instance.Parameters.correctTargets.Contains(target.name))
+            ActivityManager.instance.Parameters.correctTargets.Contains(target.name))
         {
-            if (target.GetComponent<TargetTrigger>().hitCounter > 0)
-            {
-                target.GetComponent<TargetTrigger>().hitCounter--;
-            }
-            else
-            {
-                target.GetComponent<Collider>().enabled = false;
-            }
+            interactable.GetComponent<Collider>().enabled = false;
+            interactable.GetComponent<Rigidbody>().isKinematic = true;
+            interactable.GetComponent<OVRGrabbable>().enabled = false;
+            EventManager.TriggerEvent("ReleaseObject");
 
-            TargetTrigger[] targets = GameObject.Find("DynamicObjects").GetComponentsInChildren<TargetTrigger>();
-            int totalCount = 0;
-            foreach (TargetTrigger t in targets)
-            {
-                totalCount += t.hitCounter;
-            }
+            SetFinalPosition(interactable);
+            SetFinalRotation(interactable);
+            ParameterObjects();
 
-            if (totalCount == 0)
-            {
-                SetFinalPosition(interactable);
-                SetFinalRotation(interactable);
-                ParameterObjects();
+            StartVisualFeedback(checkmark, interactable);
+            ActivityManager.instance.playSingleInstruction(selectCorrect(Correct), "Correct", () =>
+                StopVisualFeedback(checkmark, () => ActivityManager.instance.nextEvent()));
 
-                StartVisualFeedback(checkmark, interactable);
-                ActivityManager.instance.playSingleInstruction(selectCorrect(Correct), "Correct", () =>
-                    StopVisualFeedback(checkmark, () => ActivityManager.instance.nextEvent()));
-
-                SaveAction(request: ActivityManager.instance.Request, hints: ActivityManager.instance.hints);
-            }
+            SaveAction(request: ActivityManager.instance.Request, correctParameters: ActivityManager.instance.Parameters, action: new ActionParameters { interactable = interactable.name, target = target.name }, hints: ActivityManager.instance.hints);
         }
         else
         {
@@ -61,6 +68,7 @@ public class DragMoveManager : EventGroupManagerBase
             SaveAction(request: ActivityManager.instance.Request, correctParameters: ActivityManager.instance.Parameters, action: new ActionParameters { interactable = interactable.name, target = target.name }, hints: ActivityManager.instance.hints, error: true);
         }
     }
+
 
     public override string selectRequest(List<string> instructions)
     {

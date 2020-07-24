@@ -117,7 +117,7 @@ public class ActivityManager : MonoBehaviour
         });
     }
 
-    public virtual void generateSceneObjects(EventObjs objs)
+    public void generateSceneObjects(EventObjs objs)
     {
         if (objs.interactablesToActivate != null && objs.interactablesToActivate.Count != 0)
         {
