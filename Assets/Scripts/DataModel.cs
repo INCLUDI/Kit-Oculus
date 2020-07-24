@@ -40,6 +40,7 @@ public class DataModel : MonoBehaviour
     [Serializable]
     public class EventParameters
     {
+        public List<string> correctSelectables;
         public List<string> correctInteractables;
         public List<string> correctTargets;
         public List<string> correctAnswers;
@@ -52,6 +53,8 @@ public class DataModel : MonoBehaviour
     [Serializable]
     public class EventObjs
     {
+        public List<SceneObj> selectablesToActivate;
+        public List<string> selectablesToDeactivate;
         public List<SceneObj> interactablesToActivate;
         public List<string> interactablesToDeactivate;
         public List<SceneObj> targetsToActivate;
@@ -77,10 +80,13 @@ public class DataModel : MonoBehaviour
         public List<string> instructionEnd;
         public int stepsToReproduce;
         public bool randomEvents;
+        public int selectablesToSpawn;
         public int interactablesToSpawn;
         public int targetsToSpawn;
+        public bool selectablesRandomSpawn;
         public bool interactablesRandomSpawn;
         public bool targetsRandomSpawn;
+        public List<CustomTransform> selectablesSpawnPoints;
         public List<CustomTransform> interactablesSpawnPoints;
         public List<CustomTransform> targetsSpawnPoints;
         public List<EventConfiguration> events;

@@ -111,6 +111,7 @@ public class StatsManager : MonoBehaviour
     [Serializable]
     public class ActionParameters
     {
+        public string selectable;
         public string interactable;
         public string target;
         public string answer;

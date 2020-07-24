@@ -49,11 +49,14 @@ public class ActivityManager : MonoBehaviour
     private EventObjs EventGroupObjs { get => CurrentEventGroup.eventGroupObjs; }
     private List<string> InstructionIntro { get => CurrentEventGroup.instructionIntro; }
     private List<string> InstructionEnd { get => CurrentEventGroup.instructionEnd; }
+    private int SelectablesToSpawn { get => CurrentEventGroup.selectablesToSpawn; }
     private int InteractablesToSpawn { get => CurrentEventGroup.interactablesToSpawn; }
     private int TargetsToSpawn { get => CurrentEventGroup.targetsToSpawn; }
+    private bool SelectablesRandomSpawn { get => CurrentEventGroup.selectablesRandomSpawn; }
     private bool InteractablesRandomSpawn { get => CurrentEventGroup.interactablesRandomSpawn; }
     private bool TargetsRandomSpawn { get => CurrentEventGroup.targetsRandomSpawn; }
     private List<CustomTransform> InteractablesSpawnPoints { get => CurrentEventGroup.interactablesSpawnPoints; }
+    private List<CustomTransform> SelectablesSpawnPoints { get => CurrentEventGroup.selectablesSpawnPoints; }
     private List<CustomTransform> TargetsSpawnPoints { get => CurrentEventGroup.targetsSpawnPoints; }
     private int StepsToReproduce { get => CurrentEventGroup.stepsToReproduce; }
     private List<EventConfiguration> EventsInCurrentGroup { get; set; }
@@ -119,6 +122,11 @@ public class ActivityManager : MonoBehaviour
 
     public void generateSceneObjects(EventObjs objs)
     {
+        if (objs.selectablesToActivate != null && objs.selectablesToActivate.Count != 0)
+        {
+            generateObjCategory(objs.selectablesToActivate, SelectablesToSpawn, SelectablesSpawnPoints, SelectablesRandomSpawn, typeof(SelectableTrigger));
+        }
+
         if (objs.interactablesToActivate != null && objs.interactablesToActivate.Count != 0)
         {
             generateObjCategory(objs.interactablesToActivate, InteractablesToSpawn, InteractablesSpawnPoints, InteractablesRandomSpawn, typeof(InteractableTrigger));
@@ -208,6 +216,18 @@ public class ActivityManager : MonoBehaviour
 
     public void removeSceneObjects(EventObjs objs)
     {
+        if (objs.selectablesToDeactivate != null)
+        {
+            foreach (string toRemove in objs.selectablesToDeactivate)
+            {
+                GameObject temp = GameObject.Find(toRemove);
+                if (temp != null)
+                {
+                    temp.transform.DOScale(new Vector3(0, 0, 0), 1f).OnComplete(() => Destroy(temp));
+                }
+            }
+        }
+
         if (objs.interactablesToDeactivate != null)
         {
             foreach (string toRemove in objs.interactablesToDeactivate)

@@ -16,6 +16,31 @@
   },
   "eventGroups": [
     {
+      "type": "TouchManager",
+      "eventGroupObjs": {
+        "selectablesToActivate": [
+          {
+            "prefab": "Laptop_black_off"
+          }
+        ],
+        "selectablesToDeactivate": ["Laptop_black_off"],
+        "othersToDeactivate": ["hills"]
+      },
+      "events": [
+        {
+          "parameters": {
+            "correctSelectables": ["Laptop_black_off"],
+            "objsToActivate": { "prefab": "hills" }
+          },
+          "instructions": {
+            "request": ["Switch the laptop on.", "Turn the laptop on."],
+            "correct": ["Well done!"],
+            "wrong": ["Sorry, try again."]
+          }
+        }
+      ]
+    },
+    {
       "type": "DragMoveManager",
       "eventGroupObjs": {
         "interactablesToActivate": [
