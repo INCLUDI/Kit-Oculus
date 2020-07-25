@@ -6,7 +6,7 @@
   "difficulty": 1,
   "scene": "Bedroom",
   "playerTransform": {
-    "position": { "x": 0, "y": -0.5577, "z": 0 },
+    "position": { "x": 0, "y": -0.2377, "z": 0 },
     "rotation": { "x": 0, "y": 74.26, "z": 0 }
   },
   "assistantTransform": {
