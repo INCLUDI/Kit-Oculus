@@ -16,7 +16,50 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: ca52a9cf8275d25469becd8511551aa5
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 1d1e07840905e8542a49069905d3a7fd
+    m_Address: Bin
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 3media
+    m_MainAsset: {fileID: 189578, guid: 1d1e07840905e8542a49069905d3a7fd, type: 3}
+    m_TargetAsset: {fileID: 189578, guid: 1d1e07840905e8542a49069905d3a7fd, type: 3}
+  - m_GUID: 39ffbffa3d5ddb04a9188af1f196e216
+    m_Address: Sitting Idle
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 3media
+    m_MainAsset: {fileID: 3649481513900345288, guid: 39ffbffa3d5ddb04a9188af1f196e216,
+      type: 3}
+    m_TargetAsset: {fileID: 3649481513900345288, guid: 39ffbffa3d5ddb04a9188af1f196e216,
+      type: 3}
+  - m_GUID: 5a2950e02e6bf5347a955916c67cc579
+    m_Address: StickingPlaster
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 3media
+    m_MainAsset: {fileID: 720837156329809129, guid: 5a2950e02e6bf5347a955916c67cc579,
+      type: 3}
+    m_TargetAsset: {fileID: 720837156329809129, guid: 5a2950e02e6bf5347a955916c67cc579,
+      type: 3}
+  - m_GUID: 7ddffb38b53fd66459cef164fc159cf0
+    m_Address: Ice
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 3media
+    m_MainAsset: {fileID: 4506993418543139052, guid: 7ddffb38b53fd66459cef164fc159cf0,
+      type: 3}
+    m_TargetAsset: {fileID: 4506993418543139052, guid: 7ddffb38b53fd66459cef164fc159cf0,
+      type: 3}
+  - m_GUID: afd94e8f3499829469da64446f70d78d
+    m_Address: Left Leg
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 3media
+    m_MainAsset: {fileID: 2280770317047221363, guid: afd94e8f3499829469da64446f70d78d,
+      type: 3}
+    m_TargetAsset: {fileID: 2280770317047221363, guid: afd94e8f3499829469da64446f70d78d,
+      type: 3}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 84b9e0eb6389152478e25e856e50d1bb, type: 2}
   m_SchemaSet:

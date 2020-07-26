@@ -67,6 +67,45 @@
           }
         }
       ]
+    },
+    {
+      "type": "DragReleaseManager",
+      "eventGroupObjs": {
+        "interactablesToActivate": [
+          {
+            "prefab": "Ice"
+          }
+        ],
+        "interactablesToDeactivate": ["Ice"],
+        "targetsToActivate": [
+          {
+            "prefab": "Left Leg"
+          }
+        ],
+        "targetsToDeactivate": ["Left Leg"],
+        "othersToActivate": [
+          {
+            "prefab": "Sitting Idle"
+          }
+        ],
+        "othersToDeactivate": ["Sitting Idle"]
+      },
+      "events": [
+        {
+          "parameters": {
+            "correctInteractables": ["Ice"],
+            "correctTargets": ["Left Leg"]
+          },
+          "instructions": {
+            "request": [
+              "Apply ice on the patient's left leg.",
+              "Place some ice on the patient's left leg."
+            ],
+            "correct": ["Well done!"],
+            "wrong": ["Sorry, try again."]
+          }
+        }
+      ]
     }
   ]
 }
