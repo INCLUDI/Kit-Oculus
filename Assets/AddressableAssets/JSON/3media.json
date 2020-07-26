@@ -27,74 +27,40 @@
   "eventGroups": [
     {
       "type": "DragReleaseManager",
-      "instructionIntro": ["Hello, nice to see you!"],
-      "instructionEnd": ["Congratulations!"],
       "eventGroupObjs": {
         "interactablesToActivate": [
           {
-            "prefab": "TShirt_Folded_Yellow"
+            "prefab": "StickingPlaster"
           }
         ],
-        "interactablesToDeactivate": ["TShirt_Folded_Yellow"],
         "targetsToActivate": [
           {
-            "prefab": "TshirtTarget"
+            "prefab": "Bin"
           }
-        ]
+        ],
+        "targetsToDeactivate": ["Bin"],
+        "othersToActivate": [
+          {
+            "prefab": "Sitting Idle"
+          }
+        ],
+        "othersToDeactivate": ["Sitting Idle"]
       },
       "events": [
         {
           "parameters": {
-            "correctInteractables": ["TShirt_Folded_Yellow"],
-            "correctTargets": ["TshirtTarget"],
+            "correctInteractables": ["StickingPlaster"],
+            "correctTargets": ["Bin"],
             "finalTransform": {
-              "position": { "x": -1.105224, "y": 0.502416, "z": 1.83927 },
-              "rotation": { "x": 3.142, "y": 1.062, "z": -6.804 }
+              "position": { "x": 9.343, "y": 0.024, "z": 8.463 },
+              "rotation": { "x": -179.505, "y": 1.342987, "z": -0.2829895 }
             },
-            "objsToDeactivate": ["TshirtTarget"]
+            "objsToDeactivate": ["StickingPlaster"]
           },
           "instructions": {
             "request": [
-              "Put the t-shirt on the pillow",
-              "Place the t-shirt on the cushion "
-            ],
-            "correct": ["Well done!"],
-            "wrong": ["Sorry, try again."]
-          }
-        }
-      ]
-    },
-    {
-      "type": "DragReleaseManager",
-      "eventGroupObjs": {
-        "interactablesToActivate": [
-          {
-            "prefab": "Poster"
-          }
-        ],
-        "interactablesToDeactivate": ["Poster"],
-        "targetsToActivate": [
-          {
-            "prefab": "PosterTarget"
-          }
-        ],
-        "othersToActivate": ["Arrow"]
-      },
-      "events": [
-        {
-          "parameters": {
-            "correctInteractables": ["Poster"],
-            "correctTargets": ["PosterTarget"],
-            "finalTransform": {
-              "position": { "x": 2.235, "y": 1.415, "z": -0.291 },
-              "rotation": { "x": 0, "y": 90, "z": 0 }
-            },
-            "objsToDeactivate": ["PosterTarget", "Arrow"]
-          },
-          "instructions": {
-            "request": [
-              "Stick the poster on the wall.",
-              "Attach the poster on the wall."
+              "Throw the plaster away.",
+              "Remove the plaster from the patient’s leg."
             ],
             "correct": ["Well done!"],
             "wrong": ["Sorry, try again."]
