@@ -30,6 +30,86 @@
       "eventGroupObjs": {
         "interactablesToActivate": [
           {
+            "prefab": "Pen_blue"
+          }
+        ],
+        "interactablesToDeactivate": ["Pen_blue"],
+        "targetsToActivate": [
+          {
+            "prefab": "Clipboard"
+          }
+        ],
+        "targetsToDeactivate": ["Clipboard"],
+        "othersToActivate": [
+          {
+            "prefab": "Pen_cap_blue"
+          }
+        ],
+        "othersToDeactivate": ["Pen_cap_blue"]
+      },
+      "events": [
+        {
+          "parameters": {
+            "correctInteractables": ["Pen_blue"],
+            "correctTargets": ["Clipboard"],
+            "numericParameter": 1
+          },
+          "instructions": {
+            "request": [
+              "Write down the new appointment.",
+              "Note the date of the next visit."
+            ],
+            "correct": ["Well done!"],
+            "wrong": ["Sorry, try again."]
+          }
+        }
+      ]
+    },
+    {
+      "type": "DragMoveManager",
+      "eventGroupObjs": {
+        "interactablesToActivate": [
+          {
+            "prefab": "Pen_blue"
+          }
+        ],
+        "interactablesToDeactivate": ["Pen_blue"],
+        "targetsToActivate": [
+          {
+            "prefab": "Form"
+          }
+        ],
+        "targetsToDeactivate": ["Form"],
+        "othersToActivate": [
+          {
+            "prefab": "Pen_cap_blue"
+          }
+        ],
+        "othersToDeactivate": ["Pen_cap_blue"]
+      },
+      "events": [
+        {
+          "parameters": {
+            "correctInteractables": ["Pen_blue"],
+            "correctTargets": ["Form"],
+            "numericParameter": 1
+          },
+          "instructions": {
+            "request": [
+              "Fill in the form with your personal details.",
+              "Complete the form with your name and surname."
+            ],
+            "correct": ["Well done!"],
+            "wrong": ["Sorry, try again."]
+          }
+        }
+      ]
+    },
+    {
+      "type": "DragMoveManager",
+      "eventGroupObjs": {
+        "interactablesToActivate": [
+          {
             "prefab": "Pill1"
           },
           {

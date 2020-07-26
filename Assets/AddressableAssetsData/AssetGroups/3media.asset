@@ -33,6 +33,15 @@ MonoBehaviour:
       type: 3}
     m_TargetAsset: {fileID: 9104031418368325606, guid: 234a11020b025e240a4c2f3cd20023c3,
       type: 3}
+  - m_GUID: 3699bbceb35f73f49b295292d8a5b027
+    m_Address: Pen_blue
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 3media
+    m_MainAsset: {fileID: 4429903858318634332, guid: 3699bbceb35f73f49b295292d8a5b027,
+      type: 3}
+    m_TargetAsset: {fileID: 4429903858318634332, guid: 3699bbceb35f73f49b295292d8a5b027,
+      type: 3}
   - m_GUID: 39ffbffa3d5ddb04a9188af1f196e216
     m_Address: Sitting Idle
     m_ReadOnly: 0
@@ -40,6 +49,15 @@ MonoBehaviour:
     - 3media
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: 3ed62cf702cbfb0418d7bb86e0932167
+    m_Address: Form
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 3media
+    m_MainAsset: {fileID: 9205254556576377848, guid: 3ed62cf702cbfb0418d7bb86e0932167,
+      type: 3}
+    m_TargetAsset: {fileID: 9205254556576377848, guid: 3ed62cf702cbfb0418d7bb86e0932167,
+      type: 3}
   - m_GUID: 3f194f6a433ea274f9f0d95103bcf3cd
     m_Address: Pill5
     m_ReadOnly: 0
@@ -49,6 +67,15 @@ MonoBehaviour:
       type: 3}
     m_TargetAsset: {fileID: 6242337490076256473, guid: 3f194f6a433ea274f9f0d95103bcf3cd,
       type: 3}
+  - m_GUID: 5532ad65d6b7149468d2d8c5bb77dbcb
+    m_Address: Pen_cap_blue
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 3media
+    m_MainAsset: {fileID: 5680732971555054837, guid: 5532ad65d6b7149468d2d8c5bb77dbcb,
+      type: 3}
+    m_TargetAsset: {fileID: 5680732971555054837, guid: 5532ad65d6b7149468d2d8c5bb77dbcb,
+      type: 3}
   - m_GUID: 5a2950e02e6bf5347a955916c67cc579
     m_Address: StickingPlaster
     m_ReadOnly: 0
@@ -56,6 +83,15 @@ MonoBehaviour:
     - 3media
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: 6c08d8a760c761240b82447cc3c772b3
+    m_Address: Clipboard
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 3media
+    m_MainAsset: {fileID: 3294941331019224437, guid: 6c08d8a760c761240b82447cc3c772b3,
+      type: 3}
+    m_TargetAsset: {fileID: 3294941331019224437, guid: 6c08d8a760c761240b82447cc3c772b3,
+      type: 3}
   - m_GUID: 7ddffb38b53fd66459cef164fc159cf0
     m_Address: Ice
     m_ReadOnly: 0
