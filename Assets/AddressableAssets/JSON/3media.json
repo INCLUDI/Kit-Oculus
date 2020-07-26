@@ -6,14 +6,24 @@
   "difficulty": 1,
   "scene": "DoctorsOffice",
   "playerTransform": {
-    "position": { "x": 0, "y": -0.5577, "z": 0 },
-    "rotation": { "x": 0, "y": 74.26, "z": 0 }
+    "position": { "x": 9.734, "y": -0.5577, "z": 7.928 },
+    "rotation": { "x": 0, "y": 25.35, "z": 0 }
   },
   "assistantTransform": {
     "position": { "x": 1.784284, "y": -0.155, "z": 0.717057 },
     "rotation": { "x": 0, "y": -111.17, "z": 0 },
     "scale": { "x": 0.7, "y": 0.7, "z": 0.7 }
   },
+  "objsToRemove": [
+    "Otoscope",
+    "Stethoscope",
+    "Medicine 1 (1)",
+    "Paper",
+    "Clipboard",
+    "Bandage",
+    "Medicine 3",
+    "Scissors"
+  ],
   "eventGroups": [
     {
       "type": "DragReleaseManager",

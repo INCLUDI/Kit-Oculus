@@ -104,6 +104,8 @@ public class ActivityManager : MonoBehaviour
 
         _activityAssets = await Addressables.LoadAssetsAsync<GameObject>(_activityConfiguration.id, null).Task as List<GameObject>;
 
+        InitializeObjs();
+
         GameManager.instance.ActivityReady();
     }
 
@@ -118,6 +120,18 @@ public class ActivityManager : MonoBehaviour
             generateSceneObjects(EventObjs);
             playSingleInstruction(eventGroupManager.selectRequest(Request), "Talk");
         });
+    }
+
+    private void InitializeObjs()
+    {
+        foreach (string toRemove in _activityConfiguration.objsToRemove)
+        {
+            Destroy(GameObject.Find(toRemove));
+        };
+        foreach (SceneObj obj in _activityConfiguration.objsToAdd)
+        {
+            Instantiate(_activityAssets.Find(x => x.name == obj.prefab), GameObject.Find("Environment").transform);
+        }
     }
 
     public void generateSceneObjects(EventObjs objs)

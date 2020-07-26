@@ -104,6 +104,8 @@ public class DataModel : MonoBehaviour
         public string jsonPath;
         public CustomTransform assistantTransform;
         public CustomTransform playerTransform;
+        public List<SceneObj> objsToAdd;
+        public List<string> objsToRemove;
         public List<EventGroup> eventGroups;
     }
 }
