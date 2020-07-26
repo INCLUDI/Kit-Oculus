@@ -26,6 +26,72 @@
   ],
   "eventGroups": [
     {
+      "type": "DragMoveManager",
+      "eventGroupObjs": {
+        "interactablesToActivate": [
+          {
+            "prefab": "Pill1"
+          },
+          {
+            "prefab": "Pill2"
+          },
+          {
+            "prefab": "Pill3"
+          },
+          {
+            "prefab": "Pill4"
+          },
+          {
+            "prefab": "Pill5"
+          },
+          {
+            "prefab": "Pill6"
+          }
+        ],
+        "interactablesToDeactivate": [
+          "Pill1",
+          "Pill2",
+          "Pill3",
+          "Pill4",
+          "Pill5",
+          "Pill6"
+        ],
+        "targetsToActivate": [
+          {
+            "prefab": "PillsBox"
+          }
+        ],
+        "targetsToDeactivate": ["PillsBox"],
+        "othersToActivate": [
+          {
+            "prefab": "PillsBoxCover"
+          }
+        ],
+        "othersToDeactivate": ["PillsBoxCover"]
+      },
+      "events": [
+        {
+          "parameters": {
+            "correctInteractables": [
+              "Pill1",
+              "Pill2",
+              "Pill3",
+              "Pill4",
+              "Pill5",
+              "Pill6"
+            ],
+            "correctTargets": ["PillsBox"],
+            "numericParameter": 4
+          },
+          "instructions": {
+            "request": ["Take four pills.", "Count four capsules."],
+            "correct": ["Well done!"],
+            "wrong": ["Sorry, try again."]
+          }
+        }
+      ]
+    },
+    {
       "type": "DragReleaseManager",
       "eventGroupObjs": {
         "interactablesToActivate": [
@@ -69,7 +135,7 @@
       ]
     },
     {
-      "type": "DragReleaseManager",
+      "type": "DragMoveManager",
       "eventGroupObjs": {
         "interactablesToActivate": [
           {

@@ -22,43 +22,107 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - 3media
-    m_MainAsset: {fileID: 189578, guid: 1d1e07840905e8542a49069905d3a7fd, type: 3}
-    m_TargetAsset: {fileID: 189578, guid: 1d1e07840905e8542a49069905d3a7fd, type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 234a11020b025e240a4c2f3cd20023c3
+    m_Address: Pill1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 3media
+    m_MainAsset: {fileID: 9104031418368325606, guid: 234a11020b025e240a4c2f3cd20023c3,
+      type: 3}
+    m_TargetAsset: {fileID: 9104031418368325606, guid: 234a11020b025e240a4c2f3cd20023c3,
+      type: 3}
   - m_GUID: 39ffbffa3d5ddb04a9188af1f196e216
     m_Address: Sitting Idle
     m_ReadOnly: 0
     m_SerializedLabels:
     - 3media
-    m_MainAsset: {fileID: 3649481513900345288, guid: 39ffbffa3d5ddb04a9188af1f196e216,
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 3f194f6a433ea274f9f0d95103bcf3cd
+    m_Address: Pill5
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 3media
+    m_MainAsset: {fileID: 6242337490076256473, guid: 3f194f6a433ea274f9f0d95103bcf3cd,
       type: 3}
-    m_TargetAsset: {fileID: 3649481513900345288, guid: 39ffbffa3d5ddb04a9188af1f196e216,
+    m_TargetAsset: {fileID: 6242337490076256473, guid: 3f194f6a433ea274f9f0d95103bcf3cd,
       type: 3}
   - m_GUID: 5a2950e02e6bf5347a955916c67cc579
     m_Address: StickingPlaster
     m_ReadOnly: 0
     m_SerializedLabels:
     - 3media
-    m_MainAsset: {fileID: 720837156329809129, guid: 5a2950e02e6bf5347a955916c67cc579,
-      type: 3}
-    m_TargetAsset: {fileID: 720837156329809129, guid: 5a2950e02e6bf5347a955916c67cc579,
-      type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 7ddffb38b53fd66459cef164fc159cf0
     m_Address: Ice
     m_ReadOnly: 0
     m_SerializedLabels:
     - 3media
-    m_MainAsset: {fileID: 4506993418543139052, guid: 7ddffb38b53fd66459cef164fc159cf0,
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 83b6f40c45d3a51458e55aad92ec0d9b
+    m_Address: PillsBox
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 3media
+    m_MainAsset: {fileID: 3930637928845371170, guid: 83b6f40c45d3a51458e55aad92ec0d9b,
       type: 3}
-    m_TargetAsset: {fileID: 4506993418543139052, guid: 7ddffb38b53fd66459cef164fc159cf0,
+    m_TargetAsset: {fileID: 3930637928845371170, guid: 83b6f40c45d3a51458e55aad92ec0d9b,
+      type: 3}
+  - m_GUID: afbd2517fbc57464db2bc11f24ca8981
+    m_Address: Pill4
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 3media
+    m_MainAsset: {fileID: 5854507619257528099, guid: afbd2517fbc57464db2bc11f24ca8981,
+      type: 3}
+    m_TargetAsset: {fileID: 5854507619257528099, guid: afbd2517fbc57464db2bc11f24ca8981,
       type: 3}
   - m_GUID: afd94e8f3499829469da64446f70d78d
     m_Address: Left Leg
     m_ReadOnly: 0
     m_SerializedLabels:
     - 3media
-    m_MainAsset: {fileID: 2280770317047221363, guid: afd94e8f3499829469da64446f70d78d,
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: b641726e9a1d1054a94e2d2659712aee
+    m_Address: PillsBoxCover
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 3media
+    m_MainAsset: {fileID: 2992422445337188456, guid: b641726e9a1d1054a94e2d2659712aee,
       type: 3}
-    m_TargetAsset: {fileID: 2280770317047221363, guid: afd94e8f3499829469da64446f70d78d,
+    m_TargetAsset: {fileID: 2992422445337188456, guid: b641726e9a1d1054a94e2d2659712aee,
+      type: 3}
+  - m_GUID: b8a212415b3cf29409cedd40276b0c50
+    m_Address: Pill6
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 3media
+    m_MainAsset: {fileID: 7356374658381828936, guid: b8a212415b3cf29409cedd40276b0c50,
+      type: 3}
+    m_TargetAsset: {fileID: 7356374658381828936, guid: b8a212415b3cf29409cedd40276b0c50,
+      type: 3}
+  - m_GUID: c8c1fddd777dc4f4ca5e6eaea16cd802
+    m_Address: Pill3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 3media
+    m_MainAsset: {fileID: 6194261485637212266, guid: c8c1fddd777dc4f4ca5e6eaea16cd802,
+      type: 3}
+    m_TargetAsset: {fileID: 6194261485637212266, guid: c8c1fddd777dc4f4ca5e6eaea16cd802,
+      type: 3}
+  - m_GUID: ca62d7868a6d8d44991179c5c582a444
+    m_Address: Pill2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 3media
+    m_MainAsset: {fileID: 5135586411214276553, guid: ca62d7868a6d8d44991179c5c582a444,
+      type: 3}
+    m_TargetAsset: {fileID: 5135586411214276553, guid: ca62d7868a6d8d44991179c5c582a444,
       type: 3}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 84b9e0eb6389152478e25e856e50d1bb, type: 2}
