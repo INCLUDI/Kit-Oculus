@@ -16,6 +16,74 @@
   },
   "eventGroups": [
     {
+      "type": "DragMoveManager",
+      "eventGroupObjs": {
+        "interactablesToActivate": [
+          {
+            "prefab": "Sushi_01"
+          },
+          {
+            "prefab": "Sushi_02"
+          },
+          {
+            "prefab": "Sushi_03"
+          },
+          {
+            "prefab": "Sushi_04"
+          },
+          {
+            "prefab": "Sushi_05"
+          },
+          {
+            "prefab": "Sushi_06"
+          },
+          {
+            "prefab": "Sushi_07"
+          }
+        ],
+        "interactablesToDeactivate": [
+          "Sushi_01",
+          "Sushi_02",
+          "Sushi_03",
+          "Sushi_04",
+          "Sushi_05",
+          "Sushi_06",
+          "Sushi_07"
+        ],
+        "targetsToActivate": [
+          {
+            "prefab": "bowl"
+          }
+        ],
+        "targetsToDeactivate": ["bowl"]
+      },
+      "events": [
+        {
+          "parameters": {
+            "correctInteractables": [
+              "Sushi_01",
+              "Sushi_02",
+              "Sushi_03",
+              "Sushi_04",
+              "Sushi_05",
+              "Sushi_06",
+              "Sushi_07"
+            ],
+            "correctTargets": ["bowl"],
+            "numericParameter": 3
+          },
+          "instructions": {
+            "request": [
+              "Serve three pieces of sushi in the bowl.",
+              "Prepare three pieces of sushi in the bowl."
+            ],
+            "correct": ["Well done!"],
+            "wrong": ["Sorry, try again."]
+          }
+        }
+      ]
+    },
+    {
       "type": "DragHoldManager",
       "eventGroupObjs": {
         "interactablesToActivate": [

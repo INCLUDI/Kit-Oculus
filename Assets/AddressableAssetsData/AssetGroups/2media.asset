@@ -52,6 +52,15 @@ MonoBehaviour:
     - 2media
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: 25ed7bd3c1b7a564ea7263150a9b37e3
+    m_Address: Window
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 2media
+    m_MainAsset: {fileID: 461598268179157930, guid: 25ed7bd3c1b7a564ea7263150a9b37e3,
+      type: 3}
+    m_TargetAsset: {fileID: 461598268179157930, guid: 25ed7bd3c1b7a564ea7263150a9b37e3,
+      type: 3}
   - m_GUID: 265e7932c8c9bab4ba887f6752e23171
     m_Address: plant2Collider
     m_ReadOnly: 0
@@ -73,6 +82,15 @@ MonoBehaviour:
     - 2media
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: 3597f37cb055dfb4380ff145d2de3892
+    m_Address: Towel
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 2media
+    m_MainAsset: {fileID: 3440266997999450096, guid: 3597f37cb055dfb4380ff145d2de3892,
+      type: 3}
+    m_TargetAsset: {fileID: 3440266997999450096, guid: 3597f37cb055dfb4380ff145d2de3892,
+      type: 3}
   - m_GUID: 474b9872c8944794796fce8228103c75
     m_Address: Pepper
     m_ReadOnly: 0
@@ -80,6 +98,15 @@ MonoBehaviour:
     - 2media
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: 4f2ab0880e295c148948a03cb905b79c
+    m_Address: Sushi_06
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 2media
+    m_MainAsset: {fileID: 5921355264073306540, guid: 4f2ab0880e295c148948a03cb905b79c,
+      type: 3}
+    m_TargetAsset: {fileID: 5921355264073306540, guid: 4f2ab0880e295c148948a03cb905b79c,
+      type: 3}
   - m_GUID: 527b90d2efa05874cb3b20b848043dae
     m_Address: GreyCat1
     m_ReadOnly: 0
@@ -94,6 +121,15 @@ MonoBehaviour:
     - 2media
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: 5e2d7067f3550f14aab944225aeeacdb
+    m_Address: Sushi_07
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 2media
+    m_MainAsset: {fileID: 4945540756773186542, guid: 5e2d7067f3550f14aab944225aeeacdb,
+      type: 3}
+    m_TargetAsset: {fileID: 4945540756773186542, guid: 5e2d7067f3550f14aab944225aeeacdb,
+      type: 3}
   - m_GUID: 5efbdff695d22544890988ce1a13dd25
     m_Address: plant1 Variant
     m_ReadOnly: 0
@@ -108,6 +144,13 @@ MonoBehaviour:
     - 2media
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: 70aaf9090a271664eba42502135b6640
+    m_Address: bowl
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 2media
+    m_MainAsset: {fileID: 187698, guid: 70aaf9090a271664eba42502135b6640, type: 3}
+    m_TargetAsset: {fileID: 187698, guid: 70aaf9090a271664eba42502135b6640, type: 3}
   - m_GUID: 71f30eb9c3e76b94eaa16937c8a67f94
     m_Address: catfood_01
     m_ReadOnly: 0
@@ -122,14 +165,30 @@ MonoBehaviour:
     - 2media
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: 7a9d443dd466c9c49a53049d81bc0b63
+    m_Address: Sushi_04
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 2media
+    m_MainAsset: {fileID: 1715372464938055889, guid: 7a9d443dd466c9c49a53049d81bc0b63,
+      type: 3}
+    m_TargetAsset: {fileID: 1715372464938055889, guid: 7a9d443dd466c9c49a53049d81bc0b63,
+      type: 3}
   - m_GUID: 7beba925dc4e4ac43b277a1a99122be4
     m_Address: Carpet
     m_ReadOnly: 0
     m_SerializedLabels:
     - 2media
-    m_MainAsset: {fileID: 375269576575717791, guid: 7beba925dc4e4ac43b277a1a99122be4,
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 823466272f771c6488170999af5f72fa
+    m_Address: Sushi_01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 2media
+    m_MainAsset: {fileID: 480138783670666125, guid: 823466272f771c6488170999af5f72fa,
       type: 3}
-    m_TargetAsset: {fileID: 375269576575717791, guid: 7beba925dc4e4ac43b277a1a99122be4,
+    m_TargetAsset: {fileID: 480138783670666125, guid: 823466272f771c6488170999af5f72fa,
       type: 3}
   - m_GUID: 83159a856da2fe641bdbe4edf84b1761
     m_Address: plant4 Variant
@@ -150,9 +209,16 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - 2media
-    m_MainAsset: {fileID: 7676320485254606477, guid: 97532fc8b3a7c1b40a08f3caad80f678,
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: ac648be7e784d4644b477fb5f3b5ce32
+    m_Address: Sushi_03
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 2media
+    m_MainAsset: {fileID: 7660727109170707125, guid: ac648be7e784d4644b477fb5f3b5ce32,
       type: 3}
-    m_TargetAsset: {fileID: 7676320485254606477, guid: 97532fc8b3a7c1b40a08f3caad80f678,
+    m_TargetAsset: {fileID: 7660727109170707125, guid: ac648be7e784d4644b477fb5f3b5ce32,
       type: 3}
   - m_GUID: b0114fdeda2d2ee4da7dfa07633485f6
     m_Address: Salt
@@ -168,6 +234,15 @@ MonoBehaviour:
     - 2media
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: cd7e9e94f0d43b44fb83007d804dfd90
+    m_Address: Sushi_02
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 2media
+    m_MainAsset: {fileID: 6044358497666272567, guid: cd7e9e94f0d43b44fb83007d804dfd90,
+      type: 3}
+    m_TargetAsset: {fileID: 6044358497666272567, guid: cd7e9e94f0d43b44fb83007d804dfd90,
+      type: 3}
   - m_GUID: ce85f8793733fe04db907f2955bc7509
     m_Address: Pot
     m_ReadOnly: 0
@@ -189,6 +264,15 @@ MonoBehaviour:
     - 2media
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: eb06b9227a92e8b43af79387647b5e30
+    m_Address: Sushi_05
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 2media
+    m_MainAsset: {fileID: 1500972987879531487, guid: eb06b9227a92e8b43af79387647b5e30,
+      type: 3}
+    m_TargetAsset: {fileID: 1500972987879531487, guid: eb06b9227a92e8b43af79387647b5e30,
+      type: 3}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 84b9e0eb6389152478e25e856e50d1bb, type: 2}
   m_SchemaSet:
