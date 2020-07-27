@@ -43,10 +43,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - 2media
-    m_MainAsset: {fileID: 6032640874890167668, guid: 1b6cd56c09411d54481d3d4e240e7fe6,
-      type: 3}
-    m_TargetAsset: {fileID: 6032640874890167668, guid: 1b6cd56c09411d54481d3d4e240e7fe6,
-      type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 249cf98a34b9eed48b98adc07185d9cd
     m_Address: plant2 Variant
     m_ReadOnly: 0
@@ -87,10 +85,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - 2media
-    m_MainAsset: {fileID: 136490199116398453, guid: 527b90d2efa05874cb3b20b848043dae,
-      type: 3}
-    m_TargetAsset: {fileID: 136490199116398453, guid: 527b90d2efa05874cb3b20b848043dae,
-      type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 5beab40511506f648bf8bda720d7f989
     m_Address: PotCollider
     m_ReadOnly: 0
@@ -110,10 +106,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - 2media
-    m_MainAsset: {fileID: 3073575411792674690, guid: 687d1af4d53dd744eb4fe9afe30662c8,
-      type: 3}
-    m_TargetAsset: {fileID: 3073575411792674690, guid: 687d1af4d53dd744eb4fe9afe30662c8,
-      type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 71f30eb9c3e76b94eaa16937c8a67f94
     m_Address: catfood_01
     m_ReadOnly: 0
@@ -128,6 +122,15 @@ MonoBehaviour:
     - 2media
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: 7beba925dc4e4ac43b277a1a99122be4
+    m_Address: Carpet
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 2media
+    m_MainAsset: {fileID: 375269576575717791, guid: 7beba925dc4e4ac43b277a1a99122be4,
+      type: 3}
+    m_TargetAsset: {fileID: 375269576575717791, guid: 7beba925dc4e4ac43b277a1a99122be4,
+      type: 3}
   - m_GUID: 83159a856da2fe641bdbe4edf84b1761
     m_Address: plant4 Variant
     m_ReadOnly: 0
@@ -142,6 +145,15 @@ MonoBehaviour:
     - 2media
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: 97532fc8b3a7c1b40a08f3caad80f678
+    m_Address: Vacuum cleaner
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 2media
+    m_MainAsset: {fileID: 7676320485254606477, guid: 97532fc8b3a7c1b40a08f3caad80f678,
+      type: 3}
+    m_TargetAsset: {fileID: 7676320485254606477, guid: 97532fc8b3a7c1b40a08f3caad80f678,
+      type: 3}
   - m_GUID: b0114fdeda2d2ee4da7dfa07633485f6
     m_Address: Salt
     m_ReadOnly: 0
@@ -154,37 +166,29 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - 2media
-    m_MainAsset: {fileID: 5959893323815889955, guid: bcabc1adcb44b4742956a3b123fce6b6,
-      type: 3}
-    m_TargetAsset: {fileID: 5959893323815889955, guid: bcabc1adcb44b4742956a3b123fce6b6,
-      type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: ce85f8793733fe04db907f2955bc7509
     m_Address: Pot
     m_ReadOnly: 0
     m_SerializedLabels:
     - 2media
-    m_MainAsset: {fileID: 6714204193443443670, guid: ce85f8793733fe04db907f2955bc7509,
-      type: 3}
-    m_TargetAsset: {fileID: 6714204193443443670, guid: ce85f8793733fe04db907f2955bc7509,
-      type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: e107ddc589b97344b8dc6b91514c37c3
     m_Address: HamSliced
     m_ReadOnly: 0
     m_SerializedLabels:
     - 2media
-    m_MainAsset: {fileID: 5924658028255100885, guid: e107ddc589b97344b8dc6b91514c37c3,
-      type: 3}
-    m_TargetAsset: {fileID: 5924658028255100885, guid: e107ddc589b97344b8dc6b91514c37c3,
-      type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: e297fb99e04b29c4e9678ab9d5b7913a
     m_Address: Ham
     m_ReadOnly: 0
     m_SerializedLabels:
     - 2media
-    m_MainAsset: {fileID: 4386731539394635838, guid: e297fb99e04b29c4e9678ab9d5b7913a,
-      type: 3}
-    m_TargetAsset: {fileID: 4386731539394635838, guid: e297fb99e04b29c4e9678ab9d5b7913a,
-      type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 84b9e0eb6389152478e25e856e50d1bb, type: 2}
   m_SchemaSet:

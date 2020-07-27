@@ -20,6 +20,37 @@
       "eventGroupObjs": {
         "interactablesToActivate": [
           {
+            "prefab": "Vacuum cleaner"
+          }
+        ],
+        "interactablesToDeactivate": ["Vacuum cleaner"],
+        "targetsToActivate": [
+          {
+            "prefab": "Carpet"
+          }
+        ],
+        "targetsToDeactivate": ["Carpet"]
+      },
+      "events": [
+        {
+          "parameters": {
+            "correctInteractables": ["Vacuum cleaner"],
+            "correctTargets": ["Carpet"],
+            "numericParameter": 5
+          },
+          "instructions": {
+            "request": ["Vacuum the carpet.", "Dust the carpet."],
+            "correct": ["Well done!"],
+            "wrong": ["Sorry, try again."]
+          }
+        }
+      ]
+    },
+    {
+      "type": "DragHoldManager",
+      "eventGroupObjs": {
+        "interactablesToActivate": [
+          {
             "prefab": "Bottle"
           }
         ],
