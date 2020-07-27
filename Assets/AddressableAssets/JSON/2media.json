@@ -20,6 +20,40 @@
       "eventGroupObjs": {
         "interactablesToActivate": [
           {
+            "prefab": "Towel"
+          }
+        ],
+        "interactablesToDeactivate": ["Towel"],
+        "targetsToActivate": [
+          {
+            "prefab": "Window"
+          }
+        ],
+        "targetsToDeactivate": ["Window"]
+      },
+      "events": [
+        {
+          "parameters": {
+            "correctInteractables": ["Towel"],
+            "correctTargets": ["Window"],
+            "numericParameter": 5
+          },
+          "instructions": {
+            "request": [
+              "Clean the window above the sink.",
+              "Wash the window above the sink."
+            ],
+            "correct": ["Well done!"],
+            "wrong": ["Sorry, try again."]
+          }
+        }
+      ]
+    },
+    {
+      "type": "DragHoldManager",
+      "eventGroupObjs": {
+        "interactablesToActivate": [
+          {
             "prefab": "Vacuum cleaner"
           }
         ],
