@@ -20,6 +20,40 @@
       "eventGroupObjs": {
         "selectablesToActivate": [
           {
+            "prefab": "AlarmClock"
+          }
+        ],
+        "selectablesToDeactivate": ["AlarmClock"],
+        "othersToActivate": [
+          {
+            "prefab": "AlarmClockOff"
+          }
+        ],
+        "othersToDeactivate": ["AlarmClockOn"]
+      },
+      "events": [
+        {
+          "parameters": {
+            "correctSelectables": ["AlarmClock"],
+            "objsToDeactivate": ["AlarmClockOff"],
+            "objsToActivate": [{ "prefab": "AlarmClockOn" }]
+          },
+          "instructions": {
+            "request": [
+              "Set the time on the alarm clock.",
+              "Prepare the time on the alarm clock."
+            ],
+            "correct": ["Well done!"],
+            "wrong": ["Sorry, try again."]
+          }
+        }
+      ]
+    },
+    {
+      "type": "TouchManager",
+      "eventGroupObjs": {
+        "selectablesToActivate": [
+          {
             "prefab": "Low-Remote-Control"
           }
         ],
