@@ -26,6 +26,43 @@
   ],
   "eventGroups": [
     {
+      "type": "DragReleaseManager",
+      "eventGroupObjs": {
+        "interactablesToActivate": [
+          {
+            "prefab": "Prescription"
+          }
+        ],
+        "targetsToActivate": [
+          {
+            "prefab": "Backpack"
+          }
+        ],
+        "targetsToDeactivate": ["Backpack"]
+      },
+      "events": [
+        {
+          "parameters": {
+            "correctInteractables": ["Prescription"],
+            "correctTargets": ["Backpack"],
+            "objsToDeactivate": ["Prescription"],
+            "finalTransform": {
+              "position": { "x": 11.445, "y": 0.264, "z": 8.93 },
+              "rotation": { "x": 0, "y": 90, "z": 0 }
+            }
+          },
+          "instructions": {
+            "request": [
+              "Collect the prescription and put it in the schoolbag.",
+              "Pick up the document you need for the pharmacy and put it in the schoolbag."
+            ],
+            "correct": ["Well done!"],
+            "wrong": ["Sorry, try again."]
+          }
+        }
+      ]
+    },
+    {
       "type": "DragMoveManager",
       "eventGroupObjs": {
         "interactablesToActivate": [

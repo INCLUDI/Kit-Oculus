@@ -146,6 +146,15 @@ MonoBehaviour:
     - 1media
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: 83dd1e13ffbb6304c8644b9bdfe5fb2b
+    m_Address: AlarmClockOff
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 1media
+    m_MainAsset: {fileID: 2486745843675848448, guid: 83dd1e13ffbb6304c8644b9bdfe5fb2b,
+      type: 3}
+    m_TargetAsset: {fileID: 2486745843675848448, guid: 83dd1e13ffbb6304c8644b9bdfe5fb2b,
+      type: 3}
   - m_GUID: 87533ff7d08d2904ba9c50df3247b683
     m_Address: Poster
     m_ReadOnly: 0
@@ -191,6 +200,15 @@ MonoBehaviour:
     - 1media
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: b248b1f6e05fb5c4fb90c20cb3f55637
+    m_Address: AlarmClockOn
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 1media
+    m_MainAsset: {fileID: 2302604626379150908, guid: b248b1f6e05fb5c4fb90c20cb3f55637,
+      type: 3}
+    m_TargetAsset: {fileID: 2302604626379150908, guid: b248b1f6e05fb5c4fb90c20cb3f55637,
+      type: 3}
   - m_GUID: bf74bfe746c60bd418648d81f2eeb4cc
     m_Address: Brush
     m_ReadOnly: 0
@@ -240,6 +258,15 @@ MonoBehaviour:
     - 1media
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: d8a314dcbf5ce72449143b2b65f65011
+    m_Address: AlarmClock
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 1media
+    m_MainAsset: {fileID: 5743467571853651690, guid: d8a314dcbf5ce72449143b2b65f65011,
+      type: 3}
+    m_TargetAsset: {fileID: 5743467571853651690, guid: d8a314dcbf5ce72449143b2b65f65011,
+      type: 3}
   - m_GUID: e38859765ef3b2b48b4b508adf16d389
     m_Address: Book
     m_ReadOnly: 0
