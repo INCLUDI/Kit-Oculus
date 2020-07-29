@@ -20,6 +20,43 @@
       "eventGroupObjs": {
         "selectablesToActivate": [
           {
+            "prefab": "Low-Remote-Control"
+          }
+        ],
+        "selectablesToDeactivate": ["Low-Remote-Control"],
+        "othersToActivate": [
+          {
+            "prefab": "TVset"
+          },
+          {
+            "prefab": "Channel1"
+          }
+        ],
+        "othersToDeactivate": ["TVset", "Channel2"]
+      },
+      "events": [
+        {
+          "parameters": {
+            "correctSelectables": ["Low-Remote-Control"],
+            "objsToDeactivate": ["Channel1"],
+            "objsToActivate": [{ "prefab": "Channel2" }]
+          },
+          "instructions": {
+            "request": [
+              "Surf the TV channels by using the remote control.",
+              "Change the television programs by use of the remote control."
+            ],
+            "correct": ["Well done!"],
+            "wrong": ["Sorry, try again."]
+          }
+        }
+      ]
+    },
+    {
+      "type": "TouchManager",
+      "eventGroupObjs": {
+        "selectablesToActivate": [
+          {
             "prefab": "Flashlight"
           }
         ],

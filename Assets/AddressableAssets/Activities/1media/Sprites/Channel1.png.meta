@@ -1,0 +1,2048 @@
+fileFormatVersion: 2
+guid: d6200cea84c48ef4184fb99c5950d5be
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -979272273174676346
+    second: Channel1_0
+  - first:
+      213: -465754460524325709
+    second: Channel1_1
+  - first:
+      213: 595864445937547995
+    second: Channel1_2
+  - first:
+      213: 2006243585112960778
+    second: Channel1_3
+  - first:
+      213: 5860076284945599700
+    second: Channel1_4
+  - first:
+      213: -6027915628067190304
+    second: Channel1_5
+  - first:
+      213: -973626460694645973
+    second: Channel1_6
+  - first:
+      213: 7805661550978872411
+    second: Channel1_7
+  - first:
+      213: 6985672653625643991
+    second: Channel1_8
+  - first:
+      213: -804595528324851795
+    second: Channel1_9
+  - first:
+      213: 2230212110683236331
+    second: Channel1_10
+  - first:
+      213: -1722228675544264389
+    second: Channel1_11
+  - first:
+      213: 7290280414894068408
+    second: Channel1_12
+  - first:
+      213: -3791903672900585325
+    second: Channel1_13
+  - first:
+      213: -9149751831439810446
+    second: Channel1_14
+  - first:
+      213: -8111685516845442584
+    second: Channel1_15
+  - first:
+      213: -8480874644447858228
+    second: Channel1_16
+  - first:
+      213: 5868568763875237353
+    second: Channel1_17
+  - first:
+      213: 3326381295416143783
+    second: Channel1_18
+  - first:
+      213: 4157670177246200258
+    second: Channel1_19
+  - first:
+      213: 9104213607764765070
+    second: Channel1_20
+  - first:
+      213: -2520640309376633482
+    second: Channel1_21
+  - first:
+      213: -4210983542390851104
+    second: Channel1_22
+  - first:
+      213: -1019006783316347647
+    second: Channel1_23
+  - first:
+      213: 8828078163177722394
+    second: Channel1_24
+  - first:
+      213: -6318882233579953468
+    second: Channel1_25
+  - first:
+      213: 5544430450539741877
+    second: Channel1_26
+  - first:
+      213: -7195481732761388531
+    second: Channel1_27
+  - first:
+      213: -4509276155271682607
+    second: Channel1_28
+  - first:
+      213: -6014025668754766713
+    second: Channel1_29
+  - first:
+      213: -732510814050270822
+    second: Channel1_30
+  - first:
+      213: 4685569487121780175
+    second: Channel1_31
+  - first:
+      213: 3810998203722656215
+    second: Channel1_32
+  - first:
+      213: 5419258201531948012
+    second: Channel1_33
+  - first:
+      213: -3658525404359542130
+    second: Channel1_34
+  - first:
+      213: 222556837378829260
+    second: Channel1_35
+  - first:
+      213: -3333809142660101444
+    second: Channel1_36
+  - first:
+      213: 2163394840841530577
+    second: Channel1_37
+  - first:
+      213: -8495899365157566287
+    second: Channel1_38
+  - first:
+      213: 2470826791191735397
+    second: Channel1_39
+  - first:
+      213: -3908272744047169472
+    second: Channel1_40
+  - first:
+      213: 7463965680702955718
+    second: Channel1_41
+  - first:
+      213: -7658588963881230838
+    second: Channel1_42
+  - first:
+      213: 266637051099629090
+    second: Channel1_43
+  - first:
+      213: -1254918763300674458
+    second: Channel1_44
+  - first:
+      213: 4083381673168286097
+    second: Channel1_45
+  - first:
+      213: -1495277206273245827
+    second: Channel1_46
+  - first:
+      213: -8678237976757123471
+    second: Channel1_47
+  - first:
+      213: 1929412600022643062
+    second: Channel1_48
+  - first:
+      213: -4217360006361568252
+    second: Channel1_49
+  - first:
+      213: -5375771713235883523
+    second: Channel1_50
+  - first:
+      213: -104162931041524285
+    second: Channel1_51
+  - first:
+      213: 6747029083618759922
+    second: Channel1_52
+  - first:
+      213: 6130340856345893461
+    second: Channel1_53
+  - first:
+      213: -2150121066463179223
+    second: Channel1_54
+  - first:
+      213: -2837852129338907033
+    second: Channel1_55
+  - first:
+      213: -4954347927419022077
+    second: Channel1_56
+  - first:
+      213: -7852043222057678002
+    second: Channel1_57
+  - first:
+      213: 6296744014124790453
+    second: Channel1_58
+  - first:
+      213: -8724027572929045184
+    second: Channel1_59
+  - first:
+      213: -6727583266453950675
+    second: Channel1_60
+  - first:
+      213: 6853319121318980858
+    second: Channel1_61
+  - first:
+      213: 5753172426720353047
+    second: Channel1_62
+  - first:
+      213: 9079147889044130710
+    second: Channel1_63
+  - first:
+      213: -1024445455819016154
+    second: Channel1_64
+  - first:
+      213: 6807873293116764812
+    second: Channel1_65
+  - first:
+      213: 5556803776745028964
+    second: Channel1_66
+  - first:
+      213: -2796448080748349447
+    second: Channel1_67
+  - first:
+      213: -2127637000690919882
+    second: Channel1_68
+  - first:
+      213: 5941071658700335331
+    second: Channel1_69
+  - first:
+      213: -3704468712860491889
+    second: Channel1_70
+  - first:
+      213: -8858032418699542963
+    second: Channel1_71
+  - first:
+      213: 7230180770872677448
+    second: Channel1_72
+  - first:
+      213: -1436168756158546852
+    second: Channel1_73
+  - first:
+      213: 3539072375682912498
+    second: Channel1_74
+  - first:
+      213: -2277180271452635562
+    second: Channel1_75
+  - first:
+      213: 2359566467038568768
+    second: Channel1_76
+  - first:
+      213: 8201671907055143933
+    second: Channel1_77
+  - first:
+      213: 6332826805577827658
+    second: Channel1_78
+  - first:
+      213: -1145297460198832224
+    second: Channel1_79
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Channel1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3750
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68cb8035e0de862f0800000000000000
+      internalID: -979272273174676346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_1
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 3750
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b4d4eb29ce4989f0800000000000000
+      internalID: -465754460524325709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_2
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 3750
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bda746a7e8fe44800800000000000000
+      internalID: 595864445937547995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_3
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 3750
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0f609f39eb97db10800000000000000
+      internalID: 2006243585112960778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_4
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 3750
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dc8fd8455c235150800000000000000
+      internalID: 5860076284945599700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3500
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e9870d6caa885ca0800000000000000
+      internalID: -6027915628067190304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_6
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 3500
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b23ff5a74ebfc72f0800000000000000
+      internalID: -973626460694645973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_7
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 3500
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b54350f03d7435c60800000000000000
+      internalID: 7805661550978872411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_8
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 3500
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d3548c444812f060800000000000000
+      internalID: 6985672653625643991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_9
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 3500
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da7545241a085d4f0800000000000000
+      internalID: -804595528324851795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3250
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be76c07391e43fe10800000000000000
+      internalID: 2230212110683236331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_11
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 3250
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b315134f42a6918e0800000000000000
+      internalID: -1722228675544264389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_12
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 3250
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b29fba69674c2560800000000000000
+      internalID: 7290280414894068408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_13
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 3250
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 398f24a23b3706bc0800000000000000
+      internalID: -3791903672900585325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_14
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 3250
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 270ec00df2d850180800000000000000
+      internalID: -9149751831439810446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3000
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e91fbefff08d6f80800000000000000
+      internalID: -8111685516845442584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_16
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 3000
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc17119c171ed4a80800000000000000
+      internalID: -8480874644447858228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_17
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 3000
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ed9cbe9238517150800000000000000
+      internalID: 5868568763875237353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_18
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 3000
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7af68cc0a2ea92e20800000000000000
+      internalID: 3326381295416143783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_19
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 3000
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c1cef77ff203b930800000000000000
+      internalID: 4157670177246200258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2750
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e89a8124a0aa85e70800000000000000
+      internalID: 9104213607764765070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_21
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 2750
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67533195ef2e40dd0800000000000000
+      internalID: -2520640309376633482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_22
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 2750
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e9f6c867c49f85c0800000000000000
+      internalID: -4210983542390851104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_23
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 2750
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10537b0cab2cbd1f0800000000000000
+      internalID: -1019006783316347647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_24
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 2750
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a125795f052a38a70800000000000000
+      internalID: 8828078163177722394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2500
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c2a0f16612de48a0800000000000000
+      internalID: -6318882233579953468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_26
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 2500
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b2c74e7e16c1fc40800000000000000
+      internalID: 5544430450539741877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_27
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 2500
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0af1f2cc73842c90800000000000000
+      internalID: -7195481732761388531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_28
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 2500
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d564ea5a35db61c0800000000000000
+      internalID: -4509276155271682607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_29
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 2500
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7848ac79483e98ca0800000000000000
+      internalID: -6014025668754766713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2250
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a91c66eab4995d5f0800000000000000
+      internalID: -732510814050270822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_31
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 2250
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcd8d429f9c760140800000000000000
+      internalID: 4685569487121780175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_32
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 2250
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d96a8cbca263e430800000000000000
+      internalID: 3810998203722656215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_33
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 2250
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceb1f603f92153b40800000000000000
+      internalID: 5419258201531948012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_34
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 2250
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8a3867478e4a3dc0800000000000000
+      internalID: -3658525404359542130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2000
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccbac42b34ea61300800000000000000
+      internalID: 222556837378829260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_36
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 2000
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cba8bce7f3eebb1d0800000000000000
+      internalID: -3333809142660101444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_37
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 2000
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dca545452ce50e10800000000000000
+      internalID: 2163394840841530577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_38
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 2000
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b801546a80881a80800000000000000
+      internalID: -8495899365157566287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_39
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 2000
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56c608620e32a4220800000000000000
+      internalID: 2470826791191735397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1750
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0403abd65a603c9c0800000000000000
+      internalID: -3908272744047169472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_41
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 1750
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c0a106ad35559760800000000000000
+      internalID: 7463965680702955718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_42
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 1750
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0ed12f0ae937b590800000000000000
+      internalID: -7658588963881230838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_43
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 1750
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22640ca3cf843b300800000000000000
+      internalID: 266637051099629090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_44
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 1750
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 664ad7b9802a59ee0800000000000000
+      internalID: -1254918763300674458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1500
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 191398f3ff51ba830800000000000000
+      internalID: 4083381673168286097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_46
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 1500
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7d385f9d45bf3be0800000000000000
+      internalID: -1495277206273245827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_47
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 1500
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17646171a84b09780800000000000000
+      internalID: -8678237976757123471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_48
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 1500
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67133898986a6ca10800000000000000
+      internalID: 1929412600022643062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_49
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 1500
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40c21e23b6de875c0800000000000000
+      internalID: -4217360006361568252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1250
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df96bfedb1c6565b0800000000000000
+      internalID: -5375771713235883523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_51
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 1250
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c5a188bd50fd8ef0800000000000000
+      internalID: -104162931041524285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_52
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 1250
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f4535a443342ad50800000000000000
+      internalID: 6747029083618759922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_53
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 1250
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55a9f866788531550800000000000000
+      internalID: 6130340856345893461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_54
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 1250
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92ec069284c3922e0800000000000000
+      internalID: -2150121066463179223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1000
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7662ba1268ced98d0800000000000000
+      internalID: -2837852129338907033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_56
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 1000
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3051f7c2fce9e3bb0800000000000000
+      internalID: -4954347927419022077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_57
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 1000
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4b0d3c9a40f70390800000000000000
+      internalID: -7852043222057678002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_58
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 1000
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b2b97bb157826750800000000000000
+      internalID: 6296744014124790453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_59
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 1000
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04dd9d0f4270ee680800000000000000
+      internalID: -8724027572929045184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 750
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2f6626d9a2d2a2a0800000000000000
+      internalID: -6727583266453950675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_61
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 750
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afc2c9e2e61eb1f50800000000000000
+      internalID: 6853319121318980858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_62
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 750
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71b1d3a27df57df40800000000000000
+      internalID: 5753172426720353047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_63
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 750
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69b86b5d6ec9ffd70800000000000000
+      internalID: 9079147889044130710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_64
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 750
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 628f422294078c1f0800000000000000
+      internalID: -1024445455819016154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_65
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 500
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c82f710c0bc6a7e50800000000000000
+      internalID: 6807873293116764812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_66
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 500
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46dbf6ff79bbd1d40800000000000000
+      internalID: 5556803776745028964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_67
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 500
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f7fb2a69450139d0800000000000000
+      internalID: -2796448080748349447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_68
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 500
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63617daab6d1972e0800000000000000
+      internalID: -2127637000690919882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_69
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 500
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e869f9423de27250800000000000000
+      internalID: 5941071658700335331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 250
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8fd6603555179cc0800000000000000
+      internalID: -3704468712860491889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_71
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 250
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4ef4827272f11580800000000000000
+      internalID: -8858032418699542963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_72
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 250
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 844d9bd9a13c65460800000000000000
+      internalID: 7230180770872677448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_73
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 250
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5cb7ab1024b11ce0800000000000000
+      internalID: -1436168756158546852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_74
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 250
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f05afa239f4d1130800000000000000
+      internalID: 3539072375682912498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_75
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65eb98eab94d560e0800000000000000
+      internalID: -2277180271452635562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_76
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 0
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 041e1c3433ddeb020800000000000000
+      internalID: 2359566467038568768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_77
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 0
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfb8258252132d170800000000000000
+      internalID: 8201671907055143933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_78
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 0
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a45c98a4d68b2e750800000000000000
+      internalID: 6332826805577827658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Channel1_79
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 0
+        width: 445
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a701ba27061b10f0800000000000000
+      internalID: -1145297460198832224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 18fc7d541b99da84985bc20424ee9d1f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

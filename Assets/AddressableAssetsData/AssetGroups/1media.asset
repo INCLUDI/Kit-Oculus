@@ -52,6 +52,33 @@ MonoBehaviour:
     - 1media
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: 1b61ece831d213f4584cbb172dcac3ed
+    m_Address: Low-Remote-Control
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 1media
+    m_MainAsset: {fileID: 8247710677359868953, guid: 1b61ece831d213f4584cbb172dcac3ed,
+      type: 3}
+    m_TargetAsset: {fileID: 8247710677359868953, guid: 1b61ece831d213f4584cbb172dcac3ed,
+      type: 3}
+  - m_GUID: 335a8c2fee756ea4783193e09271e897
+    m_Address: TVset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 1media
+    m_MainAsset: {fileID: 6677517559309983445, guid: 335a8c2fee756ea4783193e09271e897,
+      type: 3}
+    m_TargetAsset: {fileID: 6677517559309983445, guid: 335a8c2fee756ea4783193e09271e897,
+      type: 3}
+  - m_GUID: 40432e60997199244a03424374ef3717
+    m_Address: Channel2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 1media
+    m_MainAsset: {fileID: 6101121872790235030, guid: 40432e60997199244a03424374ef3717,
+      type: 3}
+    m_TargetAsset: {fileID: 6101121872790235030, guid: 40432e60997199244a03424374ef3717,
+      type: 3}
   - m_GUID: 42b35b42f067dc74abb599c698332715
     m_Address: GreyCat1
     m_ReadOnly: 0
@@ -69,6 +96,15 @@ MonoBehaviour:
     m_MainAsset: {fileID: 2326913003411844452, guid: 49a1396dc7ed38b45a034b9622d2ce4d,
       type: 3}
     m_TargetAsset: {fileID: 2326913003411844452, guid: 49a1396dc7ed38b45a034b9622d2ce4d,
+      type: 3}
+  - m_GUID: 50a92ff59bd2f824690a308cecaaaa91
+    m_Address: Channel1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 1media
+    m_MainAsset: {fileID: 6597593818010178178, guid: 50a92ff59bd2f824690a308cecaaaa91,
+      type: 3}
+    m_TargetAsset: {fileID: 6597593818010178178, guid: 50a92ff59bd2f824690a308cecaaaa91,
       type: 3}
   - m_GUID: 59823eb9ce1d2b44195eaae66c0d4505
     m_Address: CatCollider3
