@@ -20,6 +20,77 @@
       "eventGroupObjs": {
         "selectablesToActivate": [
           {
+            "prefab": "Flashlight"
+          }
+        ],
+        "selectablesToDeactivate": ["Flashlight"],
+        "othersToDeactivate": ["Spotlight"]
+      },
+      "events": [
+        {
+          "parameters": {
+            "correctSelectables": ["Flashlight"],
+            "objsToActivate": { "prefab": "Spotlight" }
+          },
+          "instructions": {
+            "request": ["Light the torchlight.", "Set the torch alight."],
+            "correct": ["Well done!"],
+            "wrong": ["Sorry, try again."]
+          }
+        }
+      ]
+    },
+    {
+      "type": "DragMoveManager",
+      "eventGroupObjs": {
+        "interactablesToActivate": [
+          {
+            "prefab": "Brush"
+          }
+        ],
+        "interactablesToDeactivate": ["Brush"],
+        "targetsToActivate": [
+          {
+            "prefab": "CatCollider1"
+          },
+          {
+            "prefab": "CatCollider2"
+          },
+          {
+            "prefab": "CatCollider3"
+          }
+        ],
+        "targetsToDeactivate": ["CatCollider1", "CatCollider2", "CatCollider3"],
+        "othersToActivate": [
+          {
+            "prefab": "GreyCat1"
+          }
+        ],
+        "othersToDeactivate": ["GreyCat1"]
+      },
+      "events": [
+        {
+          "parameters": {
+            "correctInteractables": ["Brush"],
+            "correctTargets": ["CatCollider1", "CatCollider2", "CatCollider3"],
+            "numericParameter": 3
+          },
+          "instructions": {
+            "request": [
+              "Take the comb and brush the cat’s coat.",
+              "Grab the brush and comb the cat’s fur."
+            ],
+            "correct": ["Well done!"],
+            "wrong": ["Sorry, try again."]
+          }
+        }
+      ]
+    },
+    {
+      "type": "TouchManager",
+      "eventGroupObjs": {
+        "selectablesToActivate": [
+          {
             "prefab": "Laptop_black_off"
           }
         ],
