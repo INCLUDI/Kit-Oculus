@@ -30,6 +30,49 @@
       "eventGroupObjs": {
         "interactablesToActivate": [
           {
+            "prefab": "MaskA"
+          }
+        ],
+        "targetsToActivate": [
+          {
+            "prefab": "Bin"
+          }
+        ],
+        "targetsToDeactivate": ["Bin"],
+        "othersToActivate": [
+          {
+            "prefab": "Sitting Idle"
+          }
+        ],
+        "othersToDeactivate": ["Sitting Idle"]
+      },
+      "events": [
+        {
+          "parameters": {
+            "correctInteractables": ["MaskA"],
+            "correctTargets": ["Bin"],
+            "finalTransform": {
+              "position": { "x": 9.343, "y": 0.024, "z": 8.463 },
+              "rotation": { "x": -179.505, "y": 1.342987, "z": -0.2829895 }
+            },
+            "objsToDeactivate": ["MaskA"]
+          },
+          "instructions": {
+            "request": [
+              "Take off the surgical mask from the patient.",
+              "Strip off the surgical mask from the patient."
+            ],
+            "correct": ["Well done!"],
+            "wrong": ["Sorry, try again."]
+          }
+        }
+      ]
+    },
+    {
+      "type": "DragReleaseManager",
+      "eventGroupObjs": {
+        "interactablesToActivate": [
+          {
             "prefab": "Prescription"
           }
         ],

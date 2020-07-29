@@ -103,6 +103,13 @@ MonoBehaviour:
     - 3media
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: 9a777854551f57144bafd29f03411609
+    m_Address: MaskA
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 3media
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: afbd2517fbc57464db2bc11f24ca8981
     m_Address: Pill4
     m_ReadOnly: 0
