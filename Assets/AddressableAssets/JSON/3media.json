@@ -14,6 +14,11 @@
     "rotation": { "x": 0, "y": -111.17, "z": 0 },
     "scale": { "x": 0.7, "y": 0.7, "z": 0.7 }
   },
+  "objsToAdd": [
+    {
+      "prefab": "Patient"
+    }
+  ],
   "objsToRemove": [
     "Otoscope",
     "Stethoscope",
@@ -30,6 +35,82 @@
       "eventGroupObjs": {
         "interactablesToActivate": [
           {
+            "prefab": "Bandage"
+          }
+        ],
+        "interactablesToDeactivate": ["Bandage"],
+        "targetsToActivate": [
+          {
+            "prefab": "Arm"
+          }
+        ],
+        "targetsToDeactivate": ["Arm"]
+      },
+      "events": [
+        {
+          "parameters": {
+            "correctInteractables": ["Bandage"],
+            "correctTargets": ["Arm"]
+          },
+          "instructions": {
+            "request": [
+              "Use a bandage on the patient's arm.",
+              "Put a bandage on the patient's arm."
+            ],
+            "correct": ["Well done!"],
+            "wrong": ["Sorry, try again."]
+          }
+        }
+      ]
+    },
+    {
+      "type": "DragMoveManager",
+      "eventGroupObjs": {
+        "interactablesToActivate": [
+          {
+            "prefab": "EyesDrop"
+          }
+        ],
+        "interactablesToDeactivate": ["EyesDrop"],
+        "targetsToActivate": [
+          {
+            "prefab": "EyeRight"
+          },
+          {
+            "prefab": "EyeLeft"
+          }
+        ],
+        "targetsToDeactivate": ["EyeRight", "EyeLeft"],
+        "othersToActivate": [
+          {
+            "prefab": "EyesDropCap"
+          }
+        ],
+        "othersToDeactivate": ["EyesDropCap"]
+      },
+      "events": [
+        {
+          "parameters": {
+            "correctInteractables": ["EyesDrop"],
+            "correctTargets": ["EyeRight", "EyeLeft"],
+            "numericParameter": 2
+          },
+          "instructions": {
+            "request": [
+              "Give the patient some eye drops.",
+              "Hand the patient some eye drops."
+            ],
+            "correct": ["Well done!"],
+            "wrong": ["Sorry, try again."]
+          }
+        }
+      ]
+    },
+    {
+      "type": "DragReleaseManager",
+      "eventGroupObjs": {
+        "interactablesToActivate": [
+          {
             "prefab": "MaskA"
           }
         ],
@@ -38,13 +119,7 @@
             "prefab": "Bin"
           }
         ],
-        "targetsToDeactivate": ["Bin"],
-        "othersToActivate": [
-          {
-            "prefab": "Sitting Idle"
-          }
-        ],
-        "othersToDeactivate": ["Sitting Idle"]
+        "targetsToDeactivate": ["Bin"]
       },
       "events": [
         {
@@ -264,13 +339,7 @@
             "prefab": "Bin"
           }
         ],
-        "targetsToDeactivate": ["Bin"],
-        "othersToActivate": [
-          {
-            "prefab": "Sitting Idle"
-          }
-        ],
-        "othersToDeactivate": ["Sitting Idle"]
+        "targetsToDeactivate": ["Bin"]
       },
       "events": [
         {
@@ -308,13 +377,7 @@
             "prefab": "Left Leg"
           }
         ],
-        "targetsToDeactivate": ["Left Leg"],
-        "othersToActivate": [
-          {
-            "prefab": "Sitting Idle"
-          }
-        ],
-        "othersToDeactivate": ["Sitting Idle"]
+        "targetsToDeactivate": ["Left Leg"]
       },
       "events": [
         {

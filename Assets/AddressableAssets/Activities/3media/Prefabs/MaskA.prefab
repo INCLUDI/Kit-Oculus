@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8350622336559049907}
   - component: {fileID: 466311466882922473}
+  - component: {fileID: -4990651319873239577}
   - component: {fileID: 4172605929903118909}
   m_Layer: 0
   m_Name: MaskA
@@ -46,6 +47,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.10000001, y: 0.1, z: 0.03296907}
   m_Center: {x: 5.251313e-10, y: -0.00000012479235, z: -0.033515707}
+--- !u!54 &-4990651319873239577
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5066000169490563197}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &4172605929903118909
 MonoBehaviour:
   m_ObjectHideFlags: 0

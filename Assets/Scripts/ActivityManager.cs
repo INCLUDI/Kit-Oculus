@@ -130,7 +130,7 @@ public class ActivityManager : MonoBehaviour
         };
         foreach (SceneObj obj in _activityConfiguration.objsToAdd)
         {
-            Instantiate(_activityAssets.Find(x => x.name == obj.prefab), GameObject.Find("Environment").transform);
+            Instantiate(_activityAssets.Find(x => x.name == obj.prefab), _dynamicObjects);
         }
     }
 
