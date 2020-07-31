@@ -12,8 +12,6 @@ using static StatsManager;
 
 public abstract class EventGroupManagerBase : ScriptableObject
 {
-    protected string request;
-
     protected Vector3 _initialScale;
 
     public List<string> Correct { get => ActivityManager.instance.CurrentEvent.instructions.correct; }
@@ -49,8 +47,7 @@ public abstract class EventGroupManagerBase : ScriptableObject
 
     public virtual string selectRequest(List<string> instructions)
     {
-        request = selectNextInstruction(instructions);
-        return request;
+        return selectNextInstruction(instructions);
     }
 
     public virtual string selectCorrect(List<string> instructions, string param = null)

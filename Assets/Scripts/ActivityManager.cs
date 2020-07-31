@@ -42,7 +42,6 @@ public class ActivityManager : MonoBehaviour
 
     public SpeechToText speechToText = new SpeechToText();
 
-    public string ActivityPath { get => "Activities/" + _activityConfiguration.id; }
     private List<EventGroup> EventGroups { get => _activityConfiguration.eventGroups; }
 
     public EventGroup CurrentEventGroup { get => EventGroups[_eventGroupStep]; }
@@ -348,11 +347,11 @@ public class ActivityManager : MonoBehaviour
         }
     }
 
-    public void checkCorrectAction(GameObject interactable)
+    public void checkCorrectAction(GameObject obj)
     {
         if (IsFree)
         {
-            eventGroupManager.checkCorrectAction(interactable);
+            eventGroupManager.checkCorrectAction(obj);
         }
     }
 
