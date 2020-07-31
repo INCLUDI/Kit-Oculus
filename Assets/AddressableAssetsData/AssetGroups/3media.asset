@@ -36,10 +36,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - 3media
-    m_MainAsset: {fileID: 5575504307359394433, guid: 254a6256f9e94a04b8139363c5e9e4f5,
-      type: 3}
-    m_TargetAsset: {fileID: 5575504307359394433, guid: 254a6256f9e94a04b8139363c5e9e4f5,
-      type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 3699bbceb35f73f49b295292d8a5b027
     m_Address: Pen_blue
     m_ReadOnly: 0
@@ -52,19 +50,15 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - 3media
-    m_MainAsset: {fileID: 3649481513900345288, guid: 39ffbffa3d5ddb04a9188af1f196e216,
-      type: 3}
-    m_TargetAsset: {fileID: 3649481513900345288, guid: 39ffbffa3d5ddb04a9188af1f196e216,
-      type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 3ce8124fae5e1d04d9987b728504df06
     m_Address: Arm
     m_ReadOnly: 0
     m_SerializedLabels:
     - 3media
-    m_MainAsset: {fileID: 8439043046886305514, guid: 3ce8124fae5e1d04d9987b728504df06,
-      type: 3}
-    m_TargetAsset: {fileID: 8439043046886305514, guid: 3ce8124fae5e1d04d9987b728504df06,
-      type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 3ed62cf702cbfb0418d7bb86e0932167
     m_Address: Form
     m_ReadOnly: 0
@@ -105,10 +99,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - 3media
-    m_MainAsset: {fileID: 6364610016017268906, guid: 626fb43b92d7aad46948c9c27594404b,
-      type: 3}
-    m_TargetAsset: {fileID: 6364610016017268906, guid: 626fb43b92d7aad46948c9c27594404b,
-      type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 6c08d8a760c761240b82447cc3c772b3
     m_Address: Clipboard
     m_ReadOnly: 0
@@ -135,10 +127,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - 3media
-    m_MainAsset: {fileID: 8315800246154854156, guid: 9357f7f8b8beac94994b18895d2638bd,
-      type: 3}
-    m_TargetAsset: {fileID: 8315800246154854156, guid: 9357f7f8b8beac94994b18895d2638bd,
-      type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 9a777854551f57144bafd29f03411609
     m_Address: MaskA
     m_ReadOnly: 0
@@ -146,24 +136,29 @@ MonoBehaviour:
     - 3media
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: a0a0575ee08329a49a70c1b41b32623f
+    m_Address: ArrowBin
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 3media
+    m_MainAsset: {fileID: 1713177978744306530, guid: a0a0575ee08329a49a70c1b41b32623f,
+      type: 3}
+    m_TargetAsset: {fileID: 1713177978744306530, guid: a0a0575ee08329a49a70c1b41b32623f,
+      type: 3}
   - m_GUID: a91f2a2b405efc2478fe1ebaa7fd2f99
     m_Address: EyeLeft
     m_ReadOnly: 0
     m_SerializedLabels:
     - 3media
-    m_MainAsset: {fileID: 3371400264601728735, guid: a91f2a2b405efc2478fe1ebaa7fd2f99,
-      type: 3}
-    m_TargetAsset: {fileID: 3371400264601728735, guid: a91f2a2b405efc2478fe1ebaa7fd2f99,
-      type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: afbd2517fbc57464db2bc11f24ca8981
     m_Address: Pill4
     m_ReadOnly: 0
     m_SerializedLabels:
     - 3media
-    m_MainAsset: {fileID: 5854507619257528099, guid: afbd2517fbc57464db2bc11f24ca8981,
-      type: 3}
-    m_TargetAsset: {fileID: 5854507619257528099, guid: afbd2517fbc57464db2bc11f24ca8981,
-      type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: afd94e8f3499829469da64446f70d78d
     m_Address: Left Leg
     m_ReadOnly: 0
@@ -190,17 +185,17 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - 3media
-    m_MainAsset: {fileID: 1197902921471298478, guid: ba1fc4ad537371d469cb93fcb028f224,
-      type: 3}
-    m_TargetAsset: {fileID: 1197902921471298478, guid: ba1fc4ad537371d469cb93fcb028f224,
-      type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: bd7be6177de80d841b0c87c23c2d85b1
     m_Address: Backpack
     m_ReadOnly: 0
     m_SerializedLabels:
     - 3media
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 8937503036067105059, guid: bd7be6177de80d841b0c87c23c2d85b1,
+      type: 3}
+    m_TargetAsset: {fileID: 8937503036067105059, guid: bd7be6177de80d841b0c87c23c2d85b1,
+      type: 3}
   - m_GUID: c8c1fddd777dc4f4ca5e6eaea16cd802
     m_Address: Pill3
     m_ReadOnly: 0
