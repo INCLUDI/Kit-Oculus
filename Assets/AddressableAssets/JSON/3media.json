@@ -119,7 +119,9 @@
             "prefab": "Bin"
           }
         ],
-        "targetsToDeactivate": ["Bin"]
+        "targetsToDeactivate": ["Bin"],
+        "othersToActivate": [{ "prefab": "ArrowBin" }],
+        "othersToDeactivate": ["ArrowBin"]
       },
       "events": [
         {
