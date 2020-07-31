@@ -232,49 +232,33 @@ public class ActivityManager : MonoBehaviour
     {
         if (objs.selectablesToDeactivate != null)
         {
-            foreach (string toRemove in objs.selectablesToDeactivate)
-            {
-                GameObject temp = GameObject.Find(toRemove);
-                if (temp != null)
-                {
-                    temp.transform.DOScale(new Vector3(0, 0, 0), 1f).OnComplete(() => Destroy(temp));
-                }
-            }
+            DeactivateObjs(objs.selectablesToDeactivate);
         }
 
         if (objs.interactablesToDeactivate != null)
         {
-            foreach (string toRemove in objs.interactablesToDeactivate)
-            {
-                GameObject temp = GameObject.Find(toRemove);
-                if (temp != null)
-                {
-                    temp.transform.DOScale(new Vector3(0, 0, 0), 1f).OnComplete(() => Destroy(temp));
-                }
-            }
+            DeactivateObjs(objs.interactablesToDeactivate);
         }
 
         if (objs.targetsToDeactivate != null)
         {
-            foreach (string toRemove in objs.targetsToDeactivate)
-            {
-                GameObject temp = GameObject.Find(toRemove);
-                if (temp != null)
-                {
-                    temp.transform.DOScale(new Vector3(0, 0, 0), 1f).OnComplete(() => Destroy(temp));
-                }
-            }
+            DeactivateObjs(objs.targetsToDeactivate);
         }
 
         if (objs.othersToDeactivate != null)
         {
-            foreach (string toRemove in objs.othersToDeactivate)
+            DeactivateObjs(objs.othersToDeactivate);
+        }
+    }
+
+    private void DeactivateObjs(List<string> objsToRemove)
+    {
+        foreach (string toRemove in objsToRemove)
+        {
+            GameObject temp = GameObject.Find(toRemove);
+            if (temp != null)
             {
-                GameObject temp = GameObject.Find(toRemove);
-                if (temp != null)
-                {
-                    temp.transform.DOScale(new Vector3(0, 0, 0), 1f).OnComplete(() => Destroy(temp));
-                }
+                temp.transform.DOScale(new Vector3(0, 0, 0), 1f).OnComplete(() => Destroy(temp));
             }
         }
     }
