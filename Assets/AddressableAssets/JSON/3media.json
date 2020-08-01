@@ -6,7 +6,7 @@
   "difficulty": 1,
   "scene": "DoctorsOffice",
   "playerTransform": {
-    "position": { "x": 9.734, "y": -0.5577, "z": 7.928 },
+    "position": { "x": 9.734, "y": -0.008, "z": 7.928 },
     "rotation": { "x": 0, "y": 25.35, "z": 0 }
   },
   "assistantTransform": {
