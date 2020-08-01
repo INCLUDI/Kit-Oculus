@@ -10,9 +10,9 @@
     "rotation": { "x": 0, "y": 25.35, "z": 0 }
   },
   "assistantTransform": {
-    "position": { "x": 1.784284, "y": -0.155, "z": 0.717057 },
-    "rotation": { "x": 0, "y": -111.17, "z": 0 },
-    "scale": { "x": 0.7, "y": 0.7, "z": 0.7 }
+    "position": { "x": 10.1, "y": 0.005, "z": 11.01 },
+    "rotation": { "x": 0, "y": 187.2, "z": 0 },
+    "scale": { "x": 1, "y": 1, "z": 1 }
   },
   "objsToAdd": [
     {
@@ -64,14 +64,14 @@
       ]
     },
     {
-      "type": "DragMoveManager",
+      "type": "DragHoldManager",
       "eventGroupObjs": {
         "interactablesToActivate": [
           {
-            "prefab": "EyesDrop"
+            "prefab": "EyeDrops"
           }
         ],
-        "interactablesToDeactivate": ["EyesDrop"],
+        "interactablesToDeactivate": ["EyeDrops"],
         "targetsToActivate": [
           {
             "prefab": "EyeRight"
@@ -83,15 +83,15 @@
         "targetsToDeactivate": ["EyeRight", "EyeLeft"],
         "othersToActivate": [
           {
-            "prefab": "EyesDropCap"
+            "prefab": "EyeDropsCap"
           }
         ],
-        "othersToDeactivate": ["EyesDropCap"]
+        "othersToDeactivate": ["EyeDropsCap"]
       },
       "events": [
         {
           "parameters": {
-            "correctInteractables": ["EyesDrop"],
+            "correctInteractables": ["EyeDrops"],
             "correctTargets": ["EyeRight", "EyeLeft"],
             "numericParameter": 2
           },
@@ -116,10 +116,10 @@
         ],
         "targetsToActivate": [
           {
-            "prefab": "Bin"
+            "prefab": "Bin1"
           }
         ],
-        "targetsToDeactivate": ["Bin"],
+        "targetsToDeactivate": ["Bin1"],
         "othersToActivate": [{ "prefab": "ArrowBin" }],
         "othersToDeactivate": ["ArrowBin"]
       },
@@ -127,7 +127,7 @@
         {
           "parameters": {
             "correctInteractables": ["MaskA"],
-            "correctTargets": ["Bin"],
+            "correctTargets": ["Bin1"],
             "finalTransform": {
               "position": { "x": 9.343, "y": 0.024, "z": 8.463 },
               "rotation": { "x": -179.505, "y": 1.342987, "z": -0.2829895 }
@@ -155,16 +155,16 @@
         ],
         "targetsToActivate": [
           {
-            "prefab": "Backpack"
+            "prefab": "Backpack1"
           }
         ],
-        "targetsToDeactivate": ["Backpack"]
+        "targetsToDeactivate": ["Backpack1"]
       },
       "events": [
         {
           "parameters": {
             "correctInteractables": ["Prescription"],
-            "correctTargets": ["Backpack"],
+            "correctTargets": ["Backpack1"],
             "objsToDeactivate": ["Prescription"],
             "finalTransform": {
               "position": { "x": 11.445, "y": 0.264, "z": 8.93 },
@@ -183,7 +183,7 @@
       ]
     },
     {
-      "type": "DragMoveManager",
+      "type": "DragHoldManager",
       "eventGroupObjs": {
         "interactablesToActivate": [
           {
@@ -209,7 +209,7 @@
           "parameters": {
             "correctInteractables": ["Pen_blue"],
             "correctTargets": ["Clipboard"],
-            "numericParameter": 1
+            "numericParameter": 5
           },
           "instructions": {
             "request": [
@@ -223,7 +223,7 @@
       ]
     },
     {
-      "type": "DragMoveManager",
+      "type": "DragHoldManager",
       "eventGroupObjs": {
         "interactablesToActivate": [
           {
@@ -249,7 +249,7 @@
           "parameters": {
             "correctInteractables": ["Pen_blue"],
             "correctTargets": ["Form"],
-            "numericParameter": 1
+            "numericParameter": 5
           },
           "instructions": {
             "request": [
@@ -338,16 +338,18 @@
         ],
         "targetsToActivate": [
           {
-            "prefab": "Bin"
+            "prefab": "Bin1"
           }
         ],
-        "targetsToDeactivate": ["Bin"]
+        "targetsToDeactivate": ["Bin1"],
+        "othersToActivate": [{ "prefab": "ArrowBin" }],
+        "othersToDeactivate": ["ArrowBin"]
       },
       "events": [
         {
           "parameters": {
             "correctInteractables": ["StickingPlaster"],
-            "correctTargets": ["Bin"],
+            "correctTargets": ["Bin1"],
             "finalTransform": {
               "position": { "x": 9.343, "y": 0.024, "z": 8.463 },
               "rotation": { "x": -179.505, "y": 1.342987, "z": -0.2829895 }
@@ -357,7 +359,7 @@
           "instructions": {
             "request": [
               "Throw the plaster away.",
-              "Remove the plaster from the patient’s leg."
+              "Remove the plaster from the patient's leg."
             ],
             "correct": ["Well done!"],
             "wrong": ["Sorry, try again."]
@@ -366,7 +368,7 @@
       ]
     },
     {
-      "type": "DragMoveManager",
+      "type": "DragHoldManager",
       "eventGroupObjs": {
         "interactablesToActivate": [
           {
@@ -385,7 +387,8 @@
         {
           "parameters": {
             "correctInteractables": ["Ice"],
-            "correctTargets": ["Left Leg"]
+            "correctTargets": ["Left Leg"],
+            "numericParameter": 5
           },
           "instructions": {
             "request": [
