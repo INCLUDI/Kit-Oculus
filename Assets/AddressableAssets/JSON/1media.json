@@ -101,7 +101,7 @@
         {
           "parameters": {
             "correctSelectables": ["Flashlight"],
-            "objsToActivate": { "prefab": "Spotlight" }
+            "objsToActivate": [{ "prefab": "Spotlight" }]
           },
           "instructions": {
             "request": ["Light the torchlight.", "Set the torch alight."],
@@ -172,7 +172,7 @@
         {
           "parameters": {
             "correctSelectables": ["Laptop_black_off"],
-            "objsToActivate": { "prefab": "hills" }
+            "objsToActivate": [{ "prefab": "hills" }]
           },
           "instructions": {
             "request": ["Switch the laptop on.", "Turn the laptop on."],
@@ -183,7 +183,7 @@
       ]
     },
     {
-      "type": "DragMoveManager",
+      "type": "DragHoldManager",
       "eventGroupObjs": {
         "interactablesToActivate": [
           {
@@ -209,7 +209,7 @@
           "parameters": {
             "correctInteractables": ["Pen_blue"],
             "correctTargets": ["Notepad"],
-            "numericParameter": 1
+            "numericParameter": 5
           },
           "instructions": {
             "request": ["Make a note in the diary.", "Write in the diary."],
@@ -343,7 +343,7 @@
             "prefab": "PosterTarget"
           }
         ],
-        "othersToActivate": ["Arrow"]
+        "othersToActivate": ["Arrows"]
       },
       "events": [
         {
@@ -354,7 +354,7 @@
               "position": { "x": 2.235, "y": 1.415, "z": -0.291 },
               "rotation": { "x": 0, "y": 90, "z": 0 }
             },
-            "objsToDeactivate": ["PosterTarget", "Arrow"]
+            "objsToDeactivate": ["PosterTarget", "Arrows"]
           },
           "instructions": {
             "request": [

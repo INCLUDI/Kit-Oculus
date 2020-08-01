@@ -111,6 +111,15 @@ MonoBehaviour:
     - 3media
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: 65c619ff04d6e8a489b1e320697803f6
+    m_Address: Right Leg
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - 3media
+    m_MainAsset: {fileID: 1228332912377587742, guid: 65c619ff04d6e8a489b1e320697803f6,
+      type: 3}
+    m_TargetAsset: {fileID: 1228332912377587742, guid: 65c619ff04d6e8a489b1e320697803f6,
+      type: 3}
   - m_GUID: 6c08d8a760c761240b82447cc3c772b3
     m_Address: Clipboard
     m_ReadOnly: 0
