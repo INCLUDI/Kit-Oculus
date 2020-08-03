@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebd22b366edd6f8498f9178940b8bcae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 9127530448673096051, guid: 4b9ec7d966eea44418e40be57aff9f73, type: 3}
+  Player: {fileID: 847797444809321739, guid: 66cabee3b3626b447a541ca243ab015b, type: 3}
   ActivityManager: {fileID: 886379263796691855, guid: fc033901a16940b4aabfbfe2ce0fa947,
     type: 3}
   StatsManager: {fileID: 5544384937278356479, guid: 18ff3f3bddd0e1145a442e12f32d6804,
@@ -82,6 +82,8 @@ MonoBehaviour:
         x: 0
         y: 0
         z: 0
+    objsToAdd: []
+    objsToRemove: []
     eventGroups: []
   assistantsList:
   - Aj

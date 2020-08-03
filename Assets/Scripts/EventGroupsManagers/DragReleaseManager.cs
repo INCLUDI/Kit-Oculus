@@ -43,7 +43,7 @@ public class DragReleaseManager : EventGroupManagerBase
         {
             interactable.GetComponent<Collider>().enabled = false;
             interactable.GetComponent<Rigidbody>().isKinematic = true;
-            interactable.GetComponent<OVRGrabbable>().enabled = false;
+            // interactable.GetComponent<OVRGrabbable>().enabled = false;
             EventManager.TriggerEvent("ReleaseObject");
 
             SetFinalPosition(interactable);

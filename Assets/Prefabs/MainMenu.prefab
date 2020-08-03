@@ -192,7 +192,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3915443978443638987}
   m_HandleRect: {fileID: 3915443978443638986}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 0.42857143
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -938,7 +938,7 @@ GameObject:
   - component: {fileID: 3915443977900036617}
   - component: {fileID: 3915443977900036616}
   - component: {fileID: 3915443977900036620}
-  - component: {fileID: 251296586687359434}
+  - component: {fileID: 2881402986545242430}
   m_Layer: 0
   m_Name: MainMenu
   m_TagString: Untagged
@@ -1043,7 +1043,7 @@ MonoBehaviour:
     type: 3}
   activityScrollView: {fileID: 3915443978956412742}
   activityContent: {fileID: 3915443978441019891}
---- !u!114 &251296586687359434
+--- !u!114 &2881402986545242430
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1052,16 +1052,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 3915443977900036631}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7aaf960227867044282d921171d2d7ac, type: 3}
+  m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
+  m_IgnoreReversedGraphics: 0
+  m_CheckFor2DOcclusion: 0
+  m_CheckFor3DOcclusion: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
-  pointer: {fileID: 0}
-  sortOrder: 0
+    m_Bits: 2147483647
 --- !u!1 &3915443977916335316
 GameObject:
   m_ObjectHideFlags: 0
@@ -2170,7 +2169,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 60}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &3915443978441019893
