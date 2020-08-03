@@ -90,9 +90,8 @@ GameObject:
   - component: {fileID: 7100964824216636994}
   - component: {fileID: 4333824492902294905}
   - component: {fileID: 53656208050635993}
-  - component: {fileID: 7950924473881052400}
   m_Layer: 0
-  m_Name: EyesDrop
+  m_Name: EyeDrops
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -145,24 +144,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &7950924473881052400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5575504307359394433}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_allowOffhandGrab: 1
-  m_snapPosition: 0
-  m_snapOrientation: 0
-  m_snapOffset: {fileID: 0}
-  m_grabPoints:
-  - {fileID: 4333824492902294905}
 --- !u!1 &5623574125227572044
 GameObject:
   m_ObjectHideFlags: 0

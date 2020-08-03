@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 6867213640081303437}
   - component: {fileID: 3185297341001229839}
   - component: {fileID: 5819869390196616265}
-  - component: {fileID: 1654228980557407025}
   m_Layer: 0
   m_Name: Pen_blue
   m_TagString: Untagged
@@ -111,21 +110,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.014000371, y: 0.014000425, z: 0.26551586}
   m_Center: {x: 0.0004886817, y: 0.00036637648, z: -0.010572262}
---- !u!114 &1654228980557407025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6853004295176774175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_allowOffhandGrab: 1
-  m_snapPosition: 0
-  m_snapOrientation: 0
-  m_snapOffset: {fileID: 0}
-  m_grabPoints:
-  - {fileID: 5819869390196616265}

@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 8532843438510289376}
   - component: {fileID: 381265965577702158}
   - component: {fileID: -8831640386506250066}
-  - component: {fileID: -5540405020840418274}
   m_Layer: 0
   m_Name: Highlighter_pen_green
   m_TagString: Untagged
@@ -111,21 +110,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.03813671, y: 0.01999998, z: 0.14310417}
   m_Center: {x: 0, y: 0, z: 0.0052642426}
---- !u!114 &-5540405020840418274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8520126983797903974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_allowOffhandGrab: 1
-  m_snapPosition: 0
-  m_snapOrientation: 0
-  m_snapOffset: {fileID: 0}
-  m_grabPoints:
-  - {fileID: -8831640386506250066}

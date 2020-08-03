@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class InteractableTrigger : TriggerBase
 {
@@ -16,5 +17,15 @@ public class InteractableTrigger : TriggerBase
         initialPosition = transform.position;
         initialRotation = transform.rotation;
         initialScale = transform.localScale;
+    }
+
+    private void Start()
+    {
+        XRGrabInteractable interactable = gameObject.AddComponent<XRGrabInteractable>();
+        Transform pivot = transform.Find("Pivot");
+        if (pivot != null)
+        {
+            interactable.attachTransform = pivot;
+        }
     }
 }
