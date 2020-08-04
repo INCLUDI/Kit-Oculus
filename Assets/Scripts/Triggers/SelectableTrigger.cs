@@ -8,7 +8,7 @@ public class SelectableTrigger : TriggerBase
 {
     private void Start()
     {
-        XRGrabInteractable selectable = gameObject.AddComponent<XRGrabInteractable>();
+        XRSelectableInteractable selectable = gameObject.AddComponent<XRSelectableInteractable>();
         XRInteractableEvent event_selected = new XRInteractableEvent();
         event_selected.AddListener((data) => ActivityManager.instance.checkCorrectAction(gameObject));
         selectable.onSelectEnter = event_selected;
