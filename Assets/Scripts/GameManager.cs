@@ -7,6 +7,7 @@ using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.ResourceProviders;
 using UnityEngine.SceneManagement;
 using UnityEngine.XR;
+using UnityEngine.XR.Interaction.Toolkit;
 using static DataModel;
 
 public class GameManager : MonoBehaviour
@@ -99,6 +100,12 @@ public class GameManager : MonoBehaviour
         //Popup.SetActive(false);
 
         StatsManager = Instantiate(StatsManager);
+
+        GameObject[] teleportationAreas = GameObject.FindGameObjectsWithTag("Ground");
+        foreach (GameObject teleportationArea in teleportationAreas)
+        {
+            teleportationArea.AddComponent<TeleportationArea>();
+        }
     }
 
 

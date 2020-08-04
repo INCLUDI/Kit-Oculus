@@ -4,23 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Grabbable
-  - Target
-  - Other
-  - VRUIButtonIcon
-  - VRUIIcon
-  - VRUIBackground
-  - VRUIRadio
-  - VRUIButtonControlBar
-  - VRUIText
-  - VRUIOutline
-  - VRUIButton
-  - VRUIButtonTab
-  - VRUIButtonList
-  - VRUICheckbox
-  - VRUIToggle
-  - VRUISlider
-  - VRUIAccent
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -34,7 +18,7 @@ TagManager:
   - Target
   - Player
   - Selectable Ignore Raycast
-  - 
+  - Ground
   - 
   - 
   - 
