@@ -13,9 +13,9 @@ public class SelectableTrigger : TriggerBase
         event_selected.AddListener((data) => ActivityManager.instance.checkCorrectAction(gameObject));
         selectable.onSelectEnter = event_selected;
 
-        if (ActivityManager.instance.CurrentEventGroup.type == "TouchManager")
+        if (ActivityManager.instance.CurrentEventGroup.type != "TouchManager")
         {
-            gameObject.layer = 2;
+            gameObject.layer = 11;
         }
     }
 }

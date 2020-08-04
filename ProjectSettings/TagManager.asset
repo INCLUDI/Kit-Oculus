@@ -17,7 +17,7 @@ TagManager:
   - Interactable
   - Target
   - Player
-  - Selectable Ignore Raycast
+  - Selectable
   - Ground
   - 
   - 
