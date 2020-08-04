@@ -257,7 +257,7 @@ public class ActivityManager : MonoBehaviour
             GameObject temp = GameObject.Find(toRemove);
             if (temp != null)
             {
-                temp.transform.DOScale(new Vector3(0, 0, 0), 1f).OnComplete(() => Destroy(temp));
+                temp.transform.DOScale(new Vector3(0, 0, 0), 1f).OnComplete(() => { temp.SetActive(false); });
             }
         }
     }
