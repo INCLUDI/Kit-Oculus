@@ -105,6 +105,7 @@ public class GameManager : MonoBehaviour
         foreach (GameObject teleportationArea in teleportationAreas)
         {
             teleportationArea.AddComponent<TeleportationArea>();
+            teleportationArea.layer = 12;
         }
     }
 
