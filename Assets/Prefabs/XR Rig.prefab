@@ -1048,6 +1048,9 @@ GameObject:
   - component: {fileID: 3667855266009739068}
   - component: {fileID: -990390208562800566}
   - component: {fileID: 8961296126598237972}
+  - component: {fileID: -2598212882236548674}
+  - component: {fileID: -2445309747399679816}
+  - component: {fileID: 5232015335387931597}
   m_Layer: 0
   m_Name: XR Rig
   m_TagString: Untagged
@@ -1133,6 +1136,62 @@ MonoBehaviour:
   activationTreshold: 0.1
   leftInteractorRay: {fileID: 1298879232827845359}
   rightInteractorRay: {fileID: 6043259789042028933}
+--- !u!114 &-2598212882236548674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847797444809321739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55a8cf1ab28a73847827bc036b15d482, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.5
+  inputSource: 5
+  gravity: 9.81
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 4096
+  additionalHeight: 0.2
+--- !u!143 &-2445309747399679816
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847797444809321739}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.15
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &5232015335387931597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847797444809321739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc4f2c0214c9b494fa7eb5b8b2c02885, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_System: {fileID: 0}
+  m_TurnUsage: 0
+  m_Controllers:
+  - {fileID: 2440595550526217612}
+  m_TurnAmount: 45
+  m_DebounceTime: 0.2
+  m_DeadZone: 0.75
 --- !u!1 &1178209768248223925
 GameObject:
   m_ObjectHideFlags: 0
