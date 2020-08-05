@@ -1150,7 +1150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.5
   inputSource: 5
-  gravity: 9.81
+  gravity: -9.81
   groundLayer:
     serializedVersion: 2
     m_Bits: 4096
@@ -1338,7 +1338,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1528786205249093899
 MonoBehaviour:
@@ -1618,7 +1618,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4621659297879412552
 MonoBehaviour:
