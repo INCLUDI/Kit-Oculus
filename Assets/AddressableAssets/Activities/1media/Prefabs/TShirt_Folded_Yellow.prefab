@@ -28,10 +28,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 159710}
-  m_LocalRotation: {x: 0.026218552, y: 0.01167267, z: -0.08850487, w: 0.9956622}
-  m_LocalPosition: {x: -1.1092712, y: 0.49821228, z: 1.7355119}
+  m_LocalRotation: {x: 0.000000010873371, y: 0.00000007342487, z: -0.000000309841,
+    w: 1}
+  m_LocalPosition: {x: 0.1480001, y: 0.40503594, z: 1.706}
   m_LocalScale: {x: 0.008, y: 0.008, z: 0.008}
-  m_Children: []
+  m_Children:
+  - {fileID: 2165841536120861735}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 3.111, y: 1.0680001, z: -10.13}
@@ -130,3 +132,33 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &3033232330904637268
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2165841536120861735}
+  m_Layer: 0
+  m_Name: Pivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2165841536120861735
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3033232330904637268}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
+  m_LocalPosition: {x: -7.8, y: -0, z: -9.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 459710}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}

@@ -343,7 +343,7 @@
             "prefab": "PosterTarget"
           }
         ],
-        "othersToActivate": ["Arrows"]
+        "othersToActivate": [{ "prefab": "Arrows" }]
       },
       "events": [
         {

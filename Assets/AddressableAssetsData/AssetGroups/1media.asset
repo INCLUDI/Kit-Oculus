@@ -50,10 +50,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - 1media
-    m_MainAsset: {fileID: 7003194791219412404, guid: 0ec81290c55a2a744a188cb3629282a5,
-      type: 3}
-    m_TargetAsset: {fileID: 7003194791219412404, guid: 0ec81290c55a2a744a188cb3629282a5,
-      type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 1b61ece831d213f4584cbb172dcac3ed
     m_Address: Low-Remote-Control
     m_ReadOnly: 0
@@ -87,10 +85,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - 1media
-    m_MainAsset: {fileID: 2326913003411844452, guid: 49a1396dc7ed38b45a034b9622d2ce4d,
-      type: 3}
-    m_TargetAsset: {fileID: 2326913003411844452, guid: 49a1396dc7ed38b45a034b9622d2ce4d,
-      type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 50a92ff59bd2f824690a308cecaaaa91
     m_Address: Channel1
     m_ReadOnly: 0
@@ -110,10 +106,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - 1media
-    m_MainAsset: {fileID: 1555049090195699513, guid: 5be59baf44d69f8488a10a2e148637c8,
-      type: 3}
-    m_TargetAsset: {fileID: 1555049090195699513, guid: 5be59baf44d69f8488a10a2e148637c8,
-      type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 66363e47d845ee44cb991cc66eafc5ae
     m_Address: CatCollider1
     m_ReadOnly: 0
@@ -126,19 +120,15 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - 1media
-    m_MainAsset: {fileID: 5730803440987592902, guid: 7715897c59ce63a49ad2ef66eb269775,
-      type: 3}
-    m_TargetAsset: {fileID: 5730803440987592902, guid: 7715897c59ce63a49ad2ef66eb269775,
-      type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 7d32da5b9ef09f24b8d92d1dc4179b0d
     m_Address: Arrows
     m_ReadOnly: 0
     m_SerializedLabels:
     - 1media
-    m_MainAsset: {fileID: 2999406734304897657, guid: 7d32da5b9ef09f24b8d92d1dc4179b0d,
-      type: 3}
-    m_TargetAsset: {fileID: 2999406734304897657, guid: 7d32da5b9ef09f24b8d92d1dc4179b0d,
-      type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 83dd1e13ffbb6304c8644b9bdfe5fb2b
     m_Address: AlarmClockOff
     m_ReadOnly: 0
@@ -167,10 +157,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - 1media
-    m_MainAsset: {fileID: 6916776404784721680, guid: 9cea23af3572020478121e2445488697,
-      type: 3}
-    m_TargetAsset: {fileID: 6916776404784721680, guid: 9cea23af3572020478121e2445488697,
-      type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 9f6f2694714cd8b4c95bc13ce51d75ad
     m_Address: BookCollider4
     m_ReadOnly: 0
