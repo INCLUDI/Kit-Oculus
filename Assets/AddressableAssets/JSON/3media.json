@@ -146,6 +146,40 @@
       ]
     },
     {
+      "type": "DragHoldManager",
+      "eventGroupObjs": {
+        "interactablesToActivate": [
+          {
+            "prefab": "Ice"
+          }
+        ],
+        "interactablesToDeactivate": ["Ice"],
+        "targetsToActivate": [
+          {
+            "prefab": "Left Leg"
+          }
+        ],
+        "targetsToDeactivate": ["Left Leg"]
+      },
+      "events": [
+        {
+          "parameters": {
+            "correctInteractables": ["Ice"],
+            "correctTargets": ["Left Leg"],
+            "numericParameter": 5
+          },
+          "instructions": {
+            "request": [
+              "Apply ice on the patient's left leg.",
+              "Place some ice on the patient's left leg."
+            ],
+            "correct": ["Well done!"],
+            "wrong": ["Sorry, try again."]
+          }
+        }
+      ]
+    },
+    {
       "type": "DragReleaseManager",
       "eventGroupObjs": {
         "interactablesToActivate": [
@@ -267,6 +301,45 @@
       "eventGroupObjs": {
         "interactablesToActivate": [
           {
+            "prefab": "StickingPlaster"
+          }
+        ],
+        "targetsToActivate": [
+          {
+            "prefab": "Bin1"
+          }
+        ],
+        "targetsToDeactivate": ["Bin1"],
+        "othersToActivate": [{ "prefab": "ArrowBin" }],
+        "othersToDeactivate": ["ArrowBin"]
+      },
+      "events": [
+        {
+          "parameters": {
+            "correctInteractables": ["StickingPlaster"],
+            "correctTargets": ["Bin1"],
+            "finalTransform": {
+              "position": { "x": 9.343, "y": 0.024, "z": 8.463 },
+              "rotation": { "x": -179.505, "y": 1.342987, "z": -0.2829895 }
+            },
+            "objsToDeactivate": ["StickingPlaster"]
+          },
+          "instructions": {
+            "request": [
+              "Throw the plaster away.",
+              "Remove the plaster from the patient's leg."
+            ],
+            "correct": ["Well done!"],
+            "wrong": ["Sorry, try again."]
+          }
+        }
+      ]
+    },
+    {
+      "type": "DragReleaseManager",
+      "eventGroupObjs": {
+        "interactablesToActivate": [
+          {
             "prefab": "Pill1"
           },
           {
@@ -322,79 +395,6 @@
           },
           "instructions": {
             "request": ["Take four pills.", "Count four capsules."],
-            "correct": ["Well done!"],
-            "wrong": ["Sorry, try again."]
-          }
-        }
-      ]
-    },
-    {
-      "type": "DragReleaseManager",
-      "eventGroupObjs": {
-        "interactablesToActivate": [
-          {
-            "prefab": "StickingPlaster"
-          }
-        ],
-        "targetsToActivate": [
-          {
-            "prefab": "Bin1"
-          }
-        ],
-        "targetsToDeactivate": ["Bin1"],
-        "othersToActivate": [{ "prefab": "ArrowBin" }],
-        "othersToDeactivate": ["ArrowBin"]
-      },
-      "events": [
-        {
-          "parameters": {
-            "correctInteractables": ["StickingPlaster"],
-            "correctTargets": ["Bin1"],
-            "finalTransform": {
-              "position": { "x": 9.343, "y": 0.024, "z": 8.463 },
-              "rotation": { "x": -179.505, "y": 1.342987, "z": -0.2829895 }
-            },
-            "objsToDeactivate": ["StickingPlaster"]
-          },
-          "instructions": {
-            "request": [
-              "Throw the plaster away.",
-              "Remove the plaster from the patient's leg."
-            ],
-            "correct": ["Well done!"],
-            "wrong": ["Sorry, try again."]
-          }
-        }
-      ]
-    },
-    {
-      "type": "DragHoldManager",
-      "eventGroupObjs": {
-        "interactablesToActivate": [
-          {
-            "prefab": "Ice"
-          }
-        ],
-        "interactablesToDeactivate": ["Ice"],
-        "targetsToActivate": [
-          {
-            "prefab": "Left Leg"
-          }
-        ],
-        "targetsToDeactivate": ["Left Leg"]
-      },
-      "events": [
-        {
-          "parameters": {
-            "correctInteractables": ["Ice"],
-            "correctTargets": ["Left Leg"],
-            "numericParameter": 5
-          },
-          "instructions": {
-            "request": [
-              "Apply ice on the patient's left leg.",
-              "Place some ice on the patient's left leg."
-            ],
             "correct": ["Well done!"],
             "wrong": ["Sorry, try again."]
           }

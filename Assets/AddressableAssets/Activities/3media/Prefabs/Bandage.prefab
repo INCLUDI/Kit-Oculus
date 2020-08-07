@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7257454246464132533}
   - component: {fileID: 4851326117786018175}
   - component: {fileID: 8792204424166262030}
-  - component: {fileID: 8903324794196139373}
+  - component: {fileID: 3150365195228688753}
   m_Layer: 0
   m_Name: Bandage
   m_TagString: Untagged
@@ -97,8 +97,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &8903324794196139373
-MeshCollider:
+--- !u!65 &3150365195228688753
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -107,7 +107,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 1682944926689499439, guid: 54c6f6cc24c970c4799d527581e8966f, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.14090905, y: 0.10260571, z: 0.040845405}
+  m_Center: {x: 0, y: -0.026532382, z: 0.020721791}
