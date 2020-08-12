@@ -38,7 +38,7 @@ public class ActivityManager : MonoBehaviour
     [HideInInspector]
     public int hints;
 
-    private Transform _dynamicObjects;
+    public Transform _dynamicObjects;
 
     public SpeechToText speechToText = new SpeechToText();
 

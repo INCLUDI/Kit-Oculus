@@ -13,11 +13,26 @@ public class DragHoldManager : EventGroupManagerBase
 {
     private GameObject checkmark;
     private GameObject cross;
+    
+    public ProgressBarManager progressBarManager;
+
+    public TargetTrigger[] ActiveTargets
+    {
+        get => ActivityManager.instance._dynamicObjects.GetComponentsInChildren<TargetTrigger>();
+    }
+
+    public List<float> Timers
+    {
+        get => ActiveTargets.Select(x => x.timer).ToList();
+    }
 
     private void Awake()
     {
         checkmark = Instantiate(Resources.Load<GameObject>("Checkmark"));
         cross = Instantiate(Resources.Load<GameObject>("Cross"));
+        progressBarManager = Instantiate(Resources.Load<GameObject>("ProgressBar")).GetComponent<ProgressBarManager>();
+
+        EventManager.StartListening("CollisionOngoing", UpdateTimers);
     }
 
     public override List<EventConfiguration> SetEventsInCurrentGroup(List<EventConfiguration> events, bool randomEvents, int stepsToReproduce)
@@ -97,5 +112,15 @@ public class DragHoldManager : EventGroupManagerBase
         feedback.transform.localScale *= Vector3.Distance(interactable.transform.position, Camera.allCameras[0].transform.position);
         feedback.SetActive(true);
         feedback.transform.DOScale(new Vector3(0, 0, 0), 0.5f).From();
+    }
+
+    private void UpdateTimers()
+    {
+        progressBarManager.CurrentValue = Timers.Aggregate(0f, (acc, x) => acc + x);
+    }
+
+    public override void Ready()
+    {
+        progressBarManager.MaxValue = ActivityManager.instance.CurrentEvent.parameters.numericParameter;
     }
 }

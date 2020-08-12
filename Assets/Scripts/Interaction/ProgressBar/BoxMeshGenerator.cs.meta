@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7f324e7cd69c00a42b58bfa18f85ccee
+labels:
+- Progressbar
+- Indicator
+timeCreated: 1489174450
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

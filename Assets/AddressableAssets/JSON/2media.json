@@ -42,6 +42,7 @@
           "parameters": {
             "correctInteractables": ["catfood_01"],
             "correctTargets": ["petbowl_01"],
+            "numericParameter": 5,
             "objsToActivate": [
               {
                 "prefab": "petpowl 03 food"

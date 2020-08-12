@@ -12,11 +12,27 @@ public class DragMoveManager : EventGroupManagerBase
     private GameObject checkmark;
     private GameObject cross;
 
+    public ProgressBarManager progressBarManager;
+
+    public TargetTrigger[] ActiveTargets
+    {
+        get => ActivityManager.instance._dynamicObjects.GetComponentsInChildren<TargetTrigger>();
+    }
+
+    public List<int> HitCounters
+    {
+        get => ActiveTargets.Select(x => x.hitCounter).ToList();
+    }
+
     private void Awake()
     {
         checkmark = Instantiate(Resources.Load<GameObject>("Checkmark"));
         cross = Instantiate(Resources.Load<GameObject>("Cross"));
+        progressBarManager = Instantiate(Resources.Load<GameObject>("ProgressBar")).GetComponent<ProgressBarManager>();
+
+        EventManager.StartListening("CollisionFinished", UpdateHitCounters);
     }
+
 
     public override void checkCorrectAction(GameObject target, GameObject interactable)
     {
@@ -90,4 +106,14 @@ public class DragMoveManager : EventGroupManagerBase
         feedback.SetActive(true);
         feedback.transform.DOScale(new Vector3(0, 0, 0), 0.5f).From();
     }
+    private void UpdateHitCounters()
+    {
+        progressBarManager.CurrentValue = progressBarManager.MaxValue - HitCounters.Aggregate(0f, (acc, x) => acc + x);
+    }
+
+    public override void Ready()
+    {
+        progressBarManager.MaxValue = HitCounters.Aggregate(0, (acc, x) => acc + x);
+    }
+
 }

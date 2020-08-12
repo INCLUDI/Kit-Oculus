@@ -6,22 +6,13 @@ public class TargetTrigger : TriggerBase
 {
     public int hitCounter;
 
-    private float timer;
+    public float timer;
     public bool istantaneousCollision;
-
-    //private Collider target;
-
-    //private void Awake()
-    //{
-    //    target = GetComponent<Collider>();
-    //}
 
     void Start()
     {
         hitCounter = ActivityManager.instance.CurrentEvent.parameters.numericParameter;
         istantaneousCollision = ActivityManager.instance.CurrentEventGroup.type != "DragHoldManager";
-        //EventManager.StartListening("EnableInteraction", EnableTarget);
-        //EventManager.StartListening("DisableInteraction", DisableTarget);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -30,6 +21,7 @@ public class TargetTrigger : TriggerBase
         {
             ActivityManager.instance.checkCorrectAction(gameObject, other.gameObject);
         }
+        EventManager.TriggerEvent("CollisionStarted");
     }
 
     private void OnTriggerStay(Collider other)
@@ -42,16 +34,11 @@ public class TargetTrigger : TriggerBase
                 ActivityManager.instance.checkCorrectAction(gameObject, other.gameObject);
             }
         }
+        EventManager.TriggerEvent("CollisionOngoing");
     }
 
-    //private void EnableTarget()
-    //{
-    //    target.enabled = true;
-    //}
-
-    //private void DisableTarget()
-    //{
-    //    target.enabled = false;
-    //}
-
+    private void OnTriggerExit(Collider other)
+    {
+        EventManager.TriggerEvent("CollisionFinished");
+    }
 }
