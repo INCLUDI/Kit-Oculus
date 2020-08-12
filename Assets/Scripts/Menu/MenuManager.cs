@@ -10,6 +10,7 @@ public class MenuManager : MonoBehaviour
     public GameObject scrollItem;
     public ScrollRect activityScrollView;
     public Transform activityContent;
+    public GameObject loadingPanel;
     //public ScrollRect experieceScrollView;
     //public Transform experienceContent;
     //public Button activityButton;
@@ -19,6 +20,8 @@ public class MenuManager : MonoBehaviour
 
     private void Start()
     {
+        EventManager.StartListening("ActivityLoading", EnableLoadingPanel);
+
         if (!Permission.HasUserAuthorizedPermission(Permission.Microphone))
         {
             Permission.RequestUserPermission(Permission.Microphone);
@@ -70,5 +73,10 @@ public class MenuManager : MonoBehaviour
             }
             item.GetComponent<Button>().onClick.AddListener(() => { GameManager.instance.LaunchGame(playlist.activities); });
         }*/
+    }
+
+    private void EnableLoadingPanel()
+    {
+        loadingPanel.SetActive(true);
     }
 }

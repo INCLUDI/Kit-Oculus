@@ -59,6 +59,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadActivity(ActivityConfiguration activity)
     {
+        EventManager.TriggerEvent("ActivityLoading");
         currentActivity = activity;
         Addressables.LoadSceneAsync(activity.scene).Completed += SceneLoaded;
     }

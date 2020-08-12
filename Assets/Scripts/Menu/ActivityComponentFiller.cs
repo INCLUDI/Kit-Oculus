@@ -22,10 +22,7 @@ public class ActivityComponentFiller : MonoBehaviour
         title.text = activity.name;
         description.text = activity.description;
         image.sprite = await Addressables.LoadAssetAsync<Sprite>(activity.image).Task;
-        GetComponent<Button>().onClick.AddListener(() => 
-        {
-            GameManager.instance.LoadActivity(activity);
-        });
+        GetComponent<Button>().onClick.AddListener(() => GameManager.instance.LoadActivity(activity));
         if (activity.difficulty >= 1)
         {
             Star1.GetComponent<Image>().sprite = starFull;
