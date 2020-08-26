@@ -14,6 +14,14 @@ public class VoiceManager : EventGroupManagerBase
         cross = Instantiate(Resources.Load<GameObject>("Cross"));
     }
 
+
+    private void OnDestroy()
+    {
+        Destroy(checkmark);
+        Destroy(cross);
+    }
+
+
     public override void Ready()
     {
         ActivityManager.instance.speechToText.StartListening();
