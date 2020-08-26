@@ -11,6 +11,6 @@ public class RightHandInteractionManager : MonoBehaviour
 
     public void RightHandSelectionEnd()
     {
-        EventManager.TriggerEvent("RightHandSelectionEnd");
+        EventManager.TriggerEvent("RightHandInteractionEnd");
     }
 }

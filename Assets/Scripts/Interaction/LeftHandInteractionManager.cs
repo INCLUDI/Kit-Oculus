@@ -10,6 +10,6 @@ public class LeftHandInteractionManager : MonoBehaviour
     }
     public void LeftHandSelectionEnd()
     {
-        EventManager.TriggerEvent("LeftHandSelectionEnd");
+        EventManager.TriggerEvent("LeftHandInteractionEnd");
     }
 }
