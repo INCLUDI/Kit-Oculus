@@ -16,7 +16,7 @@
   },
   "eventGroups": [
     {
-      "type": "DragMoveManager",
+      "type": "DragHoldManager",
       "eventGroupObjs": {
         "interactablesToActivate": [
           {

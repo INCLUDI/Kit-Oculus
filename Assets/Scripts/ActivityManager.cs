@@ -69,6 +69,7 @@ public class ActivityManager : MonoBehaviour
     private EventGroupManagerBase eventGroupManager;
     private void setEventGroupManager(string type)
     {
+        Destroy(eventGroupManager);
         eventGroupManager = (EventGroupManagerBase)ScriptableObject.CreateInstance(Type.GetType(type));
     }
 

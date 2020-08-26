@@ -18,6 +18,13 @@ public class TouchManager : EventGroupManagerBase
         cross = Instantiate(Resources.Load<GameObject>("Cross"));
     }
 
+    private void OnDestroy()
+    {
+        Destroy(checkmark);
+        Destroy(cross);
+    }
+
+
     public override void checkCorrectAction(GameObject selectable)
     {
         if (ActivityManager.instance.Parameters.correctSelectables.Contains(selectable.name))

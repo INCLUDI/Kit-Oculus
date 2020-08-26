@@ -13,7 +13,8 @@ public class DragHoldManager : EventGroupManagerBase
 {
     private GameObject checkmark;
     private GameObject cross;
-    
+    private GameObject progressBar;
+
     public ProgressBarManager progressBarManager;
 
     public TargetTrigger[] ActiveTargets
@@ -30,9 +31,18 @@ public class DragHoldManager : EventGroupManagerBase
     {
         checkmark = Instantiate(Resources.Load<GameObject>("Checkmark"));
         cross = Instantiate(Resources.Load<GameObject>("Cross"));
-        progressBarManager = Instantiate(Resources.Load<GameObject>("ProgressBar")).GetComponent<ProgressBarManager>();
-
+        progressBar = Instantiate(Resources.Load<GameObject>("ProgressBar"));
+        progressBarManager = progressBar.GetComponent<ProgressBarManager>();
+        
         EventManager.StartListening("CollisionOngoing", UpdateTimers);
+    }
+
+    private void OnDestroy()
+    {
+        EventManager.StopListening("CollisionOngoing", UpdateTimers);
+        Destroy(progressBar);
+        Destroy(checkmark);
+        Destroy(cross);
     }
 
     public override List<EventConfiguration> SetEventsInCurrentGroup(List<EventConfiguration> events, bool randomEvents, int stepsToReproduce)

@@ -16,6 +16,13 @@ public class PointEventManager : EventGroupManagerBase
         cross = Instantiate(Resources.Load<GameObject>("Cross"));
     }
 
+    private void OnDestroy()
+    {
+        Destroy(checkmark);
+        Destroy(cross);
+    }
+
+
     public override List<SceneObj> randomizeObjects(List<SceneObj> objs, int objectsToSpawn)
     {
         List<SceneObj> filtered = new List<SceneObj>();

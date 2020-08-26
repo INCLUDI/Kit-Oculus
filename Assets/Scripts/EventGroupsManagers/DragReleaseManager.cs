@@ -17,6 +17,13 @@ public class DragReleaseManager : EventGroupManagerBase
         cross = Instantiate(Resources.Load<GameObject>("Cross"));
     }
 
+    private void OnDestroy()
+    {
+        Destroy(checkmark);
+        Destroy(cross);
+    }
+
+
     public override List<EventConfiguration> SetEventsInCurrentGroup(List<EventConfiguration> events, bool randomEvents, int stepsToReproduce)
     {
         List<EventConfiguration> filtered = new List<EventConfiguration>();

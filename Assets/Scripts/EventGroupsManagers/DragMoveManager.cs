@@ -11,6 +11,7 @@ public class DragMoveManager : EventGroupManagerBase
 {
     private GameObject checkmark;
     private GameObject cross;
+    private GameObject progressBar;
 
     public ProgressBarManager progressBarManager;
 
@@ -28,9 +29,18 @@ public class DragMoveManager : EventGroupManagerBase
     {
         checkmark = Instantiate(Resources.Load<GameObject>("Checkmark"));
         cross = Instantiate(Resources.Load<GameObject>("Cross"));
-        progressBarManager = Instantiate(Resources.Load<GameObject>("ProgressBar")).GetComponent<ProgressBarManager>();
+        progressBar = Instantiate(Resources.Load<GameObject>("ProgressBar"));
+        progressBarManager = progressBar.GetComponent<ProgressBarManager>();
 
         EventManager.StartListening("CollisionFinished", UpdateHitCounters);
+    }
+
+    private void OnDestroy()
+    {
+        EventManager.StopListening("CollisionFinished", UpdateHitCounters);
+        Destroy(progressBarManager);
+        Destroy(checkmark);
+        Destroy(cross);
     }
 
 
