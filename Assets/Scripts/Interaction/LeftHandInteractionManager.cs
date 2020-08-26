@@ -8,6 +8,7 @@ public class LeftHandInteractionManager : MonoBehaviour
     {
         EventManager.TriggerEvent("LeftHandInteractionBegin");
     }
+
     public void LeftHandSelectionEnd()
     {
         EventManager.TriggerEvent("LeftHandInteractionEnd");

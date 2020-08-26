@@ -58,12 +58,12 @@ public class ProgressBarManager : MonoBehaviour
         if (isGrabbingLeft)
         {
             transform.position = new Vector3(leftHand.position.x, leftHand.position.y + 0.2f, leftHand.position.z);
-            transform.rotation = Quaternion.LookRotation(Camera.allCameras[0].transform.position - transform.position);
+            transform.rotation = Quaternion.LookRotation(transform.position - Camera.allCameras[0].transform.position);
         }
         if (isGrabbingRight)
         {
             transform.position = new Vector3(rightHand.position.x, rightHand.position.y + 0.2f, rightHand.position.z);
-            transform.rotation = Quaternion.LookRotation(Camera.allCameras[0].transform.position - transform.position);
+            transform.rotation = Quaternion.LookRotation(transform.position - Camera.allCameras[0].transform.position);
         }
     }
 
