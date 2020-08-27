@@ -9,7 +9,7 @@ public class BoundaryTrigger : MonoBehaviour
     {
         if (other.gameObject.tag == "Interactable")
         {
-            InteractableTrigger interactableTrigger = other.GetComponent<InteractableTrigger>();
+            OculusInteractableTrigger interactableTrigger = other.GetComponent<OculusInteractableTrigger>();
             Vector3 originalScale = interactableTrigger.initialScale;
             Vector3 initialPosition = interactableTrigger.initialPosition;
             Quaternion initialRotation = interactableTrigger.initialRotation;

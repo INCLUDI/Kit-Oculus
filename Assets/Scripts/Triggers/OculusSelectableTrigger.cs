@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class SelectableTrigger : TriggerBase
+public class OculusSelectableTrigger : SelectableTrigger
 {
     private void Start()
     {

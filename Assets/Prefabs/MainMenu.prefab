@@ -192,7 +192,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2644354321783204167}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c531dbb74ab8e64c9a303c4e3250a47, type: 3}
+  m_Script: {fileID: 11500000, guid: 185cc9840cc75004a966d8d512727692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 300
@@ -1232,7 +1232,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3915443977900036631}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ca48189fb68db141820cb4751ebd9b9, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a9a0207bcf599e42810c7173ba25af3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   scrollItem: {fileID: 5013472963749841313, guid: e7da7ca27e9866f48922e1a6cc4b77fa,
@@ -1487,7 +1487,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3915443977930451688}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d62bc559a75d56b4cb92e32e2ea73c31, type: 3}
+  m_Script: {fileID: 11500000, guid: a0fadedb0771112409269582dc6003be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   parameter: SpeechPausesDuration
@@ -1717,7 +1717,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3915443978090253888}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee83ab2a7cd48bf479175e0ef3415270, type: 3}
+  m_Script: {fileID: 11500000, guid: ff44428363237bb41a07a486e66440c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   parameter: SpeechBubble
@@ -1982,7 +1982,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3915443978242723966}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e461263155cd1e24388e4bbb1a7138fe, type: 3}
+  m_Script: {fileID: 11500000, guid: b7a2a6b2d25f4b64b9d6b4c7fed27bbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   assistantItem: {fileID: 4647062544676646888, guid: 92b8712c6f8a5e34eb0fe2288aea8196,
@@ -2366,7 +2366,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 240}
+  m_AnchoredPosition: {x: 0, y: 300}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &3915443978441019893
@@ -4992,7 +4992,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3915443979585635594}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d62bc559a75d56b4cb92e32e2ea73c31, type: 3}
+  m_Script: {fileID: 11500000, guid: a0fadedb0771112409269582dc6003be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   parameter: SpeechRate

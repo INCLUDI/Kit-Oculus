@@ -2,13 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TargetTrigger : TriggerBase
+public class OculusTargetTrigger : TargetTrigger
 {
-    public int hitCounter;
-
-    public float timer;
-    public bool istantaneousCollision;
-
     void Start()
     {
         hitCounter = ActivityManager.instance.CurrentEvent.parameters.numericParameter;
