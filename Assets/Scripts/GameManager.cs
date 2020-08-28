@@ -55,7 +55,7 @@ public class GameManager : PlatformManager
 
     public override void ActivityReady()
     {
-        VirtualAssistantManager.instance.Initialize();
+        EventManager.TriggerEvent("StartActivity");
     }
 
     public override void ActivityCompleted()
