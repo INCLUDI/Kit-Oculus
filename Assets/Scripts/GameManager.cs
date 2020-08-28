@@ -62,4 +62,19 @@ public class GameManager : PlatformManager
     {
         SceneManager.LoadScene("MenuScene");
     }
+
+    public override Type SelectableTriggerType()
+    {
+        return typeof(OculusSelectableTrigger);
+    }
+
+    public override Type InteractableTriggerType()
+    {
+        return typeof(OculusInteractableTrigger);
+    }
+
+    public override Type TargetTriggerType()
+    {
+        return typeof(OculusTargetTrigger);
+    }
 }

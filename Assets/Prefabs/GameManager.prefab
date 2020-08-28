@@ -44,9 +44,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 847797444809321739, guid: 66cabee3b3626b447a541ca243ab015b, type: 3}
-  ActivityManager: {fileID: 886379263796691855, guid: fc033901a16940b4aabfbfe2ce0fa947,
+  ActivityManager: {fileID: 886379263796691855, guid: 44489dde5f005124c8dcca48bd2630d0,
     type: 3}
-  StatsManager: {fileID: 5544384937278356479, guid: 18ff3f3bddd0e1145a442e12f32d6804,
+  StatsManager: {fileID: 5544384937278356479, guid: 278e70f53a4db4b4ebd81a21ae1bb98d,
     type: 3}
   currentActivity:
     id: 
