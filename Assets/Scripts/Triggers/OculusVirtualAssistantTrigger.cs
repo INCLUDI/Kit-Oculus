@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OculusVirtualAssistantTrigger : VirtualAssistantTrigger
+public class OculusVirtualAssistantTrigger : IVirtualAssistantTrigger
 {
 
 }

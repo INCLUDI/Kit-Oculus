@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class OculusInteractableTrigger : InteractableTrigger
+public class OculusInteractableTrigger : MonoBehaviour, IInteractableTrigger
 {
     [HideInInspector]
     public Vector3 initialPosition;

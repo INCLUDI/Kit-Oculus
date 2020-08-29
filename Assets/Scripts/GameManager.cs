@@ -77,4 +77,14 @@ public class GameManager : PlatformManager
     {
         return typeof(OculusTargetTrigger);
     }
+
+    public override Type VirtualAssistantTriggerType()
+    {
+        return typeof(OculusInteractableTrigger);
+    }
+
+    public override Type ButtonTriggerType()
+    {
+        return typeof(OculusTargetTrigger);
+    }
 }

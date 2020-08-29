@@ -2,17 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OculusTargetTrigger : TargetTrigger
+public class OculusTargetTrigger : MonoBehaviour, ITargetTrigger
 {
+    public int HitCounter { get; set; }
+
+    public float Timer { get; set; }
+    public bool IstantaneousCollision { get; set; }
+
     void Start()
     {
-        hitCounter = ActivityManager.instance.CurrentEvent.parameters.numericParameter;
-        istantaneousCollision = ActivityManager.instance.CurrentEventGroup.type != "DragHoldManager";
+        HitCounter = ActivityManager.instance.CurrentEvent.parameters.numericParameter;
+        IstantaneousCollision = ActivityManager.instance.CurrentEventGroup.type != "DragHoldManager";
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (istantaneousCollision)
+        if (IstantaneousCollision)
         {
             ActivityManager.instance.checkCorrectAction(gameObject, other.gameObject);
         }
@@ -21,10 +26,10 @@ public class OculusTargetTrigger : TargetTrigger
 
     private void OnTriggerStay(Collider other)
     {
-        if (!istantaneousCollision)
+        if (!IstantaneousCollision)
         {
-            timer += Time.deltaTime;
-            if (timer > ActivityManager.instance.CurrentEvent.parameters.numericParameter)
+            Timer += Time.deltaTime;
+            if (Timer > ActivityManager.instance.CurrentEvent.parameters.numericParameter)
             {
                 ActivityManager.instance.checkCorrectAction(gameObject, other.gameObject);
             }
