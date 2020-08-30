@@ -1,3 +1,6 @@
 [submodule "Submodules/Kit-Shared"]
 	path = Submodules/Kit-Shared
 	url = https://github.com/mennetorelli/Kit-Shared
+[submodule "Submodules/Kit-Assets"]
+	path = Submodules/Kit-Assets
+	url = https://github.com/mennetorelli/Kit-Assets
