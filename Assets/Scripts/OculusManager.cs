@@ -10,7 +10,7 @@ using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
 using static DataModel;
 
-public class GameManager : PlatformManager
+public class OculusManager : PlatformManager
 {
     private void Start()
     {

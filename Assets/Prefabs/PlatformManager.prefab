@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2764475866836847180}
   - component: {fileID: 2764475866836847183}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: PlatformManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebd22b366edd6f8498f9178940b8bcae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Device: Oculus
   Player: {fileID: 847797444809321739, guid: 66cabee3b3626b447a541ca243ab015b, type: 3}
   ActivityManager: {fileID: 886379263796691855, guid: 44489dde5f005124c8dcca48bd2630d0,
     type: 3}
