@@ -18,4 +18,9 @@ public class OculusSelectableTrigger : MonoBehaviour, ISelectableTrigger
             gameObject.layer = 11;
         }
     }
+
+    void OnDisable()
+    {
+        Destroy(this);
+    }
 }
