@@ -13,6 +13,8 @@ public class OculusTargetTrigger : MonoBehaviour, ITargetTrigger
     {
         HitCounter = ActivityManager.instance.CurrentEvent.parameters.numericParameter;
         IstantaneousCollision = ActivityManager.instance.CurrentEventGroup.type != "DragHoldManager";
+
+        gameObject.layer = 9;
     }
 
     private void OnTriggerEnter(Collider other)

@@ -86,11 +86,11 @@ public class OculusManager : PlatformManager
 
     public override Type VirtualAssistantTriggerType()
     {
-        return typeof(OculusInteractableTrigger);
+        return typeof(OculusVirtualAssistantTrigger);
     }
 
     public override Type ButtonTriggerType()
     {
-        return typeof(OculusTargetTrigger);
+        return typeof(OculusButtonTrigger);
     }
 }

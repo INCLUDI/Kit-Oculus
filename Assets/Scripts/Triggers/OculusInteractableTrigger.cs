@@ -27,5 +27,7 @@ public class OculusInteractableTrigger : MonoBehaviour, IInteractableTrigger
         {
             interactable.attachTransform = pivot;
         }
+
+        gameObject.layer = 8;
     }
 }
