@@ -12,12 +12,6 @@ using static DataModel;
 
 public class OculusManager : PlatformManager
 {
-    private void Start()
-    {
-        EventManager.StartListening("ActivityReady", ActivityReady);
-        EventManager.StartListening("ActivityCompleted", ActivityCompleted);
-    }
-
     protected override void SceneLoaded(UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<SceneInstance> scenes)
     {
         Vector3 playerPosition = new Vector3(
