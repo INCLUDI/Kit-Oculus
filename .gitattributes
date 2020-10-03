@@ -147,3 +147,4 @@
 *.ai lfs
 *.dylib lfs
 *.p7s lfs
+*.srcaar lfs
