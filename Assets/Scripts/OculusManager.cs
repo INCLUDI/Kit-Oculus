@@ -12,6 +12,11 @@ using static DataModel;
 
 public class OculusManager : PlatformManager
 {
+    protected override void Start()
+    {
+        EventManager.StartListening("ActivatePopup", ActivatePopup);
+    }
+
     protected override void SceneLoaded(UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<SceneInstance> scenes)
     {
         base.SceneLoaded(scenes);
@@ -24,6 +29,16 @@ public class OculusManager : PlatformManager
         }
     }
 
+    void ActivatePopup()
+    {
+        PopupManager.instance.ActivatePopup(
+            header: "Attivita' in pausa",
+            message: "Vuoi davvero tornare al menu principale?",
+            button1Enabled: true,
+            button1Text: "OK",
+            call1: () => LoadMenuScene());
+    }
+
     public override void ActivityReady()
     {
         EventManager.TriggerEvent("StartActivity");
@@ -31,7 +46,12 @@ public class OculusManager : PlatformManager
 
     public override void ActivityCompleted()
     {
-        LoadMenuScene();
+        PopupManager.instance.ActivatePopup(
+            header: "Attività terminata",
+            message: "Congratulazioni! Hai terminato l'attivita'. Premi il pulsante OK per tornare al menu principale",
+            button1Enabled: true,
+            button1Text: "OK",
+            call1: () => LoadMenuScene());
     }
 
     public override Type SelectableTriggerType()

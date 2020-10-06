@@ -406,6 +406,11 @@ PrefabInstance:
       propertyPath: m_TrackingOriginMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9110113896612917914, guid: 66cabee3b3626b447a541ca243ab015b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66cabee3b3626b447a541ca243ab015b, type: 3}
 --- !u!1 &612637139
