@@ -49,27 +49,33 @@ MonoBehaviour:
     type: 3}
   StatsManager: {fileID: 5544384937278356479, guid: 278e70f53a4db4b4ebd81a21ae1bb98d,
     type: 3}
+  Popup: {fileID: 8992092415935888215, guid: f1e7f83735dd1eb40941f5a6747c5eed, type: 3}
   currentActivity:
     id: 
     name: 
     description: 
     image: 
-    difficulty: 0
+    classes: []
     scene: 
     jsonPath: 
-    assistantTransform:
-      position:
-        x: 0
-        y: 0
-        z: 0
-      rotation:
-        x: 0
-        y: 0
-        z: 0
-      scale:
-        x: 0
-        y: 0
-        z: 0
+    virtualAssistant:
+      transform:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        rotation:
+          x: 0
+          y: 0
+          z: 0
+        scale:
+          x: 0
+          y: 0
+          z: 0
+      flipBalloon: 0
+      maxBalloonWidth: 0
+      lockRotation: 0
+    flipBalloon: 0
     playerTransform:
       position:
         x: 0

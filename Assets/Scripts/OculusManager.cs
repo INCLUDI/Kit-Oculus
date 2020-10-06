@@ -8,12 +8,14 @@ using UnityEngine.ResourceManagement.ResourceProviders;
 using UnityEngine.SceneManagement;
 using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.UI;
 using static DataModel;
 
 public class OculusManager : PlatformManager
 {
     protected override void Start()
     {
+        base.Start();
         EventManager.StartListening("ActivatePopup", ActivatePopup);
     }
 
@@ -27,6 +29,10 @@ public class OculusManager : PlatformManager
             teleportationArea.AddComponent<TeleportationArea>();
             teleportationArea.layer = 12;
         }
+
+        GameObject popup = PopupManager.instance.gameObject;
+        popup.AddComponent<TrackedDeviceGraphicRaycaster>();
+        popup.GetComponent<Canvas>().worldCamera = Camera.main;
     }
 
     void ActivatePopup()
@@ -35,8 +41,11 @@ public class OculusManager : PlatformManager
             header: "Attivita' in pausa",
             message: "Vuoi davvero tornare al menu principale?",
             button1Enabled: true,
-            button1Text: "OK",
-            call1: () => LoadMenuScene());
+            button2Enabled: true,
+            button1Text: "Yes",
+            button2Text: "No",
+            call1: () => LoadMenuScene(),
+            call2: () => PopupManager.instance.transform.DOMoveY(PopupManager.instance.transform.position.y + 5f, 2f).OnComplete(() => PopupManager.instance.gameObject.SetActive(false)));
     }
 
     public override void ActivityReady()
