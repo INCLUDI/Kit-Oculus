@@ -1,17 +1,22 @@
-﻿using System.Collections;
+﻿using Kit.Oculus.Interaction;
+using Kit.Triggers;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class OculusVirtualAssistantTrigger : MonoBehaviour, IVirtualAssistantTrigger
+namespace Kit.Oculus.Triggers
 {
-    private void Start()
+    public class OculusVirtualAssistantTrigger : MonoBehaviour, IVirtualAssistantTrigger
     {
-        XRSelectableInteractable virtualAssistant = gameObject.AddComponent<XRSelectableInteractable>();
-        XRInteractableEvent event_selected = new XRInteractableEvent();
-        event_selected.AddListener((data) => ActivityManager.instance.AssistantTriggered());
-        virtualAssistant.onSelectEnter = event_selected;
+        private void Start()
+        {
+            XRSelectableInteractable virtualAssistant = gameObject.AddComponent<XRSelectableInteractable>();
+            XRInteractableEvent event_selected = new XRInteractableEvent();
+            event_selected.AddListener((data) => ActivityManager.instance.AssistantTriggered());
+            virtualAssistant.onSelectEnter = event_selected;
 
-        gameObject.layer = 13;
+            gameObject.layer = 13;
+        }
     }
 }

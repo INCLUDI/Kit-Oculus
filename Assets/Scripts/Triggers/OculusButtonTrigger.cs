@@ -1,15 +1,19 @@
-﻿using System.Collections;
+﻿using Kit.Triggers;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-public class OculusButtonTrigger : MonoBehaviour, IButtonTrigger
+namespace Kit.Oculus.Triggers
 {
-    public UnityAction Call { get; set; }
-
-    private void Start()
+    public class OculusButtonTrigger : MonoBehaviour, IButtonTrigger
     {
-        gameObject.AddComponent<Button>().onClick.AddListener(Call);
+        public UnityAction Call { get; set; }
+
+        private void Start()
+        {
+            gameObject.AddComponent<Button>().onClick.AddListener(Call);
+        }
     }
 }

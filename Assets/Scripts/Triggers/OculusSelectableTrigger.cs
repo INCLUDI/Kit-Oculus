@@ -1,26 +1,31 @@
-﻿using System.Collections;
+﻿using Kit.Oculus.Interaction;
+using Kit.Triggers;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class OculusSelectableTrigger : MonoBehaviour, ISelectableTrigger
+namespace Kit.Oculus.Triggers
 {
-    private void Start()
+    public class OculusSelectableTrigger : MonoBehaviour, ISelectableTrigger
     {
-        XRSelectableInteractable selectable = gameObject.AddComponent<XRSelectableInteractable>();
-        XRInteractableEvent event_selected = new XRInteractableEvent();
-        event_selected.AddListener((data) => ActivityManager.instance.checkCorrectAction(gameObject));
-        selectable.onSelectEnter = event_selected;
-
-        if (ActivityManager.instance.CurrentEventGroup.type != "TouchManager")
+        private void Start()
         {
-            gameObject.layer = 11;
-        }
-    }
+            XRSelectableInteractable selectable = gameObject.AddComponent<XRSelectableInteractable>();
+            XRInteractableEvent event_selected = new XRInteractableEvent();
+            event_selected.AddListener((data) => ActivityManager.instance.checkCorrectAction(gameObject));
+            selectable.onSelectEnter = event_selected;
 
-    void OnDisable()
-    {
-        Destroy(this);
+            if (ActivityManager.instance.CurrentStepGroup.type != "TouchManager")
+            {
+                gameObject.layer = 11;
+            }
+        }
+
+        void OnDisable()
+        {
+            Destroy(this);
+        }
     }
 }

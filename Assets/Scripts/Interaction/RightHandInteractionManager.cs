@@ -2,15 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RightHandInteractionManager : MonoBehaviour
+namespace Kit.Oculus.Interaction
 {
-    public void RightHandSelectionBegin()
+    public class RightHandInteractionManager : MonoBehaviour
     {
-        EventManager.TriggerEvent("RightHandInteractionBegin");
-    }
+        public void RightHandSelectionBegin()
+        {
+            EventManager.TriggerEvent("RightHandInteractionBegin");
+        }
 
-    public void RightHandSelectionEnd()
-    {
-        EventManager.TriggerEvent("RightHandInteractionEnd");
+        public void RightHandSelectionEnd()
+        {
+            EventManager.TriggerEvent("RightHandInteractionEnd");
+        }
     }
 }

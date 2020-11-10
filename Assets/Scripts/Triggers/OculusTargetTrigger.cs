@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using Kit;
+using Kit.Triggers;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,8 +13,8 @@ public class OculusTargetTrigger : MonoBehaviour, ITargetTrigger
 
     void Start()
     {
-        HitCounter = ActivityManager.instance.CurrentEvent.parameters.numericParameter;
-        IstantaneousCollision = ActivityManager.instance.CurrentEventGroup.type != "DragHoldManager";
+        HitCounter = ActivityManager.instance.CurrentStep.parameters.numericParameter;
+        IstantaneousCollision = ActivityManager.instance.CurrentStepGroup.type != "DragHoldManager";
 
         gameObject.layer = 9;
     }
@@ -31,7 +33,7 @@ public class OculusTargetTrigger : MonoBehaviour, ITargetTrigger
         if (!IstantaneousCollision)
         {
             Timer += Time.deltaTime;
-            if (Timer > ActivityManager.instance.CurrentEvent.parameters.numericParameter)
+            if (Timer > ActivityManager.instance.CurrentStep.parameters.numericParameter)
             {
                 ActivityManager.instance.checkCorrectAction(gameObject, other.gameObject);
             }
