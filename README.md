@@ -1,5 +1,7 @@
 # Kit-Oculus
 
+You can find the documentation on: https://includi.github.io/docs
+
 ### Screenshots
 
 <p align="center">
