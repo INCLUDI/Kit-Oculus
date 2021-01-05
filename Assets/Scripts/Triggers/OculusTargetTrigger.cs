@@ -1,7 +1,6 @@
 ﻿using Kit;
+using Kit.StepGroupManagers;
 using Kit.Triggers;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class OculusTargetTrigger : MonoBehaviour, ITargetTrigger
@@ -13,8 +12,8 @@ public class OculusTargetTrigger : MonoBehaviour, ITargetTrigger
 
     void Start()
     {
-        HitCounter = ActivityManager.instance.CurrentStep.parameters.numericParameter;
-        IstantaneousCollision = ActivityManager.instance.CurrentStepGroup.type != "DragHoldManager";
+        HitCounter = StepGroupManagerBase.Instance.CurrentStep.parameters.numericParameter;
+        IstantaneousCollision = StepGroupManagerBase.Instance.StepGroup.type != "DragHoldManager";
 
         gameObject.layer = 9;
     }
@@ -23,7 +22,7 @@ public class OculusTargetTrigger : MonoBehaviour, ITargetTrigger
     {
         if (IstantaneousCollision)
         {
-            ActivityManager.instance.checkCorrectAction(gameObject, other.gameObject);
+            ActivityManager.Instance.StepGroupManager.CheckCorrectAction(gameObject, other.gameObject);
         }
         EventManager.TriggerEvent("CollisionStarted");
     }
@@ -33,9 +32,9 @@ public class OculusTargetTrigger : MonoBehaviour, ITargetTrigger
         if (!IstantaneousCollision)
         {
             Timer += Time.deltaTime;
-            if (Timer > ActivityManager.instance.CurrentStep.parameters.numericParameter)
+            if (Timer > StepGroupManagerBase.Instance.CurrentStep.parameters.numericParameter)
             {
-                ActivityManager.instance.checkCorrectAction(gameObject, other.gameObject);
+                StepGroupManagerBase.Instance.CheckCorrectAction(gameObject, other.gameObject);
             }
         }
         EventManager.TriggerEvent("CollisionOngoing");

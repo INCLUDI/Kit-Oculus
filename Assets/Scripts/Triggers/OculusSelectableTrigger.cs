@@ -1,9 +1,7 @@
 ﻿using Kit.Oculus.Interaction;
+using Kit.StepGroupManagers;
 using Kit.Triggers;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.XR.Interaction.Toolkit;
 
 namespace Kit.Oculus.Triggers
@@ -14,10 +12,10 @@ namespace Kit.Oculus.Triggers
         {
             XRSelectableInteractable selectable = gameObject.AddComponent<XRSelectableInteractable>();
             XRInteractableEvent event_selected = new XRInteractableEvent();
-            event_selected.AddListener((data) => ActivityManager.instance.checkCorrectAction(gameObject));
+            event_selected.AddListener((data) => StepGroupManagerBase.Instance.CheckCorrectAction(gameObject));
             selectable.onSelectEnter = event_selected;
 
-            if (ActivityManager.instance.CurrentStepGroup.type != "TouchManager")
+            if (StepGroupManagerBase.Instance.StepGroup.type != "TouchManager")
             {
                 gameObject.layer = 11;
             }

@@ -1,7 +1,6 @@
 ﻿using Kit.Oculus.Interaction;
+using Kit.StepGroupManagers;
 using Kit.Triggers;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
@@ -13,7 +12,7 @@ namespace Kit.Oculus.Triggers
         {
             XRSelectableInteractable virtualAssistant = gameObject.AddComponent<XRSelectableInteractable>();
             XRInteractableEvent event_selected = new XRInteractableEvent();
-            event_selected.AddListener((data) => ActivityManager.instance.AssistantTriggered());
+            event_selected.AddListener((data) => StepGroupManagerBase.Instance.AssistantTriggered());
             virtualAssistant.onSelectEnter = event_selected;
 
             gameObject.layer = 13;
