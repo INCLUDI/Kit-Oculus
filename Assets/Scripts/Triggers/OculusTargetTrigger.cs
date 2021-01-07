@@ -22,7 +22,7 @@ public class OculusTargetTrigger : MonoBehaviour, ITargetTrigger
     {
         if (IstantaneousCollision)
         {
-            ActivityManager.Instance.StepGroupManager.CheckCorrectAction(gameObject, other.gameObject);
+            StepGroupManagerBase.Instance.CheckCorrectAction(gameObject, other.gameObject);
         }
         EventManager.TriggerEvent("CollisionStarted");
     }
