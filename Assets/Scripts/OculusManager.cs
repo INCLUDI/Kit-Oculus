@@ -31,7 +31,7 @@ namespace Kit.Oculus
 
         void ActivatePopup()
         {
-            PopupManager.instance.ActivatePopup(
+            PopupManager.Instance.ActivatePopup(
                 header: "Attivita' in pausa",
                 message: "Vuoi davvero tornare al menu principale?",
                 primaryButtonEnabled: true,
@@ -39,7 +39,7 @@ namespace Kit.Oculus
                 primaryButtonText: "Yes",
                 secondaryButtonText: "No",
                 primaryCallback: () => LoadMenuScene(),
-                secondaryCallback: () => PopupManager.instance.transform.DOMoveY(PopupManager.instance.transform.position.y + 5f, 2f).OnComplete(() => PopupManager.instance.gameObject.SetActive(false)));
+                secondaryCallback: () => PopupManager.Instance.transform.DOMoveY(PopupManager.Instance.transform.position.y + 5f, 2f).OnComplete(() => PopupManager.Instance.gameObject.SetActive(false)));
         }
 
         public override void LoadActivity(ActivityConfiguration activity)
@@ -94,7 +94,7 @@ namespace Kit.Oculus
                 }
 
                 // Adjust the popup.
-                GameObject popup = PopupManager.instance.gameObject;
+                GameObject popup = PopupManager.Instance.gameObject;
                 popup.AddComponent<TrackedDeviceGraphicRaycaster>();
                 popup.GetComponent<Canvas>().worldCamera = Camera.main;
             };
@@ -107,7 +107,7 @@ namespace Kit.Oculus
 
         protected override void ActivityCompleted()
         {
-            PopupManager.instance.ActivatePopup(
+            PopupManager.Instance.ActivatePopup(
                 header: "Attività terminata",
                 message: "Congratulazioni! Hai terminato l'attivita'. Premi il pulsante OK per tornare al menu principale",
                 primaryButtonEnabled: true,
