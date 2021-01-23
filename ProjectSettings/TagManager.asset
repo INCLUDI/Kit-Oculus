@@ -8,6 +8,14 @@ TagManager:
   - Grabbable
   - ToPick
   - HisBasket
+  - HerBasket
+  - YourBasket
+  - TheirBasket
+  - MyBasket
+  - Behind
+  - InFront
+  - Left
+  - Right
   layers:
   - Default
   - TransparentFX
