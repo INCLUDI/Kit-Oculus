@@ -3,8 +3,8 @@
     "m_SelectedPackage": {
         "deviceId": "1PASH9AE0C9305",
         "name": "com.INCLUDI.KitOculus",
-        "processId": 3783,
-        "exited": false
+        "processId": 6238,
+        "exited": true
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
@@ -67,6 +67,18 @@
             "name": "com.INCLUDI.KitOculus",
             "processId": 3783,
             "exited": false
+        },
+        {
+            "deviceId": "1PASH9AE0C9305",
+            "name": "com.INCLUDI.KitOculus",
+            "processId": 3965,
+            "exited": false
+        },
+        {
+            "deviceId": "1PASH9AE0C9305",
+            "name": "com.INCLUDI.KitOculus",
+            "processId": 6238,
+            "exited": true
         }
     ],
     "m_Tags": {
