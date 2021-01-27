@@ -21,20 +21,15 @@ namespace Kit.Oculus.Interaction
         // Update is called once per frame
         void Update()
         {
-            Vector3 pos = new Vector3();
-            Vector3 norm = new Vector3();
-            int index = 0;
-            bool validTarget = false;
-
             if (leftTeleportRay)
             {
-                bool isLeftInteractorRayHovering = leftInteractorRay.TryGetHitInfo(ref pos, ref norm, ref index, ref validTarget);
+                bool isLeftInteractorRayHovering = leftInteractorRay.TryGetHitInfo(out _, out _, out _, out _);
                 leftTeleportRay.gameObject.SetActive(EnableLeftTeleport && CheckIfActivated(leftTeleportRay) && !isLeftInteractorRayHovering);
             }
 
             if (rightTeleportRay)
             {
-                bool isRightInteractorRayHovering = rightInteractorRay.TryGetHitInfo(ref pos, ref norm, ref index, ref validTarget);
+                bool isRightInteractorRayHovering = rightInteractorRay.TryGetHitInfo(out _, out _, out _, out _);
                 rightTeleportRay.gameObject.SetActive(EnableRightTeleport && CheckIfActivated(rightTeleportRay) && !isRightInteractorRayHovering);
             }
         }

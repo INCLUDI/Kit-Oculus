@@ -13,7 +13,7 @@ namespace Kit.Oculus.Triggers
             XRSelectableInteractable virtualAssistant = gameObject.AddComponent<XRSelectableInteractable>();
             XRInteractableEvent event_selected = new XRInteractableEvent();
             event_selected.AddListener((data) => StepGroupManagerBase.Instance.AssistantTriggered());
-            virtualAssistant.onSelectEnter = event_selected;
+            virtualAssistant.onSelectEntered = event_selected;
 
             gameObject.layer = 13;
         }

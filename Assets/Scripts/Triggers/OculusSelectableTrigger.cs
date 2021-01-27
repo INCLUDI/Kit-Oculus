@@ -13,7 +13,7 @@ namespace Kit.Oculus.Triggers
             XRSelectableInteractable selectable = gameObject.AddComponent<XRSelectableInteractable>();
             XRInteractableEvent event_selected = new XRInteractableEvent();
             event_selected.AddListener((data) => StepGroupManagerBase.Instance.CheckCorrectAction(gameObject));
-            selectable.onSelectEnter = event_selected;
+            selectable.onSelectEntered = event_selected;
 
             if (StepGroupManagerBase.Instance.StepGroup.type != "TouchManager")
             {
