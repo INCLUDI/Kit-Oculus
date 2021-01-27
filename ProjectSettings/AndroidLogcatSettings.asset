@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "1PASH9AE0C9305",
         "name": "com.INCLUDI.KitOculus",
-        "processId": 6238,
+        "processId": 6175,
         "exited": true
     },
     "m_SelectedPriority": 0,
@@ -78,6 +78,30 @@
             "deviceId": "1PASH9AE0C9305",
             "name": "com.INCLUDI.KitOculus",
             "processId": 6238,
+            "exited": true
+        },
+        {
+            "deviceId": "1PASH9AE0C9305",
+            "name": "com.INCLUDI.KitOculus",
+            "processId": 6010,
+            "exited": false
+        },
+        {
+            "deviceId": "1PASH9AE0C9305",
+            "name": "com.INCLUDI.KitOculus",
+            "processId": 5069,
+            "exited": false
+        },
+        {
+            "deviceId": "1PASH9AE0C9305",
+            "name": "com.INCLUDI.KitOculus",
+            "processId": 5499,
+            "exited": false
+        },
+        {
+            "deviceId": "1PASH9AE0C9305",
+            "name": "com.INCLUDI.KitOculus",
+            "processId": 6175,
             "exited": true
         }
     ],
