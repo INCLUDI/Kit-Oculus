@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "1PASH9AE0C9305",
         "name": "com.INCLUDI.INCLUDIKit",
-        "processId": 10684,
+        "processId": 14184,
         "exited": true
     },
     "m_SelectedPriority": 0,
@@ -108,6 +108,12 @@
             "deviceId": "1PASH9AE0C9305",
             "name": "com.INCLUDI.INCLUDIKit",
             "processId": 10684,
+            "exited": true
+        },
+        {
+            "deviceId": "1PASH9AE0C9305",
+            "name": "com.INCLUDI.INCLUDIKit",
+            "processId": 14184,
             "exited": true
         }
     ],
